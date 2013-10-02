@@ -1,0 +1,5 @@
+pygments: true
+source: ./
+destination: ./site
+url: http://rxscala.github.io
+exclude: ['scaladoc', 'README.md']
