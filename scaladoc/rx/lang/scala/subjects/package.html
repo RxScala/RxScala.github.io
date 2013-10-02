@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>observables - rxjava-scala 0.14.2-SNAPSHOT API - rx.lang.scala.observables</title>
-          <meta name="description" content="observables - rxjava - scala 0.14.2 - SNAPSHOT API - rx.lang.scala.observables" />
-          <meta name="keywords" content="observables rxjava scala 0.14.2 SNAPSHOT API rx.lang.scala.observables" />
+          <title>subjects - rxjava-scala 0.14.2-SNAPSHOT API - rx.lang.scala.subjects</title>
+          <meta name="description" content="subjects - rxjava - scala 0.14.2 - SNAPSHOT API - rx.lang.scala.subjects" />
+          <meta name="keywords" content="subjects rxjava scala 0.14.2 SNAPSHOT API rx.lang.scala.subjects" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -12,7 +12,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../index.html';
-            var hash = 'rx.lang.scala.observables.package';
+            var hash = 'rx.lang.scala.subjects.package';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -26,7 +26,7 @@
       <div id="definition">
         <img src="../../../../lib/package_big.png" />
         <p id="owner"><a href="../../../package.html" class="extype" name="rx">rx</a>.<a href="../../package.html" class="extype" name="rx.lang">lang</a>.<a href="../package.html" class="extype" name="rx.lang.scala">scala</a></p>
-        <h1>observables</h1>
+        <h1>subjects</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,15 +35,11 @@
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <span class="name">observables</span>
+        <span class="name">subjects</span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Contains special Observables.</p><p>In Scala, this package only contains <a href="BlockingObservable.html" class="extype" name="rx.lang.scala.observables.BlockingObservable">BlockingObservable</a>.
-In the corresponding Java package <code>rx.observables</code>, there is also a
-<code>GroupedObservable</code> and a <code>ConnectableObservable</code>, but these are not needed
-in Scala, because we use a pair <code>(key, observable)</code> instead of <code>GroupedObservable</code>
-and a pair <code>(startFunction, observable)</code> instead of <code>ConnectableObservable</code>.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Provides the type <code>Subject</code>.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -64,7 +60,7 @@ and a pair <code>(startFunction, observable)</code> instead of <code>Connectable
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="rx.lang.scala.observables"><span>observables</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="rx.lang.scala.subjects"><span>subjects</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -86,19 +82,32 @@ and a pair <code>(startFunction, observable)</code> instead of <code>Connectable
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="rx.lang.scala.observables.BlockingObservable" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="BlockingObservable[+T]extendsAnyVal"></a>
-      <a id="BlockingObservable[+T]:BlockingObservable[T]"></a>
+              <ol><li name="rx.lang.scala.subjects.Dummy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DummyextendsAnyRef"></a>
+      <a id="Dummy:Dummy"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier">final </span>
+        <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="BlockingObservable.html"><span class="name">BlockingObservable</span></a><span class="tparams">[<span name="T">+T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyVal">AnyVal</span></span>
+        <a href="Dummy.html"><span class="name">Dummy</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      <p class="comment cmt">An Observable that provides blocking operators.</p>
+      
+    </li><li name="rx.lang.scala.subjects.Subject" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Subject[-T,+R]=rx.subjects.Subject[_&gt;:T,_&lt;:R]"></a>
+      <a id="Subject[-T,+R]:Subject[T,R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Subject</span><span class="tparams">[<span name="T">-T</span>, <span name="R">+R</span>]</span><span class="result"> = <span class="extype" name="rx.subjects.Subject">subjects.Subject</span>[_ &gt;: <span class="extype" name="rx.lang.scala.subjects.Subject.T">T</span>, _ &lt;: <span class="extype" name="rx.lang.scala.subjects.Subject.R">R</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A Subject is an Observable and an Observer at the same time.</p><div class="fullcomment"><div class="comment cmt"><p>A Subject is an Observable and an Observer at the same time.</p><p>The Java Subject looks like this:</p><pre>public <span class="kw">abstract</span> <span class="kw">class</span> Subject&lt;T,R&gt; <span class="kw">extends</span> Observable&lt;R&gt; implements Observer&lt;T&gt;</pre></div></div>
     </li></ol>
             </div>
 

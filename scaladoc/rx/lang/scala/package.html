@@ -95,7 +95,7 @@ will not need are left out.
         <a href="Notification.html"><span class="name">Notification</span></a><span class="tparams">[<span name="T">+T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      <p class="comment cmt">Emitted by Observables returned by <a href="Observable.html#materialize:rx.lang.scala.Observable[rx.lang.scala.Notification[T]]" class="extmbr" name="rx.lang.scala.Observable#materialize">rx.lang.scala.Observable.materialize</a>.</p>
+      <p class="comment cmt">Emitted by Observables returned by <a href="Observable.html#materialize:rx.lang.scala.Observable[rx.lang.scala.Notification[T]]" class="extmbr" name="rx.lang.scala.Observable#materialize">Observable.materialize</a>.</p>
     </li><li name="rx.lang.scala.Observable" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Observable[+T]extendsAnyVal"></a>
       <a id="Observable[+T]:Observable[T]"></a>
@@ -127,11 +127,11 @@ will not need are left out.
       <a id="Scheduler:Scheduler"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="package$$Scheduler.html"><span class="name">Scheduler</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="Scheduler.html"><span class="name">Scheduler</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       <p class="comment cmt">Represents an object that schedules units of work.</p>
@@ -147,7 +147,7 @@ will not need are left out.
         <a href="package$$Subscription.html"><span class="name">Subscription</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      <p class="comment cmt">Subscriptions are returned from all Observable.</p>
+      <p class="comment cmt">Subscriptions are returned from all <code>Observable.subscribe</code> methods to allow unsubscribing.</p>
     </li></ol>
             </div>
 
@@ -180,7 +180,7 @@ will not need are left out.
         <a href="Notification$.html"><span class="name">Notification</span></a>
       </span>
       </h4>
-      <p class="comment cmt">Provides pattern matching support for Notifications.</p>
+      <p class="comment cmt">Provides pattern matching support and constructors for Notifications.</p>
     </li><li name="rx.lang.scala.Observable" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Observable"></a>
       <a id="Observable:Observable"></a>
@@ -194,6 +194,19 @@ will not need are left out.
       </span>
       </h4>
       <p class="comment cmt">Provides various ways to construct new Observables.</p>
+    </li><li name="rx.lang.scala.Scheduler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Scheduler"></a>
+      <a id="Scheduler:Scheduler"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Scheduler$.html"><span class="name">Scheduler</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides constructors for Schedulers.</p>
     </li><li name="rx.lang.scala.concurrency" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="concurrency"></a>
       <a id="concurrency:concurrency"></a>
@@ -207,6 +220,26 @@ will not need are left out.
       </span>
       </h4>
       <p class="comment cmt">Provides schedulers.</p>
+    </li><li name="rx.lang.scala.package#observable" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="observable[T](body:=&gt;T)(implicitscheduler:rx.lang.scala.Scheduler):rx.lang.scala.Observable[T]"></a>
+      <a id="observable[T](⇒T)(Scheduler):Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">observable</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="body">body: ⇒ <span class="extype" name="rx.lang.scala.observable.T">T</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="scheduler">scheduler: <a href="Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>)</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.observable.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Allows to construct observables in a similar way as futures.</p><div class="fullcomment"><div class="comment cmt"><p>Allows to construct observables in a similar way as futures.</p><p>Example:</p><pre><span class="kw">implicit</span> <span class="kw">val</span> scheduler = Schedulers.threadPoolForIO
+<span class="kw">val</span> o: Observable[<span class="std">List</span>[Friend]] = observable {
+   session.getFriends
+}
+o.subscribe(
+  friendList <span class="kw">=&gt;</span> println(friendList),
+  err <span class="kw">=&gt;</span> println(err.getMessage)
+)</pre></div></div>
     </li><li name="rx.lang.scala.observables" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="observables"></a>
       <a id="observables:observables"></a>
@@ -232,7 +265,7 @@ will not need are left out.
         <a href="util/package.html"><span class="name">util</span></a>
       </span>
       </h4>
-      <p class="comment cmt">Provides <a href="util/package.html#Opening=rx.util.Opening" class="extmbr" name="rx.lang.scala.util.Opening">rx.lang.scala.util.Opening</a>s, <a href="util/package.html#Closing=rx.util.Closing" class="extmbr" name="rx.lang.scala.util.Closing">rx.lang.scala.util.Closing</a>s, and <a href="util/Timestamped.html" class="extype" name="rx.lang.scala.util.Timestamped">rx.lang.scala.util.Timestamped</a>.</p>
+      <p class="comment cmt">Provides <a href="util/package.html#Opening=rx.util.Opening" class="extmbr" name="rx.lang.scala.util.Opening">Opening</a>s, <a href="util/package.html#Closing=rx.util.Closing" class="extmbr" name="rx.lang.scala.util.Closing">Closing</a>s, and <a href="util/Timestamped.html" class="extype" name="rx.lang.scala.util.Timestamped">Timestamped</a>.</p>
     </li></ol>
             </div>
 

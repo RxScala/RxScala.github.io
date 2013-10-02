@@ -198,8 +198,7 @@ to use a Java library taking/returning <code>Func</code>s and <code>Action</code
         <span class="name">convertComparisonFuncToRxFunc2</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.convertComparisonFuncToRxFunc2.A">A</span>, <span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.convertComparisonFuncToRxFunc2.A">A</span>) ⇒ <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="rx.util.functions.Func2">Func2</span>[<span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.convertComparisonFuncToRxFunc2.A">A</span>, <span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.convertComparisonFuncToRxFunc2.A">A</span>, <span class="extype" name="java.lang.Integer">Integer</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Converts a function shaped ilke compareTo into the equivalent Rx Func2
-</p>
+      
     </li><li name="rx.lang.scala.ImplicitFunctionConversions#convertTakeWhileFuncToRxFunc2" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="convertTakeWhileFuncToRxFunc2[A](f:(A,Int)=&gt;Boolean):rx.util.functions.Func2[A,Integer,Boolean]"></a>
       <a id="convertTakeWhileFuncToRxFunc2[A]((A,Int)⇒Boolean):Func2[A,Integer,Boolean]"></a>
@@ -212,8 +211,7 @@ to use a Java library taking/returning <code>Func</code>s and <code>Action</code
         <span class="name">convertTakeWhileFuncToRxFunc2</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.convertTakeWhileFuncToRxFunc2.A">A</span>, <span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="rx.util.functions.Func2">Func2</span>[<span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.convertTakeWhileFuncToRxFunc2.A">A</span>, <span class="extype" name="java.lang.Integer">Integer</span>, <span class="extype" name="java.lang.Boolean">Boolean</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Converts a specific function shape (used in takeWhile) to the equivalent Java types with an Rx Func2
-</p>
+      
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -252,9 +250,7 @@ to use a Java library taking/returning <code>Func</code>s and <code>Action</code
         <span class="name">exceptionFunction1ToRxExceptionFunc1</span><span class="tparams">[<span name="A">A &lt;: <span class="extype" name="scala.Exception">Exception</span></span>, <span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.exceptionFunction1ToRxExceptionFunc1.A">A</span>) ⇒ <span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.exceptionFunction1ToRxExceptionFunc1.B">B</span></span>)</span><span class="result">: <span class="extype" name="rx.util.functions.Func1">Func1</span>[<span class="extype" name="scala.Exception">Exception</span>, <span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.exceptionFunction1ToRxExceptionFunc1.B">B</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">This implicit allows Scala code to use any exception type and still work
-with invariant Func1 interface
-</p>
+      
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -313,6 +309,19 @@ with invariant Func1 interface
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="rx.lang.scala.ImplicitFunctionConversions#javaSchedulerToScalaScheduler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="javaSchedulerToScalaScheduler(s:rx.Scheduler):rx.lang.scala.Scheduler"></a>
+      <a id="javaSchedulerToScalaScheduler(rx.Scheduler):Scheduler"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">javaSchedulerToScalaScheduler</span><span class="params">(<span name="s">s: <span class="extype" name="rx.Scheduler">rx.Scheduler</span></span>)</span><span class="result">: <a href="Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -352,7 +361,7 @@ with invariant Func1 interface
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="rx.lang.scala.ImplicitFunctionConversions#scalaBooleanFunction1ToRxBooleanFunc1" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="rx.lang.scala.ImplicitFunctionConversions#scalaBooleanFunction1ToRxBooleanFunc1" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="scalaBooleanFunction1ToRxBooleanFunc1[A](f:A=&gt;Boolean):rx.util.functions.Func1[A,Boolean]"></a>
       <a id="scalaBooleanFunction1ToRxBooleanFunc1[A]((A)⇒Boolean):Func1[A,Boolean]"></a>
       <h4 class="signature">
@@ -364,9 +373,8 @@ with invariant Func1 interface
         <span class="name">scalaBooleanFunction1ToRxBooleanFunc1</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.scalaBooleanFunction1ToRxBooleanFunc1.A">A</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="rx.util.functions.Func1">Func1</span>[<span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.scalaBooleanFunction1ToRxBooleanFunc1.A">A</span>, <span class="extype" name="java.lang.Boolean">Boolean</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Converts 1-arg predicate to Rx Func1[A, java.</p><div class="fullcomment"><div class="comment cmt"><p>Converts 1-arg predicate to Rx Func1[A, java.lang.Boolean]
-</p></div></div>
-    </li><li name="rx.lang.scala.ImplicitFunctionConversions#scalaBooleanFunction2ToRxBooleanFunc1" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      
+    </li><li name="rx.lang.scala.ImplicitFunctionConversions#scalaBooleanFunction2ToRxBooleanFunc1" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="scalaBooleanFunction2ToRxBooleanFunc1[A,B](f:(A,B)=&gt;Boolean):rx.util.functions.Func2[A,B,Boolean]"></a>
       <a id="scalaBooleanFunction2ToRxBooleanFunc1[A,B]((A,B)⇒Boolean):Func2[A,B,Boolean]"></a>
       <h4 class="signature">
@@ -378,8 +386,7 @@ with invariant Func1 interface
         <span class="name">scalaBooleanFunction2ToRxBooleanFunc1</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.scalaBooleanFunction2ToRxBooleanFunc1.A">A</span>, <span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.scalaBooleanFunction2ToRxBooleanFunc1.B">B</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="rx.util.functions.Func2">Func2</span>[<span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.scalaBooleanFunction2ToRxBooleanFunc1.A">A</span>, <span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.scalaBooleanFunction2ToRxBooleanFunc1.B">B</span>, <span class="extype" name="java.lang.Boolean">Boolean</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Converts 2-arg predicate to Rx Func2[A, B, java.</p><div class="fullcomment"><div class="comment cmt"><p>Converts 2-arg predicate to Rx Func2[A, B, java.lang.Boolean]
-</p></div></div>
+      
     </li><li name="rx.lang.scala.ImplicitFunctionConversions#scalaByNameParamToFunc0" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="scalaByNameParamToFunc0[B](param:=&gt;B):rx.util.functions.Func0[B]"></a>
       <a id="scalaByNameParamToFunc0[B](⇒B):Func0[B]"></a>
@@ -392,8 +399,7 @@ with invariant Func1 interface
         <span class="name">scalaByNameParamToFunc0</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="param">param: ⇒ <span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.scalaByNameParamToFunc0.B">B</span></span>)</span><span class="result">: <span class="extype" name="rx.util.functions.Func0">Func0</span>[<span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.scalaByNameParamToFunc0.B">B</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Converts a by-name parameter to a Rx Func0
-</p>
+      
     </li><li name="rx.lang.scala.ImplicitFunctionConversions#scalaFuncNToRxFuncN" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="scalaFuncNToRxFuncN[R](f:Seq[Object]=&gt;R):rx.util.functions.FuncN[R]"></a>
       <a id="scalaFuncNToRxFuncN[R]((Seq[AnyRef])⇒R):FuncN[R]"></a>
@@ -419,8 +425,7 @@ with invariant Func1 interface
         <span class="name">scalaFunction0ProducingUnitToAction0</span><span class="params">(<span name="f">f: () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="rx.util.functions.Action0">Action0</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Converts 0-arg function to Rx Action0
-</p>
+      
     </li><li name="rx.lang.scala.ImplicitFunctionConversions#scalaFunction0ToRxFunc0" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="scalaFunction0ToRxFunc0[A](f:()=&gt;A):rx.util.functions.Func0[A]"></a>
       <a id="scalaFunction0ToRxFunc0[A](()⇒A):Func0[A]"></a>
@@ -433,8 +438,7 @@ with invariant Func1 interface
         <span class="name">scalaFunction0ToRxFunc0</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="f">f: () ⇒ <span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.scalaFunction0ToRxFunc0.A">A</span></span>)</span><span class="result">: <span class="extype" name="rx.util.functions.Func0">Func0</span>[<span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.scalaFunction0ToRxFunc0.A">A</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">The following implicits convert functions of different arities into the Rx equivalents
-</p>
+      
     </li><li name="rx.lang.scala.ImplicitFunctionConversions#scalaFunction1ProducingUnitToAction1" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="scalaFunction1ProducingUnitToAction1[A](f:A=&gt;Unit):rx.util.functions.Action1[A]"></a>
       <a id="scalaFunction1ProducingUnitToAction1[A]((A)⇒Unit):Action1[A]"></a>
@@ -447,8 +451,7 @@ with invariant Func1 interface
         <span class="name">scalaFunction1ProducingUnitToAction1</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.scalaFunction1ProducingUnitToAction1.A">A</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="rx.util.functions.Action1">Action1</span>[<span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.scalaFunction1ProducingUnitToAction1.A">A</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Converts 1-arg function to Rx Action1
-</p>
+      
     </li><li name="rx.lang.scala.ImplicitFunctionConversions#scalaFunction1ToOnSubscribeFunc" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="scalaFunction1ToOnSubscribeFunc[T](f:rx.lang.scala.Observer[T]=&gt;rx.lang.scala.Subscription):rx.Observable.OnSubscribeFunc[T]"></a>
       <a id="scalaFunction1ToOnSubscribeFunc[T]((Observer[T])⇒Subscription):OnSubscribeFunc[T]"></a>
@@ -511,6 +514,32 @@ with invariant Func1 interface
       </span>
       <span class="symbol">
         <span class="name">scalaFunction4ToRxFunc4</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.scalaFunction4ToRxFunc4.A">A</span>, <span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.scalaFunction4ToRxFunc4.B">B</span>, <span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.scalaFunction4ToRxFunc4.C">C</span>, <span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.scalaFunction4ToRxFunc4.D">D</span>) ⇒ <span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.scalaFunction4ToRxFunc4.E">E</span></span>)</span><span class="result">: <span class="extype" name="rx.util.functions.Func4">Func4</span>[<span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.scalaFunction4ToRxFunc4.A">A</span>, <span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.scalaFunction4ToRxFunc4.B">B</span>, <span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.scalaFunction4ToRxFunc4.C">C</span>, <span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.scalaFunction4ToRxFunc4.D">D</span>, <span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.scalaFunction4ToRxFunc4.E">E</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="rx.lang.scala.ImplicitFunctionConversions#scalaSchedulerToJavaScheduler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="scalaSchedulerToJavaScheduler(s:rx.lang.scala.Scheduler):rx.Scheduler"></a>
+      <a id="scalaSchedulerToJavaScheduler(Scheduler):rx.Scheduler"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">scalaSchedulerToJavaScheduler</span><span class="params">(<span name="s">s: <a href="Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>)</span><span class="result">: <span class="extype" name="rx.Scheduler">rx.Scheduler</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="rx.lang.scala.ImplicitFunctionConversions#schedulerActionToFunc2" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="schedulerActionToFunc2[T](action:(rx.lang.scala.Scheduler,T)=&gt;rx.lang.scala.Subscription):rx.util.functions.Func2[rx.Scheduler,T,rx.lang.scala.Subscription]"></a>
+      <a id="schedulerActionToFunc2[T]((Scheduler,T)⇒Subscription):Func2[rx.Scheduler,T,Subscription]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">schedulerActionToFunc2</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="action">action: (<a href="Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a>, <span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.schedulerActionToFunc2.T">T</span>) ⇒ <a href="package$$Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>)</span><span class="result">: <span class="extype" name="rx.util.functions.Func2">Func2</span>[<span class="extype" name="rx.Scheduler">rx.Scheduler</span>, <span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.schedulerActionToFunc2.T">T</span>, <a href="package$$Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a>]</span>
       </span>
       </h4>
       

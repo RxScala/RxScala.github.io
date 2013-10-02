@@ -39,7 +39,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Provides a mechanism for receiving push-based notifications.</p><p>After an Observer calls an <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">rx.lang.scala.Observable</a>'s <code>subscribe</code> method, the Observable
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Provides a mechanism for receiving push-based notifications.</p><p>After an Observer calls an <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>'s <code>subscribe</code> method, the Observable
 calls the Observer's <code>onNext</code> method to provide notifications. A well-behaved Observable will
 call an Observer's <code>onCompleted</code> method exactly once or the Observer's <code>onError</code> method exactly once.
 </p></div><div class="toggleContainer block">
@@ -98,7 +98,7 @@ call an Observer's <code>onCompleted</code> method exactly once or the Observer'
         <span class="name">onCompleted</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Notifies the Observer that the <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">rx.lang.scala.Observable</a> has finished sending push-based notifications.</p><div class="fullcomment"><div class="comment cmt"><p>Notifies the Observer that the <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">rx.lang.scala.Observable</a> has finished sending push-based notifications.</p><p>The <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">rx.lang.scala.Observable</a> will not call this method if it calls <code>onError</code>.
+      <p class="shortcomment cmt">Notifies the Observer that the <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a> has finished sending push-based notifications.</p><div class="fullcomment"><div class="comment cmt"><p>Notifies the Observer that the <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a> has finished sending push-based notifications.</p><p>The <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a> will not call this method if it calls <code>onError</code>.
 </p></div></div>
     </li><li name="rx.lang.scala.Observer#onError" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="onError(e:Throwable):Unit"></a>
@@ -112,7 +112,7 @@ call an Observer's <code>onCompleted</code> method exactly once or the Observer'
         <span class="name">onError</span><span class="params">(<span name="e">e: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Notifies the Observer that the <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">rx.lang.scala.Observable</a> has experienced an error condition.</p><div class="fullcomment"><div class="comment cmt"><p>Notifies the Observer that the <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">rx.lang.scala.Observable</a> has experienced an error condition.</p><p>If the <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">rx.lang.scala.Observable</a> calls this method, it will not thereafter call <code>onNext</code> or <code>onCompleted</code>.
+      <p class="shortcomment cmt">Notifies the Observer that the <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a> has experienced an error condition.</p><div class="fullcomment"><div class="comment cmt"><p>Notifies the Observer that the <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a> has experienced an error condition.</p><p>If the <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a> calls this method, it will not thereafter call <code>onNext</code> or <code>onCompleted</code>.
 </p></div></div>
     </li><li name="rx.lang.scala.Observer#onNext" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="onNext(arg:T):Unit"></a>
@@ -126,7 +126,7 @@ call an Observer's <code>onCompleted</code> method exactly once or the Observer'
         <span class="name">onNext</span><span class="params">(<span name="arg">arg: <span class="extype" name="rx.lang.scala.Observer.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Provides the Observer with new data.</p><div class="fullcomment"><div class="comment cmt"><p>Provides the Observer with new data.</p><p>The <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">rx.lang.scala.Observable</a> calls this closure 0 or more times.</p><p>The <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">rx.lang.scala.Observable</a> will not call this method again after it calls either <code>onCompleted</code> or <code>onError</code>.
+      <p class="shortcomment cmt">Provides the Observer with new data.</p><div class="fullcomment"><div class="comment cmt"><p>Provides the Observer with new data.</p><p>The <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a> calls this closure 0 or more times.</p><p>The <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a> will not call this method again after it calls either <code>onCompleted</code> or <code>onError</code>.
 </p></div></div>
     </li></ol>
             </div>

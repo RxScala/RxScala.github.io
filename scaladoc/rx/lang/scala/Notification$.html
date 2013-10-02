@@ -39,7 +39,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Provides pattern matching support for Notifications.</p><p>Example:</p><pre><span class="kw">import</span> Notification._
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Provides pattern matching support and constructors for Notifications.</p><p>Example:</p><pre><span class="kw">import</span> Notification._
 Observable(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>).materialize.subscribe(n <span class="kw">=&gt;</span> n <span class="kw">match</span> {
   <span class="kw">case</span> OnNext(v) <span class="kw">=&gt;</span> println(<span class="lit">"Got value "</span> + v)
   <span class="kw">case</span> OnCompleted() <span class="kw">=&gt;</span> println(<span class="lit">"Completed"</span>)
