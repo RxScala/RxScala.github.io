@@ -354,18 +354,18 @@ buffer is emitted, and the event is propagated.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">buffer</span><span class="params">(<span name="openings">openings: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<a href="util/package.html#Opening=rx.util.Opening" class="extmbr" name="rx.lang.scala.util.Opening">Opening</a>]</span>, <span name="closings">closings: (<a href="util/package.html#Opening=rx.util.Opening" class="extmbr" name="rx.lang.scala.util.Opening">Opening</a>) ⇒ <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<a href="util/package.html#Closing=rx.util.Closing" class="extmbr" name="rx.lang.scala.util.Closing">Closing</a>]</span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]]</span>
+        <span class="name">buffer</span><span class="params">(<span name="openings">openings: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.util.Opening">Opening</span>]</span>, <span name="closings">closings: (<span class="extype" name="rx.lang.scala.util.Opening">Opening</span>) ⇒ <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.util.Closing">Closing</span>]</span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Creates an Observable which produces buffers of collected values.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an Observable which produces buffers of collected values.</p><p>This Observable produces buffers. Buffers are created when the specified <code>openings</code>
-Observable produces a <a href="util/package.html#Opening=rx.util.Opening" class="extmbr" name="rx.lang.scala.util.Opening">rx.lang.scala.util.Opening</a> object. Additionally the function argument
-is used to create an Observable which produces <a href="util/package.html#Closing=rx.util.Closing" class="extmbr" name="rx.lang.scala.util.Closing">rx.lang.scala.util.Closing</a> objects. When this
+Observable produces a <span class="extype" name="rx.lang.scala.util.Opening">rx.lang.scala.util.Opening</span> object. Additionally the function argument
+is used to create an Observable which produces <span class="extype" name="rx.lang.scala.util.Closing">rx.lang.scala.util.Closing</span> objects. When this
 Observable produces such an object, the associated buffer is emitted.
 </p></div><dl class="paramcmts block"><dt class="param">openings</dt><dd class="cmt"><p>
-           The <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a> which, when it produces a <a href="util/package.html#Opening=rx.util.Opening" class="extmbr" name="rx.lang.scala.util.Opening">rx.lang.scala.util.Opening</a> object, will cause
+           The <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a> which, when it produces a <span class="extype" name="rx.lang.scala.util.Opening">rx.lang.scala.util.Opening</span> object, will cause
            another buffer to be created.</p></dd><dt class="param">closings</dt><dd class="cmt"><p>
            The function which is used to produce an <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a> for every buffer created.
-           When this <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a> produces a <a href="util/package.html#Closing=rx.util.Closing" class="extmbr" name="rx.lang.scala.util.Closing">rx.lang.scala.util.Closing</a> object, the associated buffer
+           When this <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a> produces a <span class="extype" name="rx.lang.scala.util.Closing">rx.lang.scala.util.Closing</span> object, the associated buffer
            is emitted.</p></dd><dt>returns</dt><dd class="cmt"><p>
         An <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a> which produces buffers which are created and emitted when the specified <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>s publish certain objects.
 </p></dd></dl></div>
@@ -378,18 +378,18 @@ Observable produces such an object, the associated buffer is emitted.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">buffer</span><span class="params">(<span name="closings">closings: () ⇒ <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<a href="util/package.html#Closing=rx.util.Closing" class="extmbr" name="rx.lang.scala.util.Closing">Closing</a>]</span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]]</span>
+        <span class="name">buffer</span><span class="params">(<span name="closings">closings: () ⇒ <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.util.Closing">Closing</span>]</span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Creates an Observable which produces buffers of collected values.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an Observable which produces buffers of collected values.</p><p>This Observable produces connected non-overlapping buffers. The current buffer is
-emitted and replaced with a new buffer when the Observable produced by the specified function produces a <a href="util/package.html#Closing=rx.util.Closing" class="extmbr" name="rx.lang.scala.util.Closing">rx.lang.scala.util.Closing</a> object. The function will then
+emitted and replaced with a new buffer when the Observable produced by the specified function produces a <span class="extype" name="rx.lang.scala.util.Closing">rx.lang.scala.util.Closing</span> object. The function will then
 be used to create a new Observable to listen for the end of the next buffer.
 </p></div><dl class="paramcmts block"><dt class="param">closings</dt><dd class="cmt"><p>
            The function which is used to produce an <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a> for every buffer created.
-           When this <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a> produces a <a href="util/package.html#Closing=rx.util.Closing" class="extmbr" name="rx.lang.scala.util.Closing">rx.lang.scala.util.Closing</a> object, the associated buffer
+           When this <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a> produces a <span class="extype" name="rx.lang.scala.util.Closing">rx.lang.scala.util.Closing</span> object, the associated buffer
            is emitted and replaced with a new one.</p></dd><dt>returns</dt><dd class="cmt"><p>
         An <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a> which produces connected non-overlapping buffers, which are emitted
-        when the current <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a> created with the function argument produces a <a href="util/package.html#Closing=rx.util.Closing" class="extmbr" name="rx.lang.scala.util.Closing">rx.lang.scala.util.Closing</a> object.
+        when the current <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a> created with the function argument produces a <span class="extype" name="rx.lang.scala.util.Closing">rx.lang.scala.util.Closing</span> object.
 </p></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#cache" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="cache:rx.lang.scala.Observable[T]"></a>
@@ -795,16 +795,16 @@ otherwise you'll get a compilation error.</p></div><dl class="paramcmts block"><
       </span>
       </h4></div>
           </div></dl></div>
-    </li><li name="rx.lang.scala.Observable#fold" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="fold[R](initialValue:R)(accumulator:(R,T)=&gt;R):rx.lang.scala.Observable[R]"></a>
-      <a id="fold[R](R)((R,T)⇒R):Observable[R]"></a>
+    </li><li name="rx.lang.scala.Observable#foldLeft" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="foldLeft[R](initialValue:R)(accumulator:(R,T)=&gt;R):rx.lang.scala.Observable[R]"></a>
+      <a id="foldLeft[R](R)((R,T)⇒R):Observable[R]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fold</span><span class="tparams">[<span name="R">R</span>]</span><span class="params">(<span name="initialValue">initialValue: <span class="extype" name="rx.lang.scala.Observable.fold.R">R</span></span>)</span><span class="params">(<span name="accumulator">accumulator: (<span class="extype" name="rx.lang.scala.Observable.fold.R">R</span>, <span class="extype" name="rx.lang.scala.Observable.T">T</span>) ⇒ <span class="extype" name="rx.lang.scala.Observable.fold.R">R</span></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.fold.R">R</span>]</span>
+        <span class="name">foldLeft</span><span class="tparams">[<span name="R">R</span>]</span><span class="params">(<span name="initialValue">initialValue: <span class="extype" name="rx.lang.scala.Observable.foldLeft.R">R</span></span>)</span><span class="params">(<span name="accumulator">accumulator: (<span class="extype" name="rx.lang.scala.Observable.foldLeft.R">R</span>, <span class="extype" name="rx.lang.scala.Observable.T">T</span>) ⇒ <span class="extype" name="rx.lang.scala.Observable.foldLeft.R">R</span></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.foldLeft.R">R</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Returns an Observable that applies a function of your choosing to the first item emitted by a
@@ -1725,28 +1725,6 @@ specified condition is true.</p><p><img width="640" src="https://github.com/Netf
            Boolean</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that emits the items from the source Observable so long as each item
         satisfies the condition defined by <code>predicate</code>
 </p></dd></dl></div>
-    </li><li name="rx.lang.scala.Observable#takeWhileWithIndex" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="takeWhileWithIndex(predicate:(T,Integer)=&gt;Boolean):rx.lang.scala.Observable[T]"></a>
-      <a id="takeWhileWithIndex((T,Integer)⇒Boolean):Observable[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">takeWhileWithIndex</span><span class="params">(<span name="predicate">predicate: (<span class="extype" name="rx.lang.scala.Observable.T">T</span>, <span class="extype" name="java.lang.Integer">Integer</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Returns an Observable that emits the items emitted by a source Observable so long as a given
-predicate remains true, where the predicate can operate on both the item and its index
-relative to the complete sequence.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that emits the items emitted by a source Observable so long as a given
-predicate remains true, where the predicate can operate on both the item and its index
-relative to the complete sequence.</p><p><img width="640" src="https://github.com/Netflix/RxJava/wiki/images/rx-operators/takeWhileWithIndex.png">
-</p></div><dl class="paramcmts block"><dt class="param">predicate</dt><dd class="cmt"><p>
-           a function to test each item emitted by the source Observable for a condition;
-           the second parameter of the function represents the index of the source item</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that emits items from the source Observable so long as the predicate
-        continues to return <code>true</code> for each item, then completes
-</p></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#throttleFirst" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="throttleFirst(skipDuration:scala.concurrent.duration.Duration):rx.lang.scala.Observable[T]"></a>
       <a id="throttleFirst(Duration):Observable[T]"></a>
@@ -1846,18 +1824,18 @@ relative to the complete sequence.</p><p><img width="640" src="https://github.co
 </p></dd><dt>returns</dt><dd class="cmt"><p>An <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a> which filters out values which are too quickly followed up with newer values.</p></dd></dl><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><code>Observable.debounce</code>
 </p></span></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#timestamp" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="timestamp:rx.lang.scala.Observable[rx.lang.scala.util.Timestamped[T]]"></a>
-      <a id="timestamp:Observable[Timestamped[T]]"></a>
+      <a id="timestamp:rx.lang.scala.Observable[(Long,T)]"></a>
+      <a id="timestamp:Observable[(Long,T)]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">timestamp</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<a href="util/Timestamped.html" class="extype" name="rx.lang.scala.util.Timestamped">Timestamped</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]]</span>
+        <span class="name">timestamp</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[(<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="rx.lang.scala.Observable.T">T</span>)]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Wraps each item emitted by a source Observable in a <a href="util/Timestamped.html" class="extype" name="rx.lang.scala.util.Timestamped">rx.lang.scala.util.Timestamped</a> object.</p><div class="fullcomment"><div class="comment cmt"><p>Wraps each item emitted by a source Observable in a <a href="util/Timestamped.html" class="extype" name="rx.lang.scala.util.Timestamped">rx.lang.scala.util.Timestamped</a> object.</p><p><img width="640" src="https://github.com/Netflix/RxJava/wiki/images/rx-operators/timestamp.png">
+      <p class="shortcomment cmt">Wraps each item emitted by a source Observable in a timestamped tuple.</p><div class="fullcomment"><div class="comment cmt"><p>Wraps each item emitted by a source Observable in a timestamped tuple.</p><p><img width="640" src="https://github.com/Netflix/RxJava/wiki/images/rx-operators/timestamp.png">
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>an Observable that emits timestamped items from the source Observable
 </p></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#toBlockingObservable" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -2097,18 +2075,18 @@ encounters an error, the current window is emitted, and the event is propagated.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">window</span><span class="params">(<span name="openings">openings: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<a href="util/package.html#Opening=rx.util.Opening" class="extmbr" name="rx.lang.scala.util.Opening">Opening</a>]</span>, <span name="closings">closings: (<a href="util/package.html#Opening=rx.util.Opening" class="extmbr" name="rx.lang.scala.util.Opening">Opening</a>) ⇒ <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<a href="util/package.html#Closing=rx.util.Closing" class="extmbr" name="rx.lang.scala.util.Closing">Closing</a>]</span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]]</span>
+        <span class="name">window</span><span class="params">(<span name="openings">openings: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.util.Opening">Opening</span>]</span>, <span name="closings">closings: (<span class="extype" name="rx.lang.scala.util.Opening">Opening</span>) ⇒ <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.util.Closing">Closing</span>]</span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Creates an Observable which produces windows of collected values.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an Observable which produces windows of collected values. This Observable produces windows.
-Chunks are created when the specified <code>openings</code> Observable produces a <a href="util/package.html#Opening=rx.util.Opening" class="extmbr" name="rx.lang.scala.util.Opening">rx.lang.scala.util.Opening</a> object.
-Additionally the <code>closings</code> argument is used to create an Observable which produces <a href="util/package.html#Closing=rx.util.Closing" class="extmbr" name="rx.lang.scala.util.Closing">rx.lang.scala.util.Closing</a> objects.
+Chunks are created when the specified <code>openings</code> Observable produces a <span class="extype" name="rx.lang.scala.util.Opening">rx.lang.scala.util.Opening</span> object.
+Additionally the <code>closings</code> argument is used to create an Observable which produces <span class="extype" name="rx.lang.scala.util.Closing">rx.lang.scala.util.Closing</span> objects.
 When this Observable produces such an object, the associated window is emitted.
 </p></div><dl class="paramcmts block"><dt class="param">openings</dt><dd class="cmt"><p>
-           The <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a> which when it produces a <a href="util/package.html#Opening=rx.util.Opening" class="extmbr" name="rx.lang.scala.util.Opening">rx.lang.scala.util.Opening</a> object, will cause
+           The <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a> which when it produces a <span class="extype" name="rx.lang.scala.util.Opening">rx.lang.scala.util.Opening</span> object, will cause
            another window to be created.</p></dd><dt class="param">closings</dt><dd class="cmt"><p>
            The function which is used to produce an <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a> for every window created.
-           When this <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a> produces a <a href="util/package.html#Closing=rx.util.Closing" class="extmbr" name="rx.lang.scala.util.Closing">rx.lang.scala.util.Closing</a> object, the associated window
+           When this <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a> produces a <span class="extype" name="rx.lang.scala.util.Closing">rx.lang.scala.util.Closing</span> object, the associated window
            is emitted.</p></dd><dt>returns</dt><dd class="cmt"><p>
         An <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a> which produces windows which are created and emitted when the specified <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>s publish certain objects.
 </p></dd></dl></div>
@@ -2121,20 +2099,20 @@ When this Observable produces such an object, the associated window is emitted.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">window</span><span class="params">(<span name="closings">closings: () ⇒ <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<a href="util/package.html#Closing=rx.util.Closing" class="extmbr" name="rx.lang.scala.util.Closing">Closing</a>]</span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]]</span>
+        <span class="name">window</span><span class="params">(<span name="closings">closings: () ⇒ <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.util.Closing">Closing</span>]</span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Creates an Observable which produces windows of collected values.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an Observable which produces windows of collected values. This Observable produces connected
 non-overlapping windows. The current window is emitted and replaced with a new window when the
-Observable produced by the specified function produces a <a href="util/package.html#Closing=rx.util.Closing" class="extmbr" name="rx.lang.scala.util.Closing">rx.lang.scala.util.Closing</a> object.
+Observable produced by the specified function produces a <span class="extype" name="rx.lang.scala.util.Closing">rx.lang.scala.util.Closing</span> object.
 The function will then be used to create a new Observable to listen for the end of the next
 window.
 </p></div><dl class="paramcmts block"><dt class="param">closings</dt><dd class="cmt"><p>
            The function which is used to produce an <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a> for every window created.
-           When this <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a> produces a <a href="util/package.html#Closing=rx.util.Closing" class="extmbr" name="rx.lang.scala.util.Closing">rx.lang.scala.util.Closing</a> object, the associated window
+           When this <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a> produces a <span class="extype" name="rx.lang.scala.util.Closing">rx.lang.scala.util.Closing</span> object, the associated window
            is emitted and replaced with a new one.</p></dd><dt>returns</dt><dd class="cmt"><p>
         An <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a> which produces connected non-overlapping windows, which are emitted
-        when the current <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a> created with the function argument produces a <a href="util/package.html#Closing=rx.util.Closing" class="extmbr" name="rx.lang.scala.util.Closing">rx.lang.scala.util.Closing</a> object.
+        when the current <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a> created with the function argument produces a <span class="extype" name="rx.lang.scala.util.Closing">rx.lang.scala.util.Closing</span> object.
 </p></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#withFilter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="withFilter(p:T=&gt;Boolean):rx.lang.scala.WithFilter[T]"></a>
