@@ -2,17 +2,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>Observer - rxjava-scala 0.14.2-SNAPSHOT API - rx.lang.scala.Observer</title>
-          <meta name="description" content="Observer - rxjava - scala 0.14.2 - SNAPSHOT API - rx.lang.scala.Observer" />
-          <meta name="keywords" content="Observer rxjava scala 0.14.2 SNAPSHOT API rx.lang.scala.Observer" />
+          <title>SerialSubscription - rxjava-scala 0.15.1-SNAPSHOT API - rx.lang.scala.subscriptions.SerialSubscription</title>
+          <meta name="description" content="SerialSubscription - rxjava - scala 0.15.1 - SNAPSHOT API - rx.lang.scala.subscriptions.SerialSubscription" />
+          <meta name="keywords" content="SerialSubscription rxjava scala 0.15.1 SNAPSHOT API rx.lang.scala.subscriptions.SerialSubscription" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
-      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
       <script type="text/javascript">
          if(top === self) {
-            var url = '../../../index.html';
-            var hash = 'rx.lang.scala.package$$Observer';
+            var url = '../../../../index.html';
+            var hash = 'rx.lang.scala.subscriptions.SerialSubscription';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -24,27 +24,25 @@
         </head>
         <body class="type">
       <div id="definition">
-        <img src="../../../lib/trait_big.png" />
-        <p id="owner"><a href="../../package.html" class="extype" name="rx">rx</a>.<a href="../package.html" class="extype" name="rx.lang">lang</a>.<a href="package.html" class="extype" name="rx.lang.scala">scala</a></p>
-        <h1>Observer</h1>
+        <a href="SerialSubscription$.html" title="Go to companion"><img src="../../../../lib/class_to_object_big.png" /></a>
+        <p id="owner"><a href="../../../package.html" class="extype" name="rx">rx</a>.<a href="../../package.html" class="extype" name="rx.lang">lang</a>.<a href="../package.html" class="extype" name="rx.lang.scala">scala</a>.<a href="package.html" class="extype" name="rx.lang.scala.subscriptions">subscriptions</a></p>
+        <h1><a href="SerialSubscription$.html" title="Go to companion">SerialSubscription</a></h1>
       </div>
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">trait</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">Observer</span><span class="tparams">[<span name="T">-T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">SerialSubscription</span><span class="result"> extends <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Provides a mechanism for receiving push-based notifications.</p><p>After an Observer calls an <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>'s <code>subscribe</code> method, the Observable
-calls the Observer's <code>onNext</code> method to provide notifications. A well-behaved Observable will
-call an Observer's <code>onCompleted</code> method exactly once or the Observer's <code>onError</code> method exactly once.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Represents a <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">rx.lang.scala.Subscription</a> that can be checked for status.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -62,7 +60,7 @@ call an Observer's <code>onCompleted</code> method exactly once or the Observer'
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="rx.lang.scala.Observer"><span>Observer</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="rx.lang.scala.subscriptions.SerialSubscription"><span>SerialSubscription</span></li><li class="in" name="rx.lang.scala.Subscription"><span>Subscription</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -84,55 +82,10 @@ call an Observer's <code>onCompleted</code> method exactly once or the Observer'
 
         
 
-        <div id="values" class="values members">
-              <h3>Abstract Value Members</h3>
-              <ol><li name="rx.lang.scala.Observer#onCompleted" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="onCompleted():Unit"></a>
-      <a id="onCompleted():Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">onCompleted</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Notifies the Observer that the <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a> has finished sending push-based notifications.</p><div class="fullcomment"><div class="comment cmt"><p>Notifies the Observer that the <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a> has finished sending push-based notifications.</p><p>The <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a> will not call this method if it calls <code>onError</code>.
-</p></div></div>
-    </li><li name="rx.lang.scala.Observer#onError" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="onError(e:Throwable):Unit"></a>
-      <a id="onError(Throwable):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">onError</span><span class="params">(<span name="e">e: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Notifies the Observer that the <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a> has experienced an error condition.</p><div class="fullcomment"><div class="comment cmt"><p>Notifies the Observer that the <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a> has experienced an error condition.</p><p>If the <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a> calls this method, it will not thereafter call <code>onNext</code> or <code>onCompleted</code>.
-</p></div></div>
-    </li><li name="rx.lang.scala.Observer#onNext" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="onNext(arg:T):Unit"></a>
-      <a id="onNext(T):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">onNext</span><span class="params">(<span name="arg">arg: <span class="extype" name="rx.lang.scala.Observer.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Provides the Observer with new data.</p><div class="fullcomment"><div class="comment cmt"><p>Provides the Observer with new data.</p><p>The <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a> calls this closure 0 or more times.</p><p>The <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a> will not call this method again after it calls either <code>onCompleted</code> or <code>onError</code>.
-</p></div></div>
-    </li></ol>
-            </div>
+        
 
         <div id="values" class="values members">
-              <h3>Concrete Value Members</h3>
+              <h3>Value Members</h3>
               <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:AnyRef):Boolean"></a>
       <a id="!=(AnyRef):Boolean"></a>
@@ -211,6 +164,19 @@ call an Observer's <code>onCompleted</code> method exactly once or the Observer'
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="rx.lang.scala.subscriptions.SerialSubscription#asJavaSubscription" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asJavaSubscription:rx.subscriptions.SerialSubscription"></a>
+      <a id="asJavaSubscription:subscriptions.SerialSubscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asJavaSubscription</span><span class="result">: <span class="extype" name="rx.subscriptions.SerialSubscription">subscriptions.SerialSubscription</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="rx.lang.scala.subscriptions.SerialSubscription">SerialSubscription</a> → <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -223,7 +189,7 @@ call an Observer's <code>onCompleted</code> method exactly once or the Observer'
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
@@ -268,7 +234,7 @@ call an Observer's <code>onCompleted</code> method exactly once or the Observer'
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
@@ -314,6 +280,20 @@ call an Observer's <code>onCompleted</code> method exactly once or the Observer'
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="rx.lang.scala.subscriptions.SerialSubscription#isUnsubscribed" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isUnsubscribed:Boolean"></a>
+      <a id="isUnsubscribed:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isUnsubscribed</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Checks whether the subscription has been unsubscribed.</p><div class="fullcomment"><div class="comment cmt"><p>Checks whether the subscription has been unsubscribed.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="rx.lang.scala.subscriptions.SerialSubscription">SerialSubscription</a> → <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -353,6 +333,32 @@ call an Observer's <code>onCompleted</code> method exactly once or the Observer'
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="rx.lang.scala.subscriptions.SerialSubscription#subscription" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="subscription:rx.lang.scala.Subscription"></a>
+      <a id="subscription:Subscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">subscription</span><span class="result">: <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="rx.lang.scala.subscriptions.SerialSubscription#subscription_=" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="subscription_=(value:rx.lang.scala.Subscription):Unit"></a>
+      <a id="subscription_=(Subscription):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: subscription_$eq" class="name">subscription_=</span><span class="params">(<span name="value">value: <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -379,6 +385,20 @@ call an Observer's <code>onCompleted</code> method exactly once or the Observer'
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="rx.lang.scala.subscriptions.SerialSubscription#unsubscribe" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="unsubscribe():Unit"></a>
+      <a id="unsubscribe():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">unsubscribe</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Unsubscribes this subscription, setting isUnsubscribed to true.</p><div class="fullcomment"><div class="comment cmt"><p>Unsubscribes this subscription, setting isUnsubscribed to true.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="rx.lang.scala.subscriptions.SerialSubscription">SerialSubscription</a> → <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -445,7 +465,9 @@ call an Observer's <code>onCompleted</code> method exactly once or the Observer'
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="rx.lang.scala.Subscription">
+              <h3>Inherited from <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
@@ -465,6 +487,6 @@ call an Observer's <code>onCompleted</code> method exactly once or the Observer'
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../lib/template.js"></script>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../lib/template.js"></script>
     </body>
       </html>

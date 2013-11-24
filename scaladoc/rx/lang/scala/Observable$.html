@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>Observable - rxjava-scala 0.14.2-SNAPSHOT API - rx.lang.scala.Observable</title>
-          <meta name="description" content="Observable - rxjava - scala 0.14.2 - SNAPSHOT API - rx.lang.scala.Observable" />
-          <meta name="keywords" content="Observable rxjava scala 0.14.2 SNAPSHOT API rx.lang.scala.Observable" />
+          <title>Observable - rxjava-scala 0.15.1-SNAPSHOT API - rx.lang.scala.Observable</title>
+          <meta name="description" content="Observable - rxjava - scala 0.15.1 - SNAPSHOT API - rx.lang.scala.Observable" />
+          <meta name="keywords" content="Observable rxjava scala 0.15.1 SNAPSHOT API rx.lang.scala.Observable" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -24,7 +24,7 @@
         </head>
         <body class="value">
       <div id="definition">
-        <a href="Observable.html" title="Go to companion"><img src="../../../lib/object_to_class_big.png" /></a>
+        <a href="Observable.html" title="Go to companion"><img src="../../../lib/object_to_trait_big.png" /></a>
         <p id="owner"><a href="../../package.html" class="extype" name="rx">rx</a>.<a href="../package.html" class="extype" name="rx.lang">lang</a>.<a href="package.html" class="extype" name="rx.lang.scala">scala</a></p>
         <h1><a href="Observable.html" title="Go to companion">Observable</a></h1>
       </div>
@@ -163,13 +163,13 @@
         <span class="name">apply</span><span class="params">(<span name="range">range: <span class="extype" name="scala.collection.immutable.Range">Range</span></span>)</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Generates an Observable that emits a sequence of integers within a specified range.</p><div class="fullcomment"><div class="comment cmt"><p>Generates an Observable that emits a sequence of integers within a specified range.</p><p><img width="640" src="https://github.com/Netflix/RxJava/wiki/images/rx-operators/range.png"></p><p>Implementation note: the entire range will be immediately emitted each time an <a href="package$$Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a> subscribes.
-Since this occurs before the <a href="package$$Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a> is returned,
+      <p class="shortcomment cmt">Generates an Observable that emits a sequence of integers within a specified range.</p><div class="fullcomment"><div class="comment cmt"><p>Generates an Observable that emits a sequence of integers within a specified range.</p><p><img width="640" src="https://github.com/Netflix/RxJava/wiki/images/rx-operators/range.png"></p><p>Implementation note: the entire range will be immediately emitted each time an <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a> subscribes.
+Since this occurs before the <a href="Subscription.html" class="extype" name="rx.lang.scala.Subscription">rx.lang.scala.Subscription</a> is returned,
 it in not possible to unsubscribe from the sequence before it completes.
 </p></div><dl class="paramcmts block"><dt class="param">range</dt><dd class="cmt"><p>the range</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that emits a range of sequential integers
 </p></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply[T](args:T*):rx.lang.scala.Observable[T]"></a>
+      <a id="apply[T](items:T*):rx.lang.scala.Observable[T]"></a>
       <a id="apply[T](T*):Observable[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -177,15 +177,16 @@ it in not possible to unsubscribe from the sequence before it completes.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="args">args: <span class="extype" name="rx.lang.scala.Observable.apply.T">T</span>*</span>)</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.apply.T">T</span>]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="items">items: <span class="extype" name="rx.lang.scala.Observable.apply.T">T</span>*</span>)</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.apply.T">T</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Converts a sequence of values into an Observable.</p><div class="fullcomment"><div class="comment cmt"><p>Converts a sequence of values into an Observable.</p><p><img width="640" src="https://github.com/Netflix/RxJava/wiki/images/rx-operators/from.png"></p><p>Implementation note: the entire array will be immediately emitted each time an <a href="package$$Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a> subscribes.
-Since this occurs before the <a href="package$$Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a> is returned,
+      <p class="shortcomment cmt">Converts a sequence of values into an Observable.</p><div class="fullcomment"><div class="comment cmt"><p>Converts a sequence of values into an Observable.</p><p><img width="640" src="https://github.com/Netflix/RxJava/wiki/images/rx-operators/from.png"></p><p>Implementation note: the entire array will be immediately emitted each time an <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a> subscribes.
+Since this occurs before the <a href="Subscription.html" class="extype" name="rx.lang.scala.Subscription">rx.lang.scala.Subscription</a> is returned,
 it in not possible to unsubscribe from the sequence before it completes.
 </p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>
            the type of items in the Array, and the type of items to be emitted by the
-           resulting Observable</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that emits each item in the source Array
+           resulting Observable</p></dd><dt class="param">items</dt><dd class="cmt"><p>
+           the source Array</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that emits each item in the source Array
 </p></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="apply[T](exception:Throwable):rx.lang.scala.Observable[T]"></a>
@@ -199,10 +200,10 @@ it in not possible to unsubscribe from the sequence before it completes.
         <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="exception">exception: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.apply.T">T</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Returns an Observable that invokes an <a href="package$$Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>'s <a href="package$$Observer.html#onError(e:Throwable):Unit" class="extmbr" name="rx.lang.scala.Observer#onError">onError</a> method when the Observer subscribes to it</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that invokes an <a href="package$$Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>'s <a href="package$$Observer.html#onError(e:Throwable):Unit" class="extmbr" name="rx.lang.scala.Observer#onError">onError</a> method when the Observer subscribes to it</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/error.png">
+      <p class="shortcomment cmt">Returns an Observable that invokes an <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a>'s <a href="Observer.html#onError(error:Throwable):Unit" class="extmbr" name="rx.lang.scala.Observer#onError">onError</a> method when the Observer subscribes to it</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that invokes an <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a>'s <a href="Observer.html#onError(error:Throwable):Unit" class="extmbr" name="rx.lang.scala.Observer#onError">onError</a> method when the Observer subscribes to it</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/error.png">
 </p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>
            the type of the items (ostensibly) emitted by the Observable</p></dd><dt class="param">exception</dt><dd class="cmt"><p>
-           the particular error to report</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that invokes the <a href="package$$Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>'s <a href="package$$Observer.html#onError(e:Throwable):Unit" class="extmbr" name="rx.lang.scala.Observer#onError">onError</a> method when the Observer subscribes to it
+           the particular error to report</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that invokes the <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a>'s <a href="Observer.html#onError(error:Throwable):Unit" class="extmbr" name="rx.lang.scala.Observer#onError">onError</a> method when the Observer subscribes to it
 </p></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="apply[T](func:rx.lang.scala.Observer[T]=&gt;rx.lang.scala.Subscription):rx.lang.scala.Observable[T]"></a>
@@ -213,22 +214,22 @@ it in not possible to unsubscribe from the sequence before it completes.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="func">func: (<a href="package$$Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.Observable.apply.T">T</span>]) ⇒ <a href="package$$Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>)</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.apply.T">T</span>]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="func">func: (<a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.Observable.apply.T">T</span>]) ⇒ <a href="Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>)</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.apply.T">T</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Creates an Observable that will execute the given function when an <a href="package$$Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a> subscribes to it.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an Observable that will execute the given function when an <a href="package$$Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a> subscribes to it.</p><p><img width="640" src="https://github.com/Netflix/RxJava/wiki/images/rx-operators/create.png"></p><p>Write the function you pass to <code>create</code> so that it behaves as an Observable: It
-should invoke the Observer's <a href="package$$Observer.html#onNext(arg:T):Unit" class="extmbr" name="rx.lang.scala.Observer#onNext">onNext</a>, <a href="package$$Observer.html#onError(e:Throwable):Unit" class="extmbr" name="rx.lang.scala.Observer#onError">onError</a>, and <a href="package$$Observer.html#onCompleted():Unit" class="extmbr" name="rx.lang.scala.Observer#onCompleted">onCompleted</a> methods
+      <p class="shortcomment cmt">Creates an Observable that will execute the given function when an <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a> subscribes to it.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an Observable that will execute the given function when an <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a> subscribes to it.</p><p><img width="640" src="https://github.com/Netflix/RxJava/wiki/images/rx-operators/create.png"></p><p>Write the function you pass to <code>create</code> so that it behaves as an Observable: It
+should invoke the Observer's <a href="Observer.html#onNext(value:T):Unit" class="extmbr" name="rx.lang.scala.Observer#onNext">onNext</a>, <a href="Observer.html#onError(error:Throwable):Unit" class="extmbr" name="rx.lang.scala.Observer#onError">onError</a>, and <a href="Observer.html#onCompleted():Unit" class="extmbr" name="rx.lang.scala.Observer#onCompleted">onCompleted</a> methods
 appropriately.</p><p>A well-formed Observable must invoke either the Observer's <code>onCompleted</code> method
 exactly once or its <code>onError</code> method exactly once.</p><p>See <a href="http://go.microsoft.com/fwlink/?LinkID=205219">Rx Design Guidelines (PDF)</a>
 for detailed information.</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>
            the type of the items that this Observable emits</p></dd><dt class="param">func</dt><dd class="cmt"><p>
            a function that accepts an <code>Observer[T]</code>, invokes its <code>onNext</code>, <code>onError</code>, and <code>onCompleted</code> methods
-           as appropriate, and returns a <a href="package$$Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a> to allow the Observer to
-           canceling the subscription</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that, when an <a href="package$$Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a> subscribes to it, will execute the given
+           as appropriate, and returns a <a href="Subscription.html" class="extype" name="rx.lang.scala.Subscription">rx.lang.scala.Subscription</a> to allow the Observer to
+           canceling the subscription</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that, when an <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a> subscribes to it, will execute the given
         function
 </p></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply[T](asJava:rx.Observable[_&lt;:T]):rx.lang.scala.Observable[T]"></a>
+      <a id="apply[T](observable:rx.Observable[_&lt;:T]):rx.lang.scala.Observable[T]"></a>
       <a id="apply[T](rx.Observable[_&lt;:T]):Observable[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -236,7 +237,7 @@ for detailed information.</p></div><dl class="paramcmts block"><dt class="tparam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="asJava">asJava: <span class="extype" name="rx.Observable">rx.Observable</span>[_ &lt;: <span class="extype" name="rx.lang.scala.Observable.apply.T">T</span>]</span>)</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.apply.T">T</span>]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="observable">observable: <span class="extype" name="rx.Observable">rx.Observable</span>[_ &lt;: <span class="extype" name="rx.lang.scala.Observable.apply.T">T</span>]</span>)</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.apply.T">T</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Creates a new Scala Observable from a given Java Observable.</p>
@@ -288,10 +289,12 @@ for detailed information.</p></div><dl class="paramcmts block"><dt class="tparam
 new Observer that subscribes.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that calls an Observable factory to create its Observable for each
 new Observer that subscribes. That is, for each subscriber, the actual Observable is determined
 by the factory function.</p><p><img width="640" src="https://github.com/Netflix/RxJava/wiki/images/rx-operators/defer.png"></p><p>The defer operator allows you to defer or delay emitting items from an Observable until such
-time as an Observer subscribes to the Observable. This allows an <a href="package$$Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a> to easily
+time as an Observer subscribes to the Observable. This allows an <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a> to easily
 obtain updates or a refreshed version of the sequence.
 </p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>
-           the type of the items emitted by the Observable</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable whose <a href="package$$Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>s trigger an invocation of the given Observable
+           the type of the items emitted by the Observable</p></dd><dt class="param">observable</dt><dd class="cmt"><p>
+           the Observable factory function to invoke for each <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a> that
+           subscribes to the resulting Observable</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable whose <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a>s trigger an invocation of the given Observable
         factory function
 </p></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -436,8 +439,8 @@ obtain updates or a refreshed version of the sequence.
         <span class="name">never</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="scala.Nothing">Nothing</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Returns an Observable that never sends any items or notifications to an <a href="package$$Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that never sends any items or notifications to an <a href="package$$Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>.</p><p><img width="640" src="https://github.com/Netflix/RxJava/wiki/images/rx-operators/never.png"></p><p>This Observable is useful primarily for testing purposes.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>an Observable that never sends any items or notifications to an <a href="package$$Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>
+      <p class="shortcomment cmt">Returns an Observable that never sends any items or notifications to an <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that never sends any items or notifications to an <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a>.</p><p><img width="640" src="https://github.com/Netflix/RxJava/wiki/images/rx-operators/never.png"></p><p>This Observable is useful primarily for testing purposes.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>an Observable that never sends any items or notifications to an <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a>
 </p></dd></dl></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>

@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>BlockingObservable - rxjava-scala 0.14.2-SNAPSHOT API - rx.lang.scala.observables.BlockingObservable</title>
-          <meta name="description" content="BlockingObservable - rxjava - scala 0.14.2 - SNAPSHOT API - rx.lang.scala.observables.BlockingObservable" />
-          <meta name="keywords" content="BlockingObservable rxjava scala 0.14.2 SNAPSHOT API rx.lang.scala.observables.BlockingObservable" />
+          <title>BlockingObservable - rxjava-scala 0.15.1-SNAPSHOT API - rx.lang.scala.observables.BlockingObservable</title>
+          <meta name="description" content="BlockingObservable - rxjava - scala 0.15.1 - SNAPSHOT API - rx.lang.scala.observables.BlockingObservable" />
+          <meta name="keywords" content="BlockingObservable rxjava scala 0.15.1 SNAPSHOT API rx.lang.scala.observables.BlockingObservable" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -39,7 +39,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>An Observable that provides blocking operators.</p><p>You can obtain a BlockingObservable from an Observable using <a href="../Observable.html#toBlockingObservable:rx.lang.scala.observables.BlockingObservable[T]" class="extmbr" name="rx.lang.scala.Observable#toBlockingObservable">Observable.toBlockingObservable</a>
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>An Observable that provides blocking operators.</p><p>You can obtain a BlockingObservable from an Observable using <a href="../Observable.html#toBlockingObservable:rx.lang.scala.observables.BlockingObservable[T]" class="extmbr" name="rx.lang.scala.Observable#toBlockingObservable">rx.lang.scala.Observable.toBlockingObservable</a>
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyVal">AnyVal</span>, <span class="extype" name="scala.NotNull">NotNull</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -167,7 +167,8 @@
 completes.</p><div class="fullcomment"><div class="comment cmt"><p>Invoke a method on each item emitted by the <code> Observable</code>; block until the Observable
 completes.</p><p>NOTE: This will block even if the Observable is asynchronous.</p><p>This is similar to <code> Observable#subscribe(Observer)</code>, but it blocks. Because it blocks it does
 not need the <code> Observer#onCompleted()</code> or <code> Observer#onError(Throwable)</code> methods.</p><p><img width="640" src="https://github.com/Netflix/RxJava/wiki/images/rx-operators/B.forEach.png">
-</p></div><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">RuntimeException<p>
+</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>
+           the <code> Action1</code> to invoke for every item emitted by the <code> Observable</code></p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">RuntimeException<p>
             if an error occurs
 </p></span></dd></dl></div>
     </li><li name="scala.AnyVal#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">

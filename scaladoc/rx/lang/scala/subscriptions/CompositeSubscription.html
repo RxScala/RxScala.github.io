@@ -2,17 +2,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>Subscription - rxjava-scala 0.14.2-SNAPSHOT API - rx.lang.scala.Subscription</title>
-          <meta name="description" content="Subscription - rxjava - scala 0.14.2 - SNAPSHOT API - rx.lang.scala.Subscription" />
-          <meta name="keywords" content="Subscription rxjava scala 0.14.2 SNAPSHOT API rx.lang.scala.Subscription" />
+          <title>CompositeSubscription - rxjava-scala 0.15.1-SNAPSHOT API - rx.lang.scala.subscriptions.CompositeSubscription</title>
+          <meta name="description" content="CompositeSubscription - rxjava - scala 0.15.1 - SNAPSHOT API - rx.lang.scala.subscriptions.CompositeSubscription" />
+          <meta name="keywords" content="CompositeSubscription rxjava scala 0.15.1 SNAPSHOT API rx.lang.scala.subscriptions.CompositeSubscription" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
-      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
       <script type="text/javascript">
          if(top === self) {
-            var url = '../../../index.html';
-            var hash = 'rx.lang.scala.package$$Subscription';
+            var url = '../../../../index.html';
+            var hash = 'rx.lang.scala.subscriptions.CompositeSubscription';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -24,25 +24,25 @@
         </head>
         <body class="type">
       <div id="definition">
-        <img src="../../../lib/trait_big.png" />
-        <p id="owner"><a href="../../package.html" class="extype" name="rx">rx</a>.<a href="../package.html" class="extype" name="rx.lang">lang</a>.<a href="package.html" class="extype" name="rx.lang.scala">scala</a></p>
-        <h1>Subscription</h1>
+        <a href="CompositeSubscription$.html" title="Go to companion"><img src="../../../../lib/class_to_object_big.png" /></a>
+        <p id="owner"><a href="../../../package.html" class="extype" name="rx">rx</a>.<a href="../../package.html" class="extype" name="rx.lang">lang</a>.<a href="../package.html" class="extype" name="rx.lang.scala">scala</a>.<a href="package.html" class="extype" name="rx.lang.scala.subscriptions">subscriptions</a></p>
+        <h1><a href="CompositeSubscription$.html" title="Go to companion">CompositeSubscription</a></h1>
       </div>
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">trait</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">Subscription</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">CompositeSubscription</span><span class="result"> extends <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Subscriptions are returned from all <code>Observable.subscribe</code> methods to allow unsubscribing.</p><p>This interface is the equivalent of <code>IDisposable</code> in the .NET Rx implementation.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Represents a group of <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">rx.lang.scala.Subscription</a> that are disposed together.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -60,7 +60,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="rx.lang.scala.Subscription"><span>Subscription</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="rx.lang.scala.subscriptions.CompositeSubscription"><span>CompositeSubscription</span></li><li class="in" name="rx.lang.scala.Subscription"><span>Subscription</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -82,27 +82,10 @@
 
         
 
-        <div id="values" class="values members">
-              <h3>Abstract Value Members</h3>
-              <ol><li name="rx.lang.scala.Subscription#unsubscribe" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="unsubscribe():Unit"></a>
-      <a id="unsubscribe():Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">unsubscribe</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Call this method to stop receiving notifications on the Observer that was registered when
-this Subscription was received.</p>
-    </li></ol>
-            </div>
+        
 
         <div id="values" class="values members">
-              <h3>Concrete Value Members</h3>
+              <h3>Value Members</h3>
               <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:AnyRef):Boolean"></a>
       <a id="!=(AnyRef):Boolean"></a>
@@ -142,6 +125,36 @@ this Subscription was received.</p>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="rx.lang.scala.subscriptions.CompositeSubscription#+=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+=(subscription:rx.lang.scala.Subscription):CompositeSubscription.this.type"></a>
+      <a id="+=(Subscription):CompositeSubscription.this.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus$eq" class="name">+=</span><span class="params">(<span name="subscription">subscription: <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.subscriptions.CompositeSubscription">CompositeSubscription</a>.this.type</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Adds a subscription to the group,
+or unsubscribes immediately is the <span class="extype" name="rx.subscriptions.CompositeSubscription">rx.subscriptions.CompositeSubscription</span> is unsubscribed.</p><div class="fullcomment"><div class="comment cmt"><p>Adds a subscription to the group,
+or unsubscribes immediately is the <span class="extype" name="rx.subscriptions.CompositeSubscription">rx.subscriptions.CompositeSubscription</span> is unsubscribed.</p></div><dl class="paramcmts block"><dt class="param">subscription</dt><dd class="cmt"><p>the subscription to be added.</p></dd><dt>returns</dt><dd class="cmt"><p>the <span class="extype" name="rx.subscriptions.CompositeSubscription">rx.subscriptions.CompositeSubscription</span> itself.
+</p></dd></dl></div>
+    </li><li name="rx.lang.scala.subscriptions.CompositeSubscription#-=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-=(subscription:rx.lang.scala.Subscription):CompositeSubscription.this.type"></a>
+      <a id="-=(Subscription):CompositeSubscription.this.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$eq" class="name">-=</span><span class="params">(<span name="subscription">subscription: <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.subscriptions.CompositeSubscription">CompositeSubscription</a>.this.type</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Removes and unsubscribes a subscription to the group,</p><div class="fullcomment"><div class="comment cmt"><p>Removes and unsubscribes a subscription to the group,</p></div><dl class="paramcmts block"><dt class="param">subscription</dt><dd class="cmt"><p>the subscription be removed.</p></dd><dt>returns</dt><dd class="cmt"><p>the <span class="extype" name="rx.subscriptions.CompositeSubscription">rx.subscriptions.CompositeSubscription</span> itself.
+</p></dd></dl></div>
     </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:AnyRef):Boolean"></a>
       <a id="==(AnyRef):Boolean"></a>
@@ -181,6 +194,19 @@ this Subscription was received.</p>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="rx.lang.scala.subscriptions.CompositeSubscription#asJavaSubscription" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asJavaSubscription:rx.subscriptions.CompositeSubscription"></a>
+      <a id="asJavaSubscription:subscriptions.CompositeSubscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asJavaSubscription</span><span class="result">: <span class="extype" name="rx.subscriptions.CompositeSubscription">subscriptions.CompositeSubscription</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="rx.lang.scala.subscriptions.CompositeSubscription">CompositeSubscription</a> → <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -193,7 +219,7 @@ this Subscription was received.</p>
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
@@ -238,7 +264,7 @@ this Subscription was received.</p>
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
@@ -284,6 +310,20 @@ this Subscription was received.</p>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="rx.lang.scala.subscriptions.CompositeSubscription#isUnsubscribed" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isUnsubscribed:Boolean"></a>
+      <a id="isUnsubscribed:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isUnsubscribed</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Checks whether the subscription has been unsubscribed.</p><div class="fullcomment"><div class="comment cmt"><p>Checks whether the subscription has been unsubscribed.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="rx.lang.scala.subscriptions.CompositeSubscription">CompositeSubscription</a> → <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -349,6 +389,22 @@ this Subscription was received.</p>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="rx.lang.scala.Subscription#unsubscribe" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="unsubscribe():Unit"></a>
+      <a id="unsubscribe():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">unsubscribe</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Call this method to stop receiving notifications on the Observer that was registered when
+this Subscription was received.</p><div class="fullcomment"><div class="comment cmt"><p>Call this method to stop receiving notifications on the Observer that was registered when
+this Subscription was received.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -415,7 +471,9 @@ this Subscription was received.</p>
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="rx.lang.scala.Subscription">
+              <h3>Inherited from <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
@@ -435,6 +493,6 @@ this Subscription was received.</p>
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../lib/template.js"></script>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../lib/template.js"></script>
     </body>
       </html>

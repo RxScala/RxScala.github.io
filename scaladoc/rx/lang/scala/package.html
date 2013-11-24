@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>scala - rxjava-scala 0.14.2-SNAPSHOT API - rx.lang.scala</title>
-          <meta name="description" content="scala - rxjava - scala 0.14.2 - SNAPSHOT API - rx.lang.scala" />
-          <meta name="keywords" content="scala rxjava scala 0.14.2 SNAPSHOT API rx.lang.scala" />
+          <title>scala - rxjava-scala 0.15.1-SNAPSHOT API - rx.lang.scala</title>
+          <meta name="description" content="scala - rxjava - scala 0.15.1 - SNAPSHOT API - rx.lang.scala" />
+          <meta name="keywords" content="scala rxjava scala 0.15.1 SNAPSHOT API rx.lang.scala" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -95,17 +95,17 @@ will not need are left out.
         <a href="Notification.html"><span class="name">Notification</span></a><span class="tparams">[<span name="T">+T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      <p class="comment cmt">Emitted by Observables returned by <a href="Observable.html#materialize:rx.lang.scala.Observable[rx.lang.scala.Notification[T]]" class="extmbr" name="rx.lang.scala.Observable#materialize">Observable.materialize</a>.</p>
-    </li><li name="rx.lang.scala.Observable" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Observable[+T]extendsAnyVal"></a>
+      <p class="comment cmt">Emitted by Observables returned by <a href="Observable.html#materialize:rx.lang.scala.Observable[rx.lang.scala.Notification[T]]" class="extmbr" name="rx.lang.scala.Observable#materialize">rx.lang.scala.Observable.materialize</a>.</p>
+    </li><li name="rx.lang.scala.Observable" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Observable[+T]extendsAnyRef"></a>
       <a id="Observable[+T]:Observable[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">class</span>
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="Observable.html"><span class="name">Observable</span></a><span class="tparams">[<span name="T">+T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyVal">AnyVal</span></span>
+        <a href="Observable.html"><span class="name">Observable</span></a><span class="tparams">[<span name="T">+T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       <p class="comment cmt">The Observable interface that implements the Reactive Pattern.</p>
@@ -118,10 +118,10 @@ will not need are left out.
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="package$$Observer.html"><span class="name">Observer</span></a><span class="tparams">[<span name="T">-T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="Observer.html"><span class="name">Observer</span></a><span class="tparams">[<span name="T">-T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      <p class="comment cmt">Provides a mechanism for receiving push-based notifications.</p>
+      <p class="comment cmt"> Provides a mechanism for receiving push-based notifications.</p>
     </li><li name="rx.lang.scala.Scheduler" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="SchedulerextendsAnyRef"></a>
       <a id="Scheduler:Scheduler"></a>
@@ -134,7 +134,20 @@ will not need are left out.
         <a href="Scheduler.html"><span class="name">Scheduler</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      <p class="comment cmt">Represents an object that schedules units of work.</p>
+      <p class="comment cmt">Represents an object thatimport rx.</p>
+    </li><li name="rx.lang.scala.Subject" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Subject[-T,+R]extendsObservable[R]withObserver[T]"></a>
+      <a id="Subject[-T,+R]:Subject[T,R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Subject.html"><span class="name">Subject</span></a><span class="tparams">[<span name="T">-T</span>, <span name="R">+R</span>]</span><span class="result"> extends <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Subject.R">R</span>] with <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.Subject.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A Subject is an Observable and an Observer at the same time.</p>
     </li><li name="rx.lang.scala.Subscription" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="SubscriptionextendsAnyRef"></a>
       <a id="Subscription:Subscription"></a>
@@ -144,7 +157,7 @@ will not need are left out.
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="package$$Subscription.html"><span class="name">Subscription</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="Subscription.html"><span class="name">Subscription</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       <p class="comment cmt">Subscriptions are returned from all <code>Observable.subscribe</code> methods to allow unsubscribing.</p>
@@ -194,6 +207,19 @@ will not need are left out.
       </span>
       </h4>
       <p class="comment cmt">Provides various ways to construct new Observables.</p>
+    </li><li name="rx.lang.scala.Observer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Observer"></a>
+      <a id="Observer:Observer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Observer$.html"><span class="name">Observer</span></a>
+      </span>
+      </h4>
+      
     </li><li name="rx.lang.scala.Scheduler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Scheduler"></a>
       <a id="Scheduler:Scheduler"></a>
@@ -207,6 +233,19 @@ will not need are left out.
       </span>
       </h4>
       <p class="comment cmt">Provides constructors for Schedulers.</p>
+    </li><li name="rx.lang.scala.Subscription" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Subscription"></a>
+      <a id="Subscription:Subscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Subscription$.html"><span class="name">Subscription</span></a>
+      </span>
+      </h4>
+      
     </li><li name="rx.lang.scala.concurrency" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="concurrency"></a>
       <a id="concurrency:concurrency"></a>
@@ -253,6 +292,32 @@ o.subscribe(
       </span>
       </h4>
       <p class="comment cmt">Contains special Observables.</p>
+    </li><li name="rx.lang.scala.subjects" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="subjects"></a>
+      <a id="subjects:subjects"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="subjects/package.html"><span class="name">subjects</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Subjects are Observers and Observables at the same time.</p>
+    </li><li name="rx.lang.scala.subscriptions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="subscriptions"></a>
+      <a id="subscriptions:subscriptions"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="subscriptions/package.html"><span class="name">subscriptions</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides <code>Subscription</code>, and specialized versions of it.</p>
     </li></ol>
             </div>
 
