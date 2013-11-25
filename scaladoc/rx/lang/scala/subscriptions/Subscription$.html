@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>MultipleAssignmentSubscription - rxjava-scala 0.15.0 API - rx.lang.scala.subscriptions.MultipleAssignmentSubscription</title>
-          <meta name="description" content="MultipleAssignmentSubscription - rxjava - scala 0.15.0 API - rx.lang.scala.subscriptions.MultipleAssignmentSubscription" />
-          <meta name="keywords" content="MultipleAssignmentSubscription rxjava scala 0.15.0 API rx.lang.scala.subscriptions.MultipleAssignmentSubscription" />
+          <title>Subscription - rxjava-scala 0.15.0 API - rx.lang.scala.subscriptions.Subscription</title>
+          <meta name="description" content="Subscription - rxjava - scala 0.15.0 API - rx.lang.scala.subscriptions.Subscription" />
+          <meta name="keywords" content="Subscription rxjava scala 0.15.0 API rx.lang.scala.subscriptions.Subscription" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -12,7 +12,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../index.html';
-            var hash = 'rx.lang.scala.subscriptions.MultipleAssignmentSubscription$';
+            var hash = 'rx.lang.scala.subscriptions.Subscription$';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -24,9 +24,9 @@
         </head>
         <body class="value">
       <div id="definition">
-        <a href="MultipleAssignmentSubscription.html" title="Go to companion"><img src="../../../../lib/object_to_class_big.png" /></a>
+        <img src="../../../../lib/object_big.png" />
         <p id="owner"><a href="../../../package.html" class="extype" name="rx">rx</a>.<a href="../../package.html" class="extype" name="rx.lang">lang</a>.<a href="../package.html" class="extype" name="rx.lang.scala">scala</a>.<a href="package.html" class="extype" name="rx.lang.scala.subscriptions">subscriptions</a></p>
-        <h1><a href="MultipleAssignmentSubscription.html" title="Go to companion">MultipleAssignmentSubscription</a></h1>
+        <h1>Subscription</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,7 +35,7 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">MultipleAssignmentSubscription</span>
+        <span class="name">Subscription</span>
       </span>
       </h4>
       
@@ -59,7 +59,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="rx.lang.scala.subscriptions.MultipleAssignmentSubscription"><span>MultipleAssignmentSubscription</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="rx.lang.scala.subscriptions.Subscription"><span>Subscription</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -150,32 +150,32 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="rx.lang.scala.subscriptions.MultipleAssignmentSubscription#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply():rx.lang.scala.subscriptions.MultipleAssignmentSubscription"></a>
-      <a id="apply():MultipleAssignmentSubscription"></a>
+    </li><li name="rx.lang.scala.subscriptions.Subscription#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="apply(u:=&gt;Unit):rx.lang.scala.Subscription"></a>
+      <a id="apply(⇒Unit):scala.Subscription"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">()</span><span class="result">: <a href="MultipleAssignmentSubscription.html" class="extype" name="rx.lang.scala.subscriptions.MultipleAssignmentSubscription">MultipleAssignmentSubscription</a></span>
+        <span class="name">apply</span><span class="params">(<span name="u">u: ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">scala.Subscription</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Creates a <a href="MultipleAssignmentSubscription.html" class="extype" name="rx.lang.scala.subscriptions.MultipleAssignmentSubscription">rx.lang.scala.subscriptions.MultipleAssignmentSubscription</a>.</p>
-    </li><li name="rx.lang.scala.subscriptions.MultipleAssignmentSubscription#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply(subscription:=&gt;Unit):rx.lang.scala.subscriptions.MultipleAssignmentSubscription"></a>
-      <a id="apply(⇒Unit):MultipleAssignmentSubscription"></a>
+      <p class="shortcomment cmt">Creates an <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">rx.lang.scala.Subscription</a> that invokes the specified action when unsubscribed.</p>
+    </li><li name="rx.lang.scala.subscriptions.Subscription#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="apply(subscription:rx.Subscription):rx.lang.scala.Subscription"></a>
+      <a id="apply(rx.Subscription):scala.Subscription"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="subscription">subscription: ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <a href="MultipleAssignmentSubscription.html" class="extype" name="rx.lang.scala.subscriptions.MultipleAssignmentSubscription">MultipleAssignmentSubscription</a></span>
+        <span class="name">apply</span><span class="params">(<span name="subscription">subscription: <span class="extype" name="rx.Subscription">rx.Subscription</span></span>)</span><span class="result">: <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">scala.Subscription</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Creates a <a href="MultipleAssignmentSubscription.html" class="extype" name="rx.lang.scala.subscriptions.MultipleAssignmentSubscription">rx.lang.scala.subscriptions.MultipleAssignmentSubscription</a> that invokes the specified action when unsubscribed.</p>
+      <p class="shortcomment cmt">Creates an <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">rx.lang.scala.Subscription</a> from an<span class="extype" name="rx.Subscription">rx.Subscription</span>.</p>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>

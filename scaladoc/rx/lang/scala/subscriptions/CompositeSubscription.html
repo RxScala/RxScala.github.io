@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>CompositeSubscription - rxjava-scala 0.15.1-SNAPSHOT API - rx.lang.scala.subscriptions.CompositeSubscription</title>
-          <meta name="description" content="CompositeSubscription - rxjava - scala 0.15.1 - SNAPSHOT API - rx.lang.scala.subscriptions.CompositeSubscription" />
-          <meta name="keywords" content="CompositeSubscription rxjava scala 0.15.1 SNAPSHOT API rx.lang.scala.subscriptions.CompositeSubscription" />
+          <title>CompositeSubscription - rxjava-scala 0.15.0 API - rx.lang.scala.subscriptions.CompositeSubscription</title>
+          <meta name="description" content="CompositeSubscription - rxjava - scala 0.15.0 API - rx.lang.scala.subscriptions.CompositeSubscription" />
+          <meta name="keywords" content="CompositeSubscription rxjava scala 0.15.0 API rx.lang.scala.subscriptions.CompositeSubscription" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -35,14 +35,14 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">CompositeSubscription</span><span class="result"> extends <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>
+        <span class="name">CompositeSubscription</span><span class="result"> extends <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">scala.Subscription</a></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Represents a group of <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">rx.lang.scala.Subscription</a> that are disposed together.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">scala.Subscription</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -127,14 +127,14 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="rx.lang.scala.subscriptions.CompositeSubscription#+=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="+=(subscription:rx.lang.scala.Subscription):CompositeSubscription.this.type"></a>
-      <a id="+=(Subscription):CompositeSubscription.this.type"></a>
+      <a id="+=(scala.Subscription):CompositeSubscription.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $plus$eq" class="name">+=</span><span class="params">(<span name="subscription">subscription: <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.subscriptions.CompositeSubscription">CompositeSubscription</a>.this.type</span>
+        <span title="gt4s: $plus$eq" class="name">+=</span><span class="params">(<span name="subscription">subscription: <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">scala.Subscription</a></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.subscriptions.CompositeSubscription">CompositeSubscription</a>.this.type</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Adds a subscription to the group,
@@ -143,14 +143,14 @@ or unsubscribes immediately is the <span class="extype" name="rx.subscriptions.C
 </p></dd></dl></div>
     </li><li name="rx.lang.scala.subscriptions.CompositeSubscription#-=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="-=(subscription:rx.lang.scala.Subscription):CompositeSubscription.this.type"></a>
-      <a id="-=(Subscription):CompositeSubscription.this.type"></a>
+      <a id="-=(scala.Subscription):CompositeSubscription.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $minus$eq" class="name">-=</span><span class="params">(<span name="subscription">subscription: <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.subscriptions.CompositeSubscription">CompositeSubscription</a>.this.type</span>
+        <span title="gt4s: $minus$eq" class="name">-=</span><span class="params">(<span name="subscription">subscription: <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">scala.Subscription</a></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.subscriptions.CompositeSubscription">CompositeSubscription</a>.this.type</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Removes and unsubscribes a subscription to the group,</p><div class="fullcomment"><div class="comment cmt"><p>Removes and unsubscribes a subscription to the group,</p></div><dl class="paramcmts block"><dt class="param">subscription</dt><dd class="cmt"><p>the subscription be removed.</p></dd><dt>returns</dt><dd class="cmt"><p>the <span class="extype" name="rx.subscriptions.CompositeSubscription">rx.subscriptions.CompositeSubscription</span> itself.
@@ -472,7 +472,7 @@ this Subscription was received.
 
         <div id="inheritedMembers">
         <div class="parent" name="rx.lang.scala.Subscription">
-              <h3>Inherited from <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></h3>
+              <h3>Inherited from <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">scala.Subscription</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
