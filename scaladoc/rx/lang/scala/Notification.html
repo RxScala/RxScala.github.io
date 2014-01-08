@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>Notification - rxjava-scala 0.15.0 API - rx.lang.scala.Notification</title>
-          <meta name="description" content="Notification - rxjava - scala 0.15.0 API - rx.lang.scala.Notification" />
-          <meta name="keywords" content="Notification rxjava scala 0.15.0 API rx.lang.scala.Notification" />
+          <title>Notification - rxjava-scala 0.16.0 API - rx.lang.scala.Notification</title>
+          <meta name="description" content="Notification - rxjava - scala 0.16.0 API - rx.lang.scala.Notification" />
+          <meta name="keywords" content="Notification rxjava scala 0.16.0 API rx.lang.scala.Notification" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -85,26 +85,10 @@
 
         
 
-        <div id="values" class="values members">
-              <h3>Abstract Value Members</h3>
-              <ol><li name="rx.lang.scala.Notification#asJava" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="asJava:rx.Notification[_&lt;:T]"></a>
-      <a id="asJava:rx.Notification[_&lt;:T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">asJava</span><span class="result">: <span class="extype" name="rx.Notification">rx.Notification</span>[_ &lt;: <span class="extype" name="rx.lang.scala.Notification.T">T</span>]</span>
-      </span>
-      </h4>
-      
-    </li></ol>
-            </div>
+        
 
         <div id="values" class="values members">
-              <h3>Concrete Value Members</h3>
+              <h3>Value Members</h3>
               <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:AnyRef):Boolean"></a>
       <a id="!=(AnyRef):Boolean"></a>
@@ -170,6 +154,67 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="rx.lang.scala.Notification#accept" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="accept(observer:rx.lang.scala.Observer[T]):Unit"></a>
+      <a id="accept(Observer[T]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">accept</span><span class="params">(<span name="observer">observer: <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.Notification.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Invokes the observer corresponding to the notification
+</p><div class="fullcomment"><div class="comment cmt"><p>Invokes the observer corresponding to the notification
+</p></div><dl class="paramcmts block"><dt class="param">observer</dt><dd class="cmt"><p>
+                The observer that to observe the notification
+</p></dd></dl></div>
+    </li><li name="rx.lang.scala.Notification#accept" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="accept[R](onNext:T=&gt;R,onError:Throwable=&gt;R,onCompleted:()=&gt;R):R"></a>
+      <a id="accept[R]((T)⇒R,(Throwable)⇒R,()⇒R):R"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">accept</span><span class="tparams">[<span name="R">R</span>]</span><span class="params">(<span name="onNext">onNext: (<span class="extype" name="rx.lang.scala.Notification.T">T</span>) ⇒ <span class="extype" name="rx.lang.scala.Notification.accept.R">R</span></span>, <span name="onError">onError: (<span class="extype" name="scala.Throwable">Throwable</span>) ⇒ <span class="extype" name="rx.lang.scala.Notification.accept.R">R</span></span>, <span name="onCompleted">onCompleted: () ⇒ <span class="extype" name="rx.lang.scala.Notification.accept.R">R</span></span>)</span><span class="result">: <span class="extype" name="rx.lang.scala.Notification.accept.R">R</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Invokes the function corresponding to the notification.</p><div class="fullcomment"><div class="comment cmt"><p>Invokes the function corresponding to the notification.
+</p></div><dl class="paramcmts block"><dt class="param">onNext</dt><dd class="cmt"><p>
+              The function to invoke for an <a href="Notification$$OnNext.html" class="extype" name="rx.lang.scala.Notification.OnNext">rx.lang.scala.Notification.OnNext</a> notification.</p></dd><dt class="param">onError</dt><dd class="cmt"><p>
+              The function to invoke for an <a href="Notification$$OnError.html" class="extype" name="rx.lang.scala.Notification.OnError">rx.lang.scala.Notification.OnError</a> notification.</p></dd><dt class="param">onCompleted</dt><dd class="cmt"><p>
+              The function to invoke for an <a href="Notification$$OnCompleted.html" class="extype" name="rx.lang.scala.Notification.OnCompleted">rx.lang.scala.Notification.OnCompleted</a> notification.
+</p></dd></dl></div>
+    </li><li name="rx.lang.scala.Notification#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="apply(observer:rx.lang.scala.Observer[T]):Unit"></a>
+      <a id="apply(Observer[T]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="observer">observer: <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.Notification.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="rx.lang.scala.Notification#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="apply[R](onNext:T=&gt;R,onError:Throwable=&gt;R,onCompleted:()=&gt;R):R"></a>
+      <a id="apply[R]((T)⇒R,(Throwable)⇒R,()⇒R):R"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="tparams">[<span name="R">R</span>]</span><span class="params">(<span name="onNext">onNext: (<span class="extype" name="rx.lang.scala.Notification.T">T</span>) ⇒ <span class="extype" name="rx.lang.scala.Notification.apply.R">R</span></span>, <span name="onError">onError: (<span class="extype" name="scala.Throwable">Throwable</span>) ⇒ <span class="extype" name="rx.lang.scala.Notification.apply.R">R</span></span>, <span name="onCompleted">onCompleted: () ⇒ <span class="extype" name="rx.lang.scala.Notification.apply.R">R</span></span>)</span><span class="result">: <span class="extype" name="rx.lang.scala.Notification.apply.R">R</span></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -215,8 +260,8 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="equals(x$1:Any):Boolean"></a>
+    </li><li name="rx.lang.scala.Notification#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(that:Any):Boolean"></a>
       <a id="equals(Any):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -224,10 +269,10 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">equals</span><span class="params">(<span name="that">that: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="rx.lang.scala.Notification">Notification</a> → AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -260,7 +305,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="rx.lang.scala.Notification#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -272,7 +317,7 @@
         <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="rx.lang.scala.Notification">Notification</a> → AnyRef → Any</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>

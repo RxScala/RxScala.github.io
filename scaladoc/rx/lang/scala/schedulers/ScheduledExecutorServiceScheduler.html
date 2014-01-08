@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>TestScheduler - rxjava-scala 0.15.0 API - rx.lang.scala.concurrency.TestScheduler</title>
-          <meta name="description" content="TestScheduler - rxjava - scala 0.15.0 API - rx.lang.scala.concurrency.TestScheduler" />
-          <meta name="keywords" content="TestScheduler rxjava scala 0.15.0 API rx.lang.scala.concurrency.TestScheduler" />
+          <title>ScheduledExecutorServiceScheduler - rxjava-scala 0.16.0 API - rx.lang.scala.schedulers.ScheduledExecutorServiceScheduler</title>
+          <meta name="description" content="ScheduledExecutorServiceScheduler - rxjava - scala 0.16.0 API - rx.lang.scala.schedulers.ScheduledExecutorServiceScheduler" />
+          <meta name="keywords" content="ScheduledExecutorServiceScheduler rxjava scala 0.16.0 API rx.lang.scala.schedulers.ScheduledExecutorServiceScheduler" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -12,7 +12,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../index.html';
-            var hash = 'rx.lang.scala.concurrency.TestScheduler';
+            var hash = 'rx.lang.scala.schedulers.ScheduledExecutorServiceScheduler';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -24,9 +24,9 @@
         </head>
         <body class="type">
       <div id="definition">
-        <a href="TestScheduler$.html" title="Go to companion"><img src="../../../../lib/class_to_object_big.png" /></a>
-        <p id="owner"><a href="../../../package.html" class="extype" name="rx">rx</a>.<a href="../../package.html" class="extype" name="rx.lang">lang</a>.<a href="../package.html" class="extype" name="rx.lang.scala">scala</a>.<a href="package.html" class="extype" name="rx.lang.scala.concurrency">concurrency</a></p>
-        <h1><a href="TestScheduler$.html" title="Go to companion">TestScheduler</a></h1>
+        <a href="ScheduledExecutorServiceScheduler$.html" title="Go to companion"><img src="../../../../lib/class_to_object_big.png" /></a>
+        <p id="owner"><a href="../../../package.html" class="extype" name="rx">rx</a>.<a href="../../package.html" class="extype" name="rx.lang">lang</a>.<a href="../package.html" class="extype" name="rx.lang.scala">scala</a>.<a href="package.html" class="extype" name="rx.lang.scala.schedulers">schedulers</a></p>
+        <h1><a href="ScheduledExecutorServiceScheduler$.html" title="Go to companion">ScheduledExecutorServiceScheduler</a></h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,39 +35,11 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">TestScheduler</span><span class="result"> extends <a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>
+        <span class="name">ScheduledExecutorServiceScheduler</span><span class="result"> extends <a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Scheduler with artificial time, useful for testing.</p><p>For example, you could test the <code>Observable.interval</code> operation using a <code>TestScheduler</code> as follows:</p><pre>@Test <span class="kw">def</span> testInterval() {
-<span class="kw">import</span> org.mockito.Matchers._
-<span class="kw">import</span> org.mockito.Mockito._
-
-<span class="kw">val</span> scheduler = TestScheduler()
-<span class="kw">val</span> observer = mock(classOf[rx.Observer[<span class="std">Long</span>]])
-
-<span class="kw">val</span> o = Observable.interval(<span class="num">1</span> second, scheduler)
-<span class="kw">val</span> sub = o.subscribe(observer)
-
-verify(observer, never).onNext(<span class="num">0</span>L)
-verify(observer, never).onCompleted()
-verify(observer, never).onError(any(classOf[Throwable]))
-
-scheduler.advanceTimeTo(<span class="num">2</span> seconds)
-
-<span class="kw">val</span> inOrdr = inOrder(observer);
-inOrdr.verify(observer, times(<span class="num">1</span>)).onNext(<span class="num">0</span>L)
-inOrdr.verify(observer, times(<span class="num">1</span>)).onNext(<span class="num">1</span>L)
-inOrdr.verify(observer, never).onNext(<span class="num">2</span>L)
-verify(observer, never).onCompleted()
-verify(observer, never).onError(any(classOf[Throwable]))
-
-sub.unsubscribe();
-scheduler.advanceTimeTo(<span class="num">4</span> seconds)
-verify(observer, never).onNext(<span class="num">2</span>L)
-verify(observer, times(<span class="num">1</span>)).onCompleted()
-verify(observer, never).onError(any(classOf[Throwable]))
-}</pre></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -87,7 +59,7 @@ verify(observer, never).onError(any(classOf[Throwable]))
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="rx.lang.scala.concurrency.TestScheduler"><span>TestScheduler</span></li><li class="in" name="rx.lang.scala.Scheduler"><span>Scheduler</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="rx.lang.scala.schedulers.ScheduledExecutorServiceScheduler"><span>ScheduledExecutorServiceScheduler</span></li><li class="in" name="rx.lang.scala.Scheduler"><span>Scheduler</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -105,23 +77,7 @@ verify(observer, never).onError(any(classOf[Throwable]))
 
       <div id="template">
         <div id="allMembers">
-        <div id="constructors" class="members">
-              <h3>Instance Constructors</h3>
-              <ol><li name="rx.lang.scala.concurrency.TestScheduler#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;():rx.lang.scala.concurrency.TestScheduler"></a>
-      <a id="&lt;init&gt;:TestScheduler"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">new</span>
-      </span>
-      <span class="symbol">
-        <span class="name">TestScheduler</span><span class="params">()</span>
-      </span>
-      </h4>
-      
-    </li></ol>
-            </div>
+        
 
         
 
@@ -194,32 +150,6 @@ verify(observer, never).onError(any(classOf[Throwable]))
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="rx.lang.scala.concurrency.TestScheduler#advanceTimeBy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="advanceTimeBy(time:scala.concurrent.duration.Duration):Unit"></a>
-      <a id="advanceTimeBy(Duration):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">advanceTimeBy</span><span class="params">(<span name="time">time: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="rx.lang.scala.concurrency.TestScheduler#advanceTimeTo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="advanceTimeTo(time:scala.concurrent.duration.Duration):Unit"></a>
-      <a id="advanceTimeTo(Duration):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">advanceTimeTo</span><span class="params">(<span name="time">time: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -233,19 +163,19 @@ verify(observer, never).onError(any(classOf[Throwable]))
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="rx.lang.scala.concurrency.TestScheduler#asJavaScheduler" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="asJavaScheduler:rx.concurrency.TestScheduler"></a>
-      <a id="asJavaScheduler:concurrency.TestScheduler"></a>
+    </li><li name="rx.lang.scala.schedulers.ScheduledExecutorServiceScheduler#asJavaScheduler" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asJavaScheduler:rx.Scheduler"></a>
+      <a id="asJavaScheduler:rx.Scheduler"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">asJavaScheduler</span><span class="result">: <span class="extype" name="rx.concurrency.TestScheduler">concurrency.TestScheduler</span></span>
+        <span class="name">asJavaScheduler</span><span class="result">: <span class="extype" name="rx.Scheduler">rx.Scheduler</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="rx.lang.scala.concurrency.TestScheduler">TestScheduler</a> → <a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="rx.lang.scala.schedulers.ScheduledExecutorServiceScheduler">ScheduledExecutorServiceScheduler</a> → <a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -418,15 +348,15 @@ verify(observer, never).onError(any(classOf[Throwable]))
       <p class="shortcomment cmt">Returns the scheduler's notion of current absolute time in milliseconds.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the scheduler's notion of current absolute time in milliseconds.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></dd></dl></div>
     </li><li name="rx.lang.scala.Scheduler#schedule" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="schedule(initialDelay:scala.concurrent.duration.Duration,period:scala.concurrent.duration.Duration)(action:=&gt;Unit):rx.lang.scala.Subscription"></a>
-      <a id="schedule(Duration,Duration)(⇒Unit):Subscription"></a>
+      <a id="schedule(initialDelay:scala.concurrent.duration.Duration,period:scala.concurrent.duration.Duration,action:=&gt;Unit):rx.lang.scala.Subscription"></a>
+      <a id="schedule(Duration,Duration,⇒Unit):Subscription"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">schedule</span><span class="params">(<span name="initialDelay">initialDelay: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>, <span name="period">period: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>)</span><span class="params">(<span name="action">action: ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>
+        <span class="name">schedule</span><span class="params">(<span name="initialDelay">initialDelay: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>, <span name="period">period: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>, <span name="action">action: ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Schedules an action to be executed periodically.</p><div class="fullcomment"><div class="comment cmt"><p>Schedules an action to be executed periodically.
@@ -436,15 +366,15 @@ verify(observer, never).onError(any(classOf[Throwable]))
            The action to execute periodically.</p></dd><dt>returns</dt><dd class="cmt"><p>A subscription to be able to unsubscribe from action.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></dd></dl></div>
     </li><li name="rx.lang.scala.Scheduler#schedule" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="schedule(delayTime:scala.concurrent.duration.Duration)(action:=&gt;Unit):rx.lang.scala.Subscription"></a>
-      <a id="schedule(Duration)(⇒Unit):Subscription"></a>
+      <a id="schedule(delayTime:scala.concurrent.duration.Duration,action:=&gt;Unit):rx.lang.scala.Subscription"></a>
+      <a id="schedule(Duration,⇒Unit):Subscription"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">schedule</span><span class="params">(<span name="delayTime">delayTime: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>)</span><span class="params">(<span name="action">action: ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>
+        <span class="name">schedule</span><span class="params">(<span name="delayTime">delayTime: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>, <span name="action">action: ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Schedules an action to be executed in delayTime.</p><div class="fullcomment"><div class="comment cmt"><p>Schedules an action to be executed in delayTime.
@@ -467,30 +397,30 @@ verify(observer, never).onError(any(classOf[Throwable]))
            action</p></dd><dt>returns</dt><dd class="cmt"><p>a subscription to be able to unsubscribe from action.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></dd></dl></div>
     </li><li name="rx.lang.scala.Scheduler#schedule" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="schedule(dueTime:java.util.Date)(action:rx.lang.scala.Scheduler=&gt;rx.lang.scala.Subscription):rx.lang.scala.Subscription"></a>
-      <a id="schedule(Date)((Scheduler)⇒Subscription):Subscription"></a>
+      <a id="schedule(dueTime:java.util.Date,action:rx.lang.scala.Scheduler=&gt;rx.lang.scala.Subscription):rx.lang.scala.Subscription"></a>
+      <a id="schedule(Date,(Scheduler)⇒Subscription):Subscription"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">schedule</span><span class="params">(<span name="dueTime">dueTime: <span class="extype" name="java.util.Date">Date</span></span>)</span><span class="params">(<span name="action">action: (<a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a>) ⇒ <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>)</span><span class="result">: <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>
+        <span class="name">schedule</span><span class="params">(<span name="dueTime">dueTime: <span class="extype" name="java.util.Date">Date</span></span>, <span name="action">action: (<a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a>) ⇒ <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>)</span><span class="result">: <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Schedules a cancelable action to be executed at dueTime.</p><div class="fullcomment"><div class="comment cmt"><p>Schedules a cancelable action to be executed at dueTime.
 </p></div><dl class="paramcmts block"><dt class="param">dueTime</dt><dd class="cmt"><p>Time the action is to be executed. If in the past it will be executed immediately.</p></dd><dt class="param">action</dt><dd class="cmt"><p>Action to schedule.</p></dd><dt>returns</dt><dd class="cmt"><p>a subscription to be able to unsubscribe from action.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></dd></dl></div>
     </li><li name="rx.lang.scala.Scheduler#schedule" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="schedule(initialDelay:scala.concurrent.duration.Duration,period:scala.concurrent.duration.Duration)(action:rx.lang.scala.Scheduler=&gt;rx.lang.scala.Subscription):rx.lang.scala.Subscription"></a>
-      <a id="schedule(Duration,Duration)((Scheduler)⇒Subscription):Subscription"></a>
+      <a id="schedule(initialDelay:scala.concurrent.duration.Duration,period:scala.concurrent.duration.Duration,action:rx.lang.scala.Scheduler=&gt;rx.lang.scala.Subscription):rx.lang.scala.Subscription"></a>
+      <a id="schedule(Duration,Duration,(Scheduler)⇒Subscription):Subscription"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">schedule</span><span class="params">(<span name="initialDelay">initialDelay: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>, <span name="period">period: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>)</span><span class="params">(<span name="action">action: (<a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a>) ⇒ <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>)</span><span class="result">: <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>
+        <span class="name">schedule</span><span class="params">(<span name="initialDelay">initialDelay: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>, <span name="period">period: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>, <span name="action">action: (<a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a>) ⇒ <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>)</span><span class="result">: <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Schedules a cancelable action to be executed periodically.</p><div class="fullcomment"><div class="comment cmt"><p>Schedules a cancelable action to be executed periodically.
@@ -499,15 +429,15 @@ long-running actions concurrently). Each scheduler that can do periodic scheduli
 </p></div><dl class="paramcmts block"><dt class="param">initialDelay</dt><dd class="cmt"><p>Time to wait before executing the action for the first time.</p></dd><dt class="param">period</dt><dd class="cmt"><p>The time interval to wait each time in between executing the action.</p></dd><dt class="param">action</dt><dd class="cmt"><p>The action to execute periodically.</p></dd><dt>returns</dt><dd class="cmt"><p>A subscription to be able to unsubscribe from action.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></dd></dl></div>
     </li><li name="rx.lang.scala.Scheduler#schedule" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="schedule(delayTime:scala.concurrent.duration.Duration)(action:rx.lang.scala.Scheduler=&gt;rx.lang.scala.Subscription):rx.lang.scala.Subscription"></a>
-      <a id="schedule(Duration)((Scheduler)⇒Subscription):Subscription"></a>
+      <a id="schedule(delayTime:scala.concurrent.duration.Duration,action:rx.lang.scala.Scheduler=&gt;rx.lang.scala.Subscription):rx.lang.scala.Subscription"></a>
+      <a id="schedule(Duration,(Scheduler)⇒Subscription):Subscription"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">schedule</span><span class="params">(<span name="delayTime">delayTime: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>)</span><span class="params">(<span name="action">action: (<a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a>) ⇒ <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>)</span><span class="result">: <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>
+        <span class="name">schedule</span><span class="params">(<span name="delayTime">delayTime: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>, <span name="action">action: (<a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a>) ⇒ <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>)</span><span class="result">: <a href="../Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Schedules a cancelable action to be executed in delayTime.</p><div class="fullcomment"><div class="comment cmt"><p>Schedules a cancelable action to be executed in delayTime.
@@ -567,19 +497,6 @@ long-running actions concurrently). Each scheduler that can do periodic scheduli
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="rx.lang.scala.concurrency.TestScheduler#triggerActions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="triggerActions():Unit"></a>
-      <a id="triggerActions():Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">triggerActions</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>

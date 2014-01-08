@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>scala - rxjava-scala 0.15.0 API - rx.lang.scala</title>
-          <meta name="description" content="scala - rxjava - scala 0.15.0 API - rx.lang.scala" />
-          <meta name="keywords" content="scala rxjava scala 0.15.0 API rx.lang.scala" />
+          <title>scala - rxjava-scala 0.16.0 API - rx.lang.scala</title>
+          <meta name="description" content="scala - rxjava - scala 0.16.0 API - rx.lang.scala" />
+          <meta name="keywords" content="scala rxjava scala 0.16.0 API rx.lang.scala" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -39,7 +39,8 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This package contains all classes that RxScala users need.</p><p>It basically mirrors the structure of package <code>rx</code>, but some changes were made to make it more Scala-idiomatic.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -107,6 +108,20 @@
       </span>
       </h4>
       <p class="comment cmt">The Observable interface that implements the Reactive Pattern.</p>
+    </li><li name="rx.lang.scala.ObservableExtensions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ObservableExtensions[T]extendsAnyVal"></a>
+      <a id="ObservableExtensions[T]:ObservableExtensions[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$ObservableExtensions.html"><span class="name">ObservableExtensions</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyVal">AnyVal</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Placeholder for extension methods into Observable[T] from other types
+</p>
     </li><li name="rx.lang.scala.Observer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="Observer[-T]extendsAnyRef"></a>
       <a id="Observer[-T]:Observer[T]"></a>
@@ -132,17 +147,17 @@
         <a href="Scheduler.html"><span class="name">Scheduler</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      <p class="comment cmt">Represents an object thatimport rx.</p>
+      <p class="comment cmt">Represents an object that schedules units of work.</p>
     </li><li name="rx.lang.scala.Subject" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="Subject[-T,+R]extendsObservable[R]withObserver[T]"></a>
-      <a id="Subject[-T,+R]:Subject[T,R]"></a>
+      <a id="Subject[T]extendsObservable[T]withObserver[T]"></a>
+      <a id="Subject[T]:Subject[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="Subject.html"><span class="name">Subject</span></a><span class="tparams">[<span name="T">-T</span>, <span name="R">+R</span>]</span><span class="result"> extends <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Subject.R">R</span>] with <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.Subject.T">T</span>]</span>
+        <a href="Subject.html"><span class="name">Subject</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Subject.T">T</span>] with <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.Subject.T">T</span>]</span>
       </span>
       </h4>
       <p class="comment cmt">A Subject is an Observable and an Observer at the same time.</p>
@@ -179,6 +194,19 @@
       </span>
       </h4>
       <p class="comment cmt">These function conversions convert between Scala functions and Rx <code>Func</code>s and <code>Action</code>s.</p>
+    </li><li name="rx.lang.scala.JavaConversions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="JavaConversions"></a>
+      <a id="JavaConversions:JavaConversions"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="JavaConversions$.html"><span class="name">JavaConversions</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">These functions convert between RxScala types RxJava types.</p>
     </li><li name="rx.lang.scala.Notification" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Notification"></a>
       <a id="Notification:Notification"></a>
@@ -218,52 +246,32 @@
       </span>
       </h4>
       
-    </li><li name="rx.lang.scala.Scheduler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Scheduler"></a>
-      <a id="Scheduler:Scheduler"></a>
+    </li><li name="rx.lang.scala.Subject" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Subject"></a>
+      <a id="Subject:Subject"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="Scheduler$.html"><span class="name">Scheduler</span></a>
-      </span>
-      </h4>
-      <p class="comment cmt">Provides constructors for Schedulers.</p>
-    </li><li name="rx.lang.scala.concurrency" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="concurrency"></a>
-      <a id="concurrency:concurrency"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a href="concurrency/package.html"><span class="name">concurrency</span></a>
+        <a href="Subject$.html"><span class="name">Subject</span></a>
       </span>
       </h4>
       
-    </li><li name="rx.lang.scala.package#observable" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="observable[T](body:=&gt;T)(implicitscheduler:rx.lang.scala.Scheduler):rx.lang.scala.Observable[T]"></a>
-      <a id="observable[T](⇒T)(Scheduler):Observable[T]"></a>
+    </li><li name="rx.lang.scala.Subscription" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Subscription"></a>
+      <a id="Subscription:Subscription"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">observable</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="body">body: ⇒ <span class="extype" name="rx.lang.scala.observable.T">T</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="scheduler">scheduler: <a href="Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>)</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.observable.T">T</span>]</span>
+        <a href="Subscription$.html"><span class="name">Subscription</span></a>
       </span>
       </h4>
-      <p class="shortcomment cmt">Allows to construct observables in a similar way as futures.</p><div class="fullcomment"><div class="comment cmt"><p>Allows to construct observables in a similar way as futures.</p><p>Example:</p><pre><span class="kw">implicit</span> <span class="kw">val</span> scheduler = Schedulers.threadPoolForIO
-<span class="kw">val</span> o: Observable[<span class="std">List</span>[Friend]] = observable {
-   session.getFriends
-}
-o.subscribe(
-  friendList <span class="kw">=&gt;</span> println(friendList),
-  err <span class="kw">=&gt;</span> println(err.getMessage)
-)</pre></div></div>
+      
     </li><li name="rx.lang.scala.observables" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="observables"></a>
       <a id="observables:observables"></a>
@@ -274,6 +282,19 @@ o.subscribe(
       </span>
       <span class="symbol">
         <a href="observables/package.html"><span class="name">observables</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Contains special Observables.</p>
+    </li><li name="rx.lang.scala.schedulers" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="schedulers"></a>
+      <a id="schedulers:schedulers"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="schedulers/package.html"><span class="name">schedulers</span></a>
       </span>
       </h4>
       
@@ -289,7 +310,7 @@ o.subscribe(
         <a href="subjects/package.html"><span class="name">subjects</span></a>
       </span>
       </h4>
-      
+      <p class="comment cmt">Subjects are Observers and Observables at the same time.</p>
     </li><li name="rx.lang.scala.subscriptions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="subscriptions"></a>
       <a id="subscriptions:subscriptions"></a>

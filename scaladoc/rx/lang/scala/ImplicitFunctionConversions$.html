@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ImplicitFunctionConversions - rxjava-scala 0.15.0 API - rx.lang.scala.ImplicitFunctionConversions</title>
-          <meta name="description" content="ImplicitFunctionConversions - rxjava - scala 0.15.0 API - rx.lang.scala.ImplicitFunctionConversions" />
-          <meta name="keywords" content="ImplicitFunctionConversions rxjava scala 0.15.0 API rx.lang.scala.ImplicitFunctionConversions" />
+          <title>ImplicitFunctionConversions - rxjava-scala 0.16.0 API - rx.lang.scala.ImplicitFunctionConversions</title>
+          <meta name="description" content="ImplicitFunctionConversions - rxjava - scala 0.16.0 API - rx.lang.scala.ImplicitFunctionConversions" />
+          <meta name="keywords" content="ImplicitFunctionConversions rxjava scala 0.16.0 API rx.lang.scala.ImplicitFunctionConversions" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -43,6 +43,8 @@
 Most RxScala users won't need them, but they might be useful if one wants to use
 the <code>rx.Observable</code> directly instead of using <code>rx.lang.scala.Observable</code> or if one wants
 to use a Java library taking/returning <code>Func</code>s and <code>Action</code>s.
+This object only contains conversions between functions. For conversions between types,
+use <a href="JavaConversions$.html" class="extype" name="rx.lang.scala.JavaConversions">rx.lang.scala.JavaConversions</a>.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -322,19 +324,6 @@ to use a Java library taking/returning <code>Func</code>s and <code>Action</code
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="rx.lang.scala.ImplicitFunctionConversions#javaSchedulerToScalaScheduler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="javaSchedulerToScalaScheduler(s:rx.Scheduler):rx.lang.scala.Scheduler"></a>
-      <a id="javaSchedulerToScalaScheduler(rx.Scheduler):Scheduler"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">javaSchedulerToScalaScheduler</span><span class="params">(<span name="s">s: <span class="extype" name="rx.Scheduler">rx.Scheduler</span></span>)</span><span class="result">: <a href="Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -530,19 +519,6 @@ to use a Java library taking/returning <code>Func</code>s and <code>Action</code
       </span>
       </h4>
       
-    </li><li name="rx.lang.scala.ImplicitFunctionConversions#scalaSchedulerToJavaScheduler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="scalaSchedulerToJavaScheduler(s:rx.lang.scala.Scheduler):rx.Scheduler"></a>
-      <a id="scalaSchedulerToJavaScheduler(Scheduler):rx.Scheduler"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">scalaSchedulerToJavaScheduler</span><span class="params">(<span name="s">s: <a href="Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>)</span><span class="result">: <span class="extype" name="rx.Scheduler">rx.Scheduler</span></span>
-      </span>
-      </h4>
-      
     </li><li name="rx.lang.scala.ImplicitFunctionConversions#schedulerActionToFunc2" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="schedulerActionToFunc2[T](action:(rx.lang.scala.Scheduler,T)=&gt;rx.lang.scala.Subscription):rx.util.functions.Func2[rx.Scheduler,T,rx.Subscription]"></a>
       <a id="schedulerActionToFunc2[T]((Scheduler,T)⇒Subscription):Func2[rx.Scheduler,T,rx.Subscription]"></a>
@@ -569,84 +545,6 @@ to use a Java library taking/returning <code>Func</code>s and <code>Action</code
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="rx.lang.scala.ImplicitFunctionConversions#toJavaObservable" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="toJavaObservable[T](s:rx.lang.scala.Observable[T]):rx.Observable[_&lt;:T]"></a>
-      <a id="toJavaObservable[T](Observable[T]):rx.Observable[_&lt;:T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toJavaObservable</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="s">s: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.toJavaObservable.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="rx.Observable">rx.Observable</span>[_ &lt;: <span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.toJavaObservable.T">T</span>]</span>
-      </span>
-      </h4>
-      
-    </li><li name="rx.lang.scala.ImplicitFunctionConversions#toJavaObserver" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="toJavaObserver[T](s:rx.lang.scala.Observer[T]):rx.Observer[_&gt;:T]"></a>
-      <a id="toJavaObserver[T](Observer[T]):rx.Observer[_&gt;:T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toJavaObserver</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="s">s: <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.toJavaObserver.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="rx.Observer">rx.Observer</span>[_ &gt;: <span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.toJavaObserver.T">T</span>]</span>
-      </span>
-      </h4>
-      
-    </li><li name="rx.lang.scala.ImplicitFunctionConversions#toJavaSubscription" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="toJavaSubscription(s:rx.lang.scala.Subscription):rx.Subscription"></a>
-      <a id="toJavaSubscription(Subscription):rx.Subscription"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toJavaSubscription</span><span class="params">(<span name="s">s: <a href="Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>)</span><span class="result">: <span class="extype" name="rx.Subscription">rx.Subscription</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="rx.lang.scala.ImplicitFunctionConversions#toScalaObservable" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="toScalaObservable[T](s:rx.Observable[T]):rx.lang.scala.Observable[T]"></a>
-      <a id="toScalaObservable[T](rx.Observable[T]):Observable[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toScalaObservable</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="s">s: <span class="extype" name="rx.Observable">rx.Observable</span>[<span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.toScalaObservable.T">T</span>]</span>)</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.toScalaObservable.T">T</span>]</span>
-      </span>
-      </h4>
-      
-    </li><li name="rx.lang.scala.ImplicitFunctionConversions#toScalaObserver" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="toScalaObserver[T](s:rx.Observer[T]):rx.lang.scala.Observer[T]"></a>
-      <a id="toScalaObserver[T](rx.Observer[T]):Observer[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toScalaObserver</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="s">s: <span class="extype" name="rx.Observer">rx.Observer</span>[<span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.toScalaObserver.T">T</span>]</span>)</span><span class="result">: <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.ImplicitFunctionConversions.toScalaObserver.T">T</span>]</span>
-      </span>
-      </h4>
-      
-    </li><li name="rx.lang.scala.ImplicitFunctionConversions#toScalaSubscription" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="toScalaSubscription(s:rx.Subscription):rx.lang.scala.Subscription"></a>
-      <a id="toScalaSubscription(rx.Subscription):Subscription"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toScalaSubscription</span><span class="params">(<span name="s">s: <span class="extype" name="rx.Subscription">rx.Subscription</span></span>)</span><span class="result">: <a href="Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>

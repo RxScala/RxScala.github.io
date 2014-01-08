@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>Schedulers - rxjava-scala 0.15.0 API - rx.lang.scala.concurrency.Schedulers</title>
-          <meta name="description" content="Schedulers - rxjava - scala 0.15.0 API - rx.lang.scala.concurrency.Schedulers" />
-          <meta name="keywords" content="Schedulers rxjava scala 0.15.0 API rx.lang.scala.concurrency.Schedulers" />
+          <title>CurrentThreadScheduler - rxjava-scala 0.16.0 API - rx.lang.scala.schedulers.CurrentThreadScheduler</title>
+          <meta name="description" content="CurrentThreadScheduler - rxjava - scala 0.16.0 API - rx.lang.scala.schedulers.CurrentThreadScheduler" />
+          <meta name="keywords" content="CurrentThreadScheduler rxjava scala 0.16.0 API rx.lang.scala.schedulers.CurrentThreadScheduler" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -12,7 +12,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../index.html';
-            var hash = 'rx.lang.scala.concurrency.Schedulers$';
+            var hash = 'rx.lang.scala.schedulers.CurrentThreadScheduler$';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -24,9 +24,9 @@
         </head>
         <body class="value">
       <div id="definition">
-        <img src="../../../../lib/object_big.png" />
-        <p id="owner"><a href="../../../package.html" class="extype" name="rx">rx</a>.<a href="../../package.html" class="extype" name="rx.lang">lang</a>.<a href="../package.html" class="extype" name="rx.lang.scala">scala</a>.<a href="package.html" class="extype" name="rx.lang.scala.concurrency">concurrency</a></p>
-        <h1>Schedulers</h1>
+        <a href="CurrentThreadScheduler.html" title="Go to companion"><img src="../../../../lib/object_to_class_big.png" /></a>
+        <p id="owner"><a href="../../../package.html" class="extype" name="rx">rx</a>.<a href="../../package.html" class="extype" name="rx.lang">lang</a>.<a href="../package.html" class="extype" name="rx.lang.scala">scala</a>.<a href="package.html" class="extype" name="rx.lang.scala.schedulers">schedulers</a></p>
+        <h1><a href="CurrentThreadScheduler.html" title="Go to companion">CurrentThreadScheduler</a></h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,12 +35,11 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">Schedulers</span>
+        <span class="name">CurrentThreadScheduler</span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Factory methods for creating Schedulers.
-</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -60,7 +59,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="rx.lang.scala.concurrency.Schedulers"><span>Schedulers</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="rx.lang.scala.schedulers.CurrentThreadScheduler"><span>CurrentThreadScheduler</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -151,6 +150,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="rx.lang.scala.schedulers.CurrentThreadScheduler#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="apply():rx.lang.scala.schedulers.CurrentThreadScheduler"></a>
+      <a id="apply():CurrentThreadScheduler"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">()</span><span class="result">: <a href="CurrentThreadScheduler.html" class="extype" name="rx.lang.scala.schedulers.CurrentThreadScheduler">CurrentThreadScheduler</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a <a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">rx.lang.scala.Scheduler</a> that queues work on the current thread to be executed after the current work completes.</p>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -183,19 +195,6 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="rx.lang.scala.concurrency.Schedulers#currentThread" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="currentThread:rx.lang.scala.Scheduler"></a>
-      <a id="currentThread:Scheduler"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">currentThread</span><span class="result">: <a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Returns a <a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">rx.lang.scala.Scheduler</a> that queues work on the current thread to be executed after the current work completes.</p>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -222,33 +221,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="rx.lang.scala.concurrency.Schedulers#executor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="executor(executor:java.util.concurrent.ScheduledExecutorService):rx.lang.scala.Scheduler"></a>
-      <a id="executor(ScheduledExecutorService):Scheduler"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">executor</span><span class="params">(<span name="executor">executor: <span class="extype" name="java.util.concurrent.ScheduledExecutorService">ScheduledExecutorService</span></span>)</span><span class="result">: <a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Returns a <a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">rx.lang.scala.Scheduler</a> that queues work on an <code>java.util.concurrent.ScheduledExecutorService</code>.</p>
-    </li><li name="rx.lang.scala.concurrency.Schedulers#executor" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="executor(executor:java.util.concurrent.Executor):rx.lang.scala.Scheduler"></a>
-      <a id="executor(Executor):Scheduler"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">executor</span><span class="params">(<span name="executor">executor: <span class="extype" name="java.util.concurrent.Executor">Executor</span></span>)</span><span class="result">: <a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Returns a <a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">rx.lang.scala.Scheduler</a> that queues work on an <code>java.util.concurrent.Executor</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a <a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">rx.lang.scala.Scheduler</a> that queues work on an <code>java.util.concurrent.Executor</code>.</p><p>Note that this does not support scheduled actions with a delay.
-</p></div></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -294,19 +266,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="rx.lang.scala.concurrency.Schedulers#immediate" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="immediate:rx.lang.scala.Scheduler"></a>
-      <a id="immediate:Scheduler"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">immediate</span><span class="result">: <a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Returns a <a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">rx.lang.scala.Scheduler</a> that executes work immediately on the current thread.</p>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -333,19 +292,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="rx.lang.scala.concurrency.Schedulers#newThread" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="newThread:rx.lang.scala.Scheduler"></a>
-      <a id="newThread:Scheduler"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">newThread</span><span class="result">: <a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Returns a <a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">rx.lang.scala.Scheduler</a> that creates a new <code> Thread</code> for each unit of work.</p>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>
@@ -385,34 +331,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="rx.lang.scala.concurrency.Schedulers#threadPoolForComputation" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="threadPoolForComputation:rx.lang.scala.Scheduler"></a>
-      <a id="threadPoolForComputation:Scheduler"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">threadPoolForComputation</span><span class="result">: <a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Returns a <a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">rx.lang.scala.Scheduler</a> intended for computational work.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a <a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">rx.lang.scala.Scheduler</a> intended for computational work.</p><p>The implementation is backed by a <code>java.util.concurrent.ScheduledExecutorService</code> thread-pool sized to the number of CPU cores.</p><p>This can be used for event-loops, processing callbacks and other computational work.</p><p>Do not perform IO-bound work on this scheduler. Use <a href="#threadPoolForIO:rx.lang.scala.Scheduler" class="extmbr" name="rx.lang.scala.concurrency.Schedulers#threadPoolForIO">rx.lang.scala.concurrency.Schedulers.threadPoolForIO</a> instead.
-</p></div></div>
-    </li><li name="rx.lang.scala.concurrency.Schedulers#threadPoolForIO" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="threadPoolForIO:rx.lang.scala.Scheduler"></a>
-      <a id="threadPoolForIO:Scheduler"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">threadPoolForIO</span><span class="result">: <a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt"><a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">rx.lang.scala.Scheduler</a> intended for IO-bound work.</p><div class="fullcomment"><div class="comment cmt"><p><a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">rx.lang.scala.Scheduler</a> intended for IO-bound work.</p><p>The implementation is backed by an <code>java.util.concurrent.Executor</code> thread-pool that will grow as needed.</p><p>This can be used for asynchronously performing blocking IO.</p><p>Do not perform computational work on this scheduler. Use <a href="#threadPoolForComputation:rx.lang.scala.Scheduler" class="extmbr" name="rx.lang.scala.concurrency.Schedulers#threadPoolForComputation">rx.lang.scala.concurrency.Schedulers.threadPoolForComputation</a> instead.
-</p></div></div>
     </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>

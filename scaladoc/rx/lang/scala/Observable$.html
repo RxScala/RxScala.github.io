@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>Observable - rxjava-scala 0.15.0 API - rx.lang.scala.Observable</title>
-          <meta name="description" content="Observable - rxjava - scala 0.15.0 API - rx.lang.scala.Observable" />
-          <meta name="keywords" content="Observable rxjava scala 0.15.0 API rx.lang.scala.Observable" />
+          <title>Observable - rxjava-scala 0.16.0 API - rx.lang.scala.Observable</title>
+          <meta name="description" content="Observable - rxjava - scala 0.16.0 API - rx.lang.scala.Observable" />
+          <meta name="keywords" content="Observable rxjava scala 0.16.0 API rx.lang.scala.Observable" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -151,96 +151,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="rx.lang.scala.Observable#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply(range:scala.collection.immutable.Range):rx.lang.scala.Observable[Int]"></a>
-      <a id="apply(Range):Observable[Int]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="range">range: <span class="extype" name="scala.collection.immutable.Range">Range</span></span>)</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="scala.Int">Int</span>]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Generates an Observable that emits a sequence of integers within a specified range.</p><div class="fullcomment"><div class="comment cmt"><p>Generates an Observable that emits a sequence of integers within a specified range.</p><p><img width="640" src="https://github.com/Netflix/RxJava/wiki/images/rx-operators/range.png"></p><p>Implementation note: the entire range will be immediately emitted each time an <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a> subscribes.
-Since this occurs before the <a href="Subscription.html" class="extype" name="rx.lang.scala.Subscription">rx.lang.scala.Subscription</a> is returned,
-it in not possible to unsubscribe from the sequence before it completes.
-</p></div><dl class="paramcmts block"><dt class="param">range</dt><dd class="cmt"><p>the range</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that emits a range of sequential integers
-</p></dd></dl></div>
-    </li><li name="rx.lang.scala.Observable#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply[T](items:T*):rx.lang.scala.Observable[T]"></a>
-      <a id="apply[T](T*):Observable[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="items">items: <span class="extype" name="rx.lang.scala.Observable.apply.T">T</span>*</span>)</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.apply.T">T</span>]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Converts a sequence of values into an Observable.</p><div class="fullcomment"><div class="comment cmt"><p>Converts a sequence of values into an Observable.</p><p><img width="640" src="https://github.com/Netflix/RxJava/wiki/images/rx-operators/from.png"></p><p>Implementation note: the entire array will be immediately emitted each time an <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a> subscribes.
-Since this occurs before the <a href="Subscription.html" class="extype" name="rx.lang.scala.Subscription">rx.lang.scala.Subscription</a> is returned,
-it in not possible to unsubscribe from the sequence before it completes.
-</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>
-           the type of items in the Array, and the type of items to be emitted by the
-           resulting Observable</p></dd><dt class="param">items</dt><dd class="cmt"><p>
-           the source Array</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that emits each item in the source Array
-</p></dd></dl></div>
-    </li><li name="rx.lang.scala.Observable#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply[T](exception:Throwable):rx.lang.scala.Observable[T]"></a>
-      <a id="apply[T](Throwable):Observable[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="exception">exception: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.apply.T">T</span>]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Returns an Observable that invokes an <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a>'s <a href="Observer.html#onError(error:Throwable):Unit" class="extmbr" name="rx.lang.scala.Observer#onError">onError</a> method when the Observer subscribes to it</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that invokes an <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a>'s <a href="Observer.html#onError(error:Throwable):Unit" class="extmbr" name="rx.lang.scala.Observer#onError">onError</a> method when the Observer subscribes to it</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/error.png">
-</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>
-           the type of the items (ostensibly) emitted by the Observable</p></dd><dt class="param">exception</dt><dd class="cmt"><p>
-           the particular error to report</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that invokes the <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a>'s <a href="Observer.html#onError(error:Throwable):Unit" class="extmbr" name="rx.lang.scala.Observer#onError">onError</a> method when the Observer subscribes to it
-</p></dd></dl></div>
-    </li><li name="rx.lang.scala.Observable#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply[T](func:rx.lang.scala.Observer[T]=&gt;rx.lang.scala.Subscription):rx.lang.scala.Observable[T]"></a>
-      <a id="apply[T]((Observer[T])⇒Subscription):Observable[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="func">func: (<a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.Observable.apply.T">T</span>]) ⇒ <a href="Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>)</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.apply.T">T</span>]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Creates an Observable that will execute the given function when an <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a> subscribes to it.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an Observable that will execute the given function when an <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a> subscribes to it.</p><p><img width="640" src="https://github.com/Netflix/RxJava/wiki/images/rx-operators/create.png"></p><p>Write the function you pass to <code>create</code> so that it behaves as an Observable: It
-should invoke the Observer's <a href="Observer.html#onNext(value:T):Unit" class="extmbr" name="rx.lang.scala.Observer#onNext">onNext</a>, <a href="Observer.html#onError(error:Throwable):Unit" class="extmbr" name="rx.lang.scala.Observer#onError">onError</a>, and <a href="Observer.html#onCompleted():Unit" class="extmbr" name="rx.lang.scala.Observer#onCompleted">onCompleted</a> methods
-appropriately.</p><p>A well-formed Observable must invoke either the Observer's <code>onCompleted</code> method
-exactly once or its <code>onError</code> method exactly once.</p><p>See <a href="http://go.microsoft.com/fwlink/?LinkID=205219">Rx Design Guidelines (PDF)</a>
-for detailed information.</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>
-           the type of the items that this Observable emits</p></dd><dt class="param">func</dt><dd class="cmt"><p>
-           a function that accepts an <code>Observer[T]</code>, invokes its <code>onNext</code>, <code>onError</code>, and <code>onCompleted</code> methods
-           as appropriate, and returns a <a href="Subscription.html" class="extype" name="rx.lang.scala.Subscription">rx.lang.scala.Subscription</a> to allow the Observer to
-           canceling the subscription</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that, when an <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a> subscribes to it, will execute the given
-        function
-</p></dd></dl></div>
-    </li><li name="rx.lang.scala.Observable#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply[T](observable:rx.Observable[_&lt;:T]):rx.lang.scala.Observable[T]"></a>
-      <a id="apply[T](rx.Observable[_&lt;:T]):Observable[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="observable">observable: <span class="extype" name="rx.Observable">rx.Observable</span>[_ &lt;: <span class="extype" name="rx.lang.scala.Observable.apply.T">T</span>]</span>)</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.apply.T">T</span>]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Creates a new Scala Observable from a given Java Observable.</p>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -273,6 +183,29 @@ for detailed information.</p></div><dl class="paramcmts block"><dt class="tparam
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#create" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="create[T](func:rx.lang.scala.Observer[T]=&gt;rx.lang.scala.Subscription):rx.lang.scala.Observable[T]"></a>
+      <a id="create[T]((Observer[T])⇒Subscription):Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">create</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="func">func: (<a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.Observable.create.T">T</span>]) ⇒ <a href="Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>)</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.create.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates an Observable that will execute the given function when an <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a> subscribes to it.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an Observable that will execute the given function when an <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a> subscribes to it.</p><p><img width="640" src="https://github.com/Netflix/RxJava/wiki/images/rx-operators/create.png"></p><p>Write the function you pass to <code>create</code> so that it behaves as an Observable: It
+should invoke the Observer's <a href="Observer.html#onNext(value:T):Unit" class="extmbr" name="rx.lang.scala.Observer#onNext">onNext</a>, <a href="Observer.html#onError(error:Throwable):Unit" class="extmbr" name="rx.lang.scala.Observer#onError">onError</a>, and <a href="Observer.html#onCompleted():Unit" class="extmbr" name="rx.lang.scala.Observer#onCompleted">onCompleted</a> methods
+appropriately.</p><p>A well-formed Observable must invoke either the Observer's <code>onCompleted</code> method
+exactly once or its <code>onError</code> method exactly once.</p><p>See <a href="http://go.microsoft.com/fwlink/?LinkID=205219">Rx Design Guidelines (PDF)</a>
+for detailed information.</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>
+           the type of the items that this Observable emits.</p></dd><dt class="param">func</dt><dd class="cmt"><p>
+           a function that accepts an <code>Observer[T]</code>, invokes its <code>onNext</code>, <code>onError</code>, and <code>onCompleted</code> methods
+           as appropriate, and returns a <a href="Subscription.html" class="extype" name="rx.lang.scala.Subscription">rx.lang.scala.Subscription</a> to allow the Observer to
+           canceling the subscription.</p></dd><dt>returns</dt><dd class="cmt"><p>
+        an Observable that, when an <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a> subscribes to it, will execute the given function.
+</p></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#defer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="defer[T](observable:=&gt;rx.lang.scala.Observable[T]):rx.lang.scala.Observable[T]"></a>
       <a id="defer[T](⇒Observable[T]):Observable[T]"></a>
@@ -297,6 +230,51 @@ obtain updates or a refreshed version of the sequence.
            subscribes to the resulting Observable</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable whose <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a>s trigger an invocation of the given Observable
         factory function
 </p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#empty" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="empty[T](scheduler:rx.lang.scala.Scheduler):rx.lang.scala.Observable[T]"></a>
+      <a id="empty[T](Scheduler):Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">empty</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="scheduler">scheduler: <a href="Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>)</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.empty.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an Observable that emits no data to the <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a> and
+immediately invokes its <a href="Observer.html#onCompleted():Unit" class="extmbr" name="rx.lang.scala.Observer#onCompleted">onCompleted</a> method
+with the specified scheduler.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that emits no data to the <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a> and
+immediately invokes its <a href="Observer.html#onCompleted():Unit" class="extmbr" name="rx.lang.scala.Observer#onCompleted">onCompleted</a> method
+with the specified scheduler.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/empty.s.png">
+</p></div><dl class="paramcmts block"><dt class="param">scheduler</dt><dd class="cmt"><p>the scheduler to call the
+                        <a href="Observer.html#onCompleted():Unit" class="extmbr" name="rx.lang.scala.Observer#onCompleted">onCompleted</a> method</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that returns no data to the <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a> and
+        immediately invokes the <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a>r's
+       <a href="Observer.html#onCompleted():Unit" class="extmbr" name="rx.lang.scala.Observer#onCompleted">onCompleted</a> method with the
+        specified scheduler</p></dd></dl><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="http://msdn.microsoft.com/en-us/library/hh229066.aspx">MSDN: Observable.Empty Method (IScheduler)</a>
+</p></span><span class="cmt"><p><a href="https://github.com/Netflix/RxJava/wiki/Creating-Observables#empty-error-and-never">RxJava Wiki: empty()</a></p></span></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#empty" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="empty[T]:rx.lang.scala.Observable[T]"></a>
+      <a id="empty[T]:Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">empty</span><span class="tparams">[<span name="T">T</span>]</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.empty.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an Observable that emits no data to the <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a> and
+immediately invokes its <a href="Observer.html#onCompleted():Unit" class="extmbr" name="rx.lang.scala.Observer#onCompleted">onCompleted</a> method
+with the specified scheduler.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that emits no data to the <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a> and
+immediately invokes its <a href="Observer.html#onCompleted():Unit" class="extmbr" name="rx.lang.scala.Observer#onCompleted">onCompleted</a> method
+with the specified scheduler.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/empty.s.png">
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>an Observable that returns no data to the <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a> and
+        immediately invokes the <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a>r's
+       <a href="Observer.html#onCompleted():Unit" class="extmbr" name="rx.lang.scala.Observer#onCompleted">onCompleted</a> method with the
+        specified scheduler</p></dd></dl><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="http://msdn.microsoft.com/en-us/library/hh229066.aspx">MSDN: Observable.Empty Method (IScheduler)</a>
+</p></span><span class="cmt"><p><a href="https://github.com/Netflix/RxJava/wiki/Creating-Observables#empty-error-and-never">RxJava Wiki: empty()</a></p></span></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -323,6 +301,26 @@ obtain updates or a refreshed version of the sequence.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#error" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="error[T](exception:Throwable):rx.lang.scala.Observable[T]"></a>
+      <a id="error[T](Throwable):Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">error</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="exception">exception: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.error.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an Observable that invokes an <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a>'s <a href="Observer.html#onError(error:Throwable):Unit" class="extmbr" name="rx.lang.scala.Observer#onError">onError</a>
+method when the Observer subscribes to it.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that invokes an <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a>'s <a href="Observer.html#onError(error:Throwable):Unit" class="extmbr" name="rx.lang.scala.Observer#onError">onError</a>
+method when the Observer subscribes to it.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/error.png">
+</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>
+           the type of the items (ostensibly) emitted by the Observable</p></dd><dt class="param">exception</dt><dd class="cmt"><p>
+           the particular error to report</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that invokes the <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a>'s <a href="Observer.html#onError(error:Throwable):Unit" class="extmbr" name="rx.lang.scala.Observer#onError">onError</a>
+        method when the Observer subscribes to it
+</p></dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -342,6 +340,57 @@ obtain updates or a refreshed version of the sequence.
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#from" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="from[T](iterable:Iterable[T],scheduler:rx.lang.scala.Scheduler):rx.lang.scala.Observable[T]"></a>
+      <a id="from[T](Iterable[T],Scheduler):Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">from</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="iterable">iterable: <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="rx.lang.scala.Observable.from.T">T</span>]</span>, <span name="scheduler">scheduler: <a href="Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>)</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.from.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>the type of items in the <code>Iterable</code> sequence and the
+           type of items to be emitted by the resulting Observable</p></dd><dt class="param">iterable</dt><dd class="cmt"><p>the source <code>Iterable</code> sequence</p></dd><dt class="param">scheduler</dt><dd class="cmt"><p>the scheduler to use</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that emits each item in the source <code>Iterable</code>
+        sequence
+</p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#from" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="from[T](iterable:Iterable[T]):rx.lang.scala.Observable[T]"></a>
+      <a id="from[T](Iterable[T]):Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">from</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="iterable">iterable: <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="rx.lang.scala.Observable.from.T">T</span>]</span>)</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.from.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Converts an <code>Iterable</code> into an Observable.</p><div class="fullcomment"><div class="comment cmt"><p>Converts an <code>Iterable</code> into an Observable.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/from.png"></p><p>Note: the entire iterable sequence is immediately emitted each time an
+Observer subscribes. Since this occurs before the
+<code>Subscription</code> is returned, it is not possible to unsubscribe from
+the sequence before it completes.
+</p></div><dl class="paramcmts block"><dt class="param">iterable</dt><dd class="cmt"><p>the source <code>Iterable</code> sequence</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that emits each item in the source <code>Iterable</code>
+        sequence
+</p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#from" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="from[T](f:scala.concurrent.Future[T])(implicitexecContext:scala.concurrent.ExecutionContext):rx.lang.scala.Observable[T]"></a>
+      <a id="from[T](Future[T])(ExecutionContext):Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">from</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="f">f: <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="rx.lang.scala.Observable.from.T">T</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="execContext">execContext: <span class="extype" name="scala.concurrent.ExecutionContext">ExecutionContext</span></span>)</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.from.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an Observable emitting the value produced by the Future as its single item.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable emitting the value produced by the Future as its single item.
+If the future fails, the Observable will fail as well.
+</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>Future whose value ends up in the resulting Observable</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable completed after producing the value of the future, or with an exception
+</p></dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -414,6 +463,26 @@ obtain updates or a refreshed version of the sequence.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#items" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="items[T](items:T*):rx.lang.scala.Observable[T]"></a>
+      <a id="items[T](T*):Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">items</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="items">items: <span class="extype" name="rx.lang.scala.Observable.items.T">T</span>*</span>)</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.items.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Converts a sequence of values into an Observable.</p><div class="fullcomment"><div class="comment cmt"><p>Converts a sequence of values into an Observable.</p><p><img width="640" src="https://github.com/Netflix/RxJava/wiki/images/rx-operators/from.png"></p><p>Implementation note: the entire array will be immediately emitted each time an <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a> subscribes.
+Since this occurs before the <a href="Subscription.html" class="extype" name="rx.lang.scala.Subscription">rx.lang.scala.Subscription</a> is returned,
+it in not possible to unsubscribe from the sequence before it completes.
+</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>
+           the type of items in the Array, and the type of items to be emitted by the
+           resulting Observable</p></dd><dt class="param">items</dt><dd class="cmt"><p>
+           the source Array</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that emits each item in the source Array
+</p></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>

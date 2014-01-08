@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>Notification - rxjava-scala 0.15.0 API - rx.lang.scala.Notification</title>
-          <meta name="description" content="Notification - rxjava - scala 0.15.0 API - rx.lang.scala.Notification" />
-          <meta name="keywords" content="Notification rxjava scala 0.15.0 API rx.lang.scala.Notification" />
+          <title>Notification - rxjava-scala 0.16.0 API - rx.lang.scala.Notification</title>
+          <meta name="description" content="Notification - rxjava - scala 0.16.0 API - rx.lang.scala.Notification" />
+          <meta name="keywords" content="Notification rxjava scala 0.16.0 API rx.lang.scala.Notification" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -41,9 +41,9 @@
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Provides pattern matching support and constructors for Notifications.</p><p>Example:</p><pre><span class="kw">import</span> Notification._
 Observable(<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>).materialize.subscribe(n <span class="kw">=&gt;</span> n <span class="kw">match</span> {
-  <span class="kw">case</span> OnNext(v) <span class="kw">=&gt;</span> println(<span class="lit">"Got value "</span> + v)
+  <span class="kw">case</span> OnNext(v)     <span class="kw">=&gt;</span> println(<span class="lit">"Got value "</span> + v)
   <span class="kw">case</span> OnCompleted() <span class="kw">=&gt;</span> println(<span class="lit">"Completed"</span>)
-  <span class="kw">case</span> OnError(err) <span class="kw">=&gt;</span> println(<span class="lit">"Error: "</span> + err.getMessage)
+  <span class="kw">case</span> OnError(err)  <span class="kw">=&gt;</span> println(<span class="lit">"Error: "</span> + err.getMessage)
 })</pre></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -233,19 +233,6 @@ Observable(<span class="num">1</span>, <span class="num">2</span>, <span class="
       </span>
       <span class="symbol">
         <a href="Notification$$OnNext$.html"><span class="name">OnNext</span></a>
-      </span>
-      </h4>
-      
-    </li><li name="rx.lang.scala.Notification#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply[T](n:rx.Notification[_&lt;:T]):rx.lang.scala.Notification[T]"></a>
-      <a id="apply[T](rx.Notification[_&lt;:T]):Notification[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="n">n: <span class="extype" name="rx.Notification">rx.Notification</span>[_ &lt;: <span class="extype" name="rx.lang.scala.Notification.apply.T">T</span>]</span>)</span><span class="result">: <a href="Notification.html" class="extype" name="rx.lang.scala.Notification">Notification</a>[<span class="extype" name="rx.lang.scala.Notification.apply.T">T</span>]</span>
       </span>
       </h4>
       

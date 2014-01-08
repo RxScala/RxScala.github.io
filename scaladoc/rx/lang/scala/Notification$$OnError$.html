@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>OnError - rxjava-scala 0.15.0 API - rx.lang.scala.Notification.OnError</title>
-          <meta name="description" content="OnError - rxjava - scala 0.15.0 API - rx.lang.scala.Notification.OnError" />
-          <meta name="keywords" content="OnError rxjava scala 0.15.0 API rx.lang.scala.Notification.OnError" />
+          <title>OnError - rxjava-scala 0.16.0 API - rx.lang.scala.Notification.OnError</title>
+          <meta name="description" content="OnError - rxjava - scala 0.16.0 API - rx.lang.scala.Notification.OnError" />
+          <meta name="keywords" content="OnError rxjava scala 0.16.0 API rx.lang.scala.Notification.OnError" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -150,6 +150,22 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="rx.lang.scala.Notification.OnError#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply[T](error:Throwable):rx.lang.scala.Notification[T]"></a>
+      <a id="apply[T](Throwable):Notification[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="error">error: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <a href="Notification.html" class="extype" name="rx.lang.scala.Notification">Notification</a>[<span class="extype" name="rx.lang.scala.Notification.OnError.apply.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Constructor for onError notifications.</p><div class="fullcomment"><div class="comment cmt"><p>Constructor for onError notifications.
+</p></div><dl class="paramcmts block"><dt class="param">error</dt><dd class="cmt"><p>
+The exception passed to the onNext method.
+</p></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -331,8 +347,8 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="rx.lang.scala.Notification.OnError#unapply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="unapply[U](n:rx.lang.scala.Notification[U]):Option[Throwable]"></a>
+    </li><li name="rx.lang.scala.Notification.OnError#unapply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="unapply[U](notification:rx.lang.scala.Notification[U]):Option[Throwable]"></a>
       <a id="unapply[U](Notification[U]):Option[Throwable]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -340,10 +356,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">unapply</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="n">n: <a href="Notification.html" class="extype" name="rx.lang.scala.Notification">Notification</a>[<span class="extype" name="rx.lang.scala.Notification.OnError.unapply.U">U</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Throwable">Throwable</span>]</span>
+        <span class="name">unapply</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="notification">notification: <a href="Notification.html" class="extype" name="rx.lang.scala.Notification">Notification</a>[<span class="extype" name="rx.lang.scala.Notification.OnError.unapply.U">U</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Throwable">Throwable</span>]</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Destructor for onError notifications.</p><div class="fullcomment"><div class="comment cmt"><p>Destructor for onError notifications.
+</p></div><dl class="paramcmts block"><dt class="param">notification</dt><dd class="cmt"><p>
+                    The <a href="Notification.html" class="extype" name="rx.lang.scala.Notification">rx.lang.scala.Notification</a> to be deconstructed</p></dd><dt>returns</dt><dd class="cmt"><p>
+        The <span class="extype" name="java.lang.Throwable">java.lang.Throwable</span> value contained in this notification.
+</p></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>

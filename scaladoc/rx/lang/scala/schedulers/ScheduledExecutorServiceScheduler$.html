@@ -2,17 +2,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>Scheduler - rxjava-scala 0.15.0 API - rx.lang.scala.Scheduler</title>
-          <meta name="description" content="Scheduler - rxjava - scala 0.15.0 API - rx.lang.scala.Scheduler" />
-          <meta name="keywords" content="Scheduler rxjava scala 0.15.0 API rx.lang.scala.Scheduler" />
+          <title>ScheduledExecutorServiceScheduler - rxjava-scala 0.16.0 API - rx.lang.scala.schedulers.ScheduledExecutorServiceScheduler</title>
+          <meta name="description" content="ScheduledExecutorServiceScheduler - rxjava - scala 0.16.0 API - rx.lang.scala.schedulers.ScheduledExecutorServiceScheduler" />
+          <meta name="keywords" content="ScheduledExecutorServiceScheduler rxjava scala 0.16.0 API rx.lang.scala.schedulers.ScheduledExecutorServiceScheduler" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
-      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
       <script type="text/javascript">
          if(top === self) {
-            var url = '../../../index.html';
-            var hash = 'rx.lang.scala.Scheduler$';
+            var url = '../../../../index.html';
+            var hash = 'rx.lang.scala.schedulers.ScheduledExecutorServiceScheduler$';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -24,9 +24,9 @@
         </head>
         <body class="value">
       <div id="definition">
-        <a href="Scheduler.html" title="Go to companion"><img src="../../../lib/object_to_trait_big.png" /></a>
-        <p id="owner"><a href="../../package.html" class="extype" name="rx">rx</a>.<a href="../package.html" class="extype" name="rx.lang">lang</a>.<a href="package.html" class="extype" name="rx.lang.scala">scala</a></p>
-        <h1><a href="Scheduler.html" title="Go to companion">Scheduler</a></h1>
+        <a href="ScheduledExecutorServiceScheduler.html" title="Go to companion"><img src="../../../../lib/object_to_class_big.png" /></a>
+        <p id="owner"><a href="../../../package.html" class="extype" name="rx">rx</a>.<a href="../../package.html" class="extype" name="rx.lang">lang</a>.<a href="../package.html" class="extype" name="rx.lang.scala">scala</a>.<a href="package.html" class="extype" name="rx.lang.scala.schedulers">schedulers</a></p>
+        <h1><a href="ScheduledExecutorServiceScheduler.html" title="Go to companion">ScheduledExecutorServiceScheduler</a></h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,12 +35,11 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">Scheduler</span>
+        <span class="name">ScheduledExecutorServiceScheduler</span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Provides constructors for Schedulers.
-</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -60,7 +59,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="rx.lang.scala.Scheduler"><span>Scheduler</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="rx.lang.scala.schedulers.ScheduledExecutorServiceScheduler"><span>ScheduledExecutorServiceScheduler</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -151,19 +150,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="rx.lang.scala.Scheduler#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply(s:rx.Scheduler):rx.lang.scala.Scheduler"></a>
-      <a id="apply(rx.Scheduler):Scheduler"></a>
+    </li><li name="rx.lang.scala.schedulers.ScheduledExecutorServiceScheduler#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="apply(executor:java.util.concurrent.ScheduledExecutorService):rx.lang.scala.schedulers.ScheduledExecutorServiceScheduler"></a>
+      <a id="apply(ScheduledExecutorService):ScheduledExecutorServiceScheduler"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="s">s: <span class="extype" name="rx.Scheduler">rx.Scheduler</span></span>)</span><span class="result">: <a href="Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>
+        <span class="name">apply</span><span class="params">(<span name="executor">executor: <span class="extype" name="java.util.concurrent.ScheduledExecutorService">ScheduledExecutorService</span></span>)</span><span class="result">: <a href="ScheduledExecutorServiceScheduler.html" class="extype" name="rx.lang.scala.schedulers.ScheduledExecutorServiceScheduler">ScheduledExecutorServiceScheduler</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Constructs a Scala Scheduler from a Java Scheduler.</p>
+      <p class="shortcomment cmt">Returns a <a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">rx.lang.scala.Scheduler</a> that queues work on an <code>java.util.concurrent.ScheduledExecutorService</code>.</p>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -189,7 +188,7 @@
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
@@ -234,7 +233,7 @@
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
@@ -431,6 +430,6 @@
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../lib/template.js"></script>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../lib/template.js"></script>
     </body>
       </html>

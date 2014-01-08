@@ -2,17 +2,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>SerialSubscription - rxjava-scala 0.16.0 API - rx.lang.scala.subscriptions.SerialSubscription</title>
-          <meta name="description" content="SerialSubscription - rxjava - scala 0.16.0 API - rx.lang.scala.subscriptions.SerialSubscription" />
-          <meta name="keywords" content="SerialSubscription rxjava scala 0.16.0 API rx.lang.scala.subscriptions.SerialSubscription" />
+          <title>JavaConversions - rxjava-scala 0.16.0 API - rx.lang.scala.JavaConversions</title>
+          <meta name="description" content="JavaConversions - rxjava - scala 0.16.0 API - rx.lang.scala.JavaConversions" />
+          <meta name="keywords" content="JavaConversions rxjava scala 0.16.0 API rx.lang.scala.JavaConversions" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
-      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
       <script type="text/javascript">
          if(top === self) {
-            var url = '../../../../index.html';
-            var hash = 'rx.lang.scala.subscriptions.SerialSubscription$';
+            var url = '../../../index.html';
+            var hash = 'rx.lang.scala.JavaConversions$';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -24,9 +24,9 @@
         </head>
         <body class="value">
       <div id="definition">
-        <a href="SerialSubscription.html" title="Go to companion"><img src="../../../../lib/object_to_class_big.png" /></a>
-        <p id="owner"><a href="../../../package.html" class="extype" name="rx">rx</a>.<a href="../../package.html" class="extype" name="rx.lang">lang</a>.<a href="../package.html" class="extype" name="rx.lang.scala">scala</a>.<a href="package.html" class="extype" name="rx.lang.scala.subscriptions">subscriptions</a></p>
-        <h1><a href="SerialSubscription.html" title="Go to companion">SerialSubscription</a></h1>
+        <img src="../../../lib/object_big.png" />
+        <p id="owner"><a href="../../package.html" class="extype" name="rx">rx</a>.<a href="../package.html" class="extype" name="rx.lang">lang</a>.<a href="package.html" class="extype" name="rx.lang.scala">scala</a></p>
+        <h1>JavaConversions</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,11 +35,15 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">SerialSubscription</span>
+        <span class="name">JavaConversions</span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>These functions convert between RxScala types RxJava types.
+Pure Scala projects won't need them, but they will be useful for polyglot projects.
+This object only contains conversions between types. For conversions between functions,
+use <a href="ImplicitFunctionConversions$.html" class="extype" name="rx.lang.scala.ImplicitFunctionConversions">rx.lang.scala.ImplicitFunctionConversions</a>.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -59,7 +63,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="rx.lang.scala.subscriptions.SerialSubscription"><span>SerialSubscription</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="rx.lang.scala.JavaConversions"><span>JavaConversions</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -150,32 +154,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="rx.lang.scala.subscriptions.SerialSubscription#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply(unsubscribe:=&gt;Unit):rx.lang.scala.subscriptions.SerialSubscription"></a>
-      <a id="apply(⇒Unit):SerialSubscription"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="unsubscribe">unsubscribe: ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <a href="SerialSubscription.html" class="extype" name="rx.lang.scala.subscriptions.SerialSubscription">SerialSubscription</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Creates a <a href="SerialSubscription.html" class="extype" name="rx.lang.scala.subscriptions.SerialSubscription">rx.lang.scala.subscriptions.SerialSubscription</a> that invokes the specified action when unsubscribed.</p>
-    </li><li name="rx.lang.scala.subscriptions.SerialSubscription#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply():rx.lang.scala.subscriptions.SerialSubscription"></a>
-      <a id="apply():SerialSubscription"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="params">()</span><span class="result">: <a href="SerialSubscription.html" class="extype" name="rx.lang.scala.subscriptions.SerialSubscription">SerialSubscription</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Creates a <a href="SerialSubscription.html" class="extype" name="rx.lang.scala.subscriptions.SerialSubscription">rx.lang.scala.subscriptions.SerialSubscription</a>.</p>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -201,7 +179,7 @@
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
@@ -246,7 +224,7 @@
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
@@ -292,6 +270,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="rx.lang.scala.JavaConversions#javaSchedulerToScalaScheduler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="javaSchedulerToScalaScheduler(s:rx.Scheduler):rx.lang.scala.Scheduler"></a>
+      <a id="javaSchedulerToScalaScheduler(rx.Scheduler):Scheduler"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">javaSchedulerToScalaScheduler</span><span class="params">(<span name="s">s: <span class="extype" name="rx.Scheduler">rx.Scheduler</span></span>)</span><span class="result">: <a href="Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -331,6 +322,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="rx.lang.scala.JavaConversions#scalaSchedulerToJavaScheduler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="scalaSchedulerToJavaScheduler(s:rx.lang.scala.Scheduler):rx.Scheduler"></a>
+      <a id="scalaSchedulerToJavaScheduler(Scheduler):rx.Scheduler"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">scalaSchedulerToJavaScheduler</span><span class="params">(<span name="s">s: <a href="Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>)</span><span class="result">: <span class="extype" name="rx.Scheduler">rx.Scheduler</span></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -344,6 +348,110 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="rx.lang.scala.JavaConversions#toJavaNotification" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toJavaNotification[T](s:rx.lang.scala.Notification[T]):rx.Notification[_&lt;:T]"></a>
+      <a id="toJavaNotification[T](Notification[T]):rx.Notification[_&lt;:T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toJavaNotification</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="s">s: <a href="Notification.html" class="extype" name="rx.lang.scala.Notification">Notification</a>[<span class="extype" name="rx.lang.scala.JavaConversions.toJavaNotification.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="rx.Notification">rx.Notification</span>[_ &lt;: <span class="extype" name="rx.lang.scala.JavaConversions.toJavaNotification.T">T</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="rx.lang.scala.JavaConversions#toJavaObservable" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toJavaObservable[T](s:rx.lang.scala.Observable[T]):rx.Observable[_&lt;:T]"></a>
+      <a id="toJavaObservable[T](Observable[T]):rx.Observable[_&lt;:T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toJavaObservable</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="s">s: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.JavaConversions.toJavaObservable.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="rx.Observable">rx.Observable</span>[_ &lt;: <span class="extype" name="rx.lang.scala.JavaConversions.toJavaObservable.T">T</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="rx.lang.scala.JavaConversions#toJavaObserver" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toJavaObserver[T](s:rx.lang.scala.Observer[T]):rx.Observer[_&gt;:T]"></a>
+      <a id="toJavaObserver[T](Observer[T]):rx.Observer[_&gt;:T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toJavaObserver</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="s">s: <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.JavaConversions.toJavaObserver.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="rx.Observer">rx.Observer</span>[_ &gt;: <span class="extype" name="rx.lang.scala.JavaConversions.toJavaObserver.T">T</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="rx.lang.scala.JavaConversions#toJavaSubscription" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toJavaSubscription(s:rx.lang.scala.Subscription):rx.Subscription"></a>
+      <a id="toJavaSubscription(Subscription):rx.Subscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toJavaSubscription</span><span class="params">(<span name="s">s: <a href="Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>)</span><span class="result">: <span class="extype" name="rx.Subscription">rx.Subscription</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="rx.lang.scala.JavaConversions#toScalaNotification" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toScalaNotification[T](s:rx.Notification[_&lt;:T]):rx.lang.scala.Notification[T]"></a>
+      <a id="toScalaNotification[T](rx.Notification[_&lt;:T]):Notification[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toScalaNotification</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="s">s: <span class="extype" name="rx.Notification">rx.Notification</span>[_ &lt;: <span class="extype" name="rx.lang.scala.JavaConversions.toScalaNotification.T">T</span>]</span>)</span><span class="result">: <a href="Notification.html" class="extype" name="rx.lang.scala.Notification">Notification</a>[<span class="extype" name="rx.lang.scala.JavaConversions.toScalaNotification.T">T</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="rx.lang.scala.JavaConversions#toScalaObservable" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toScalaObservable[T](observable:rx.Observable[_&lt;:T]):rx.lang.scala.Observable[T]"></a>
+      <a id="toScalaObservable[T](rx.Observable[_&lt;:T]):Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toScalaObservable</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="observable">observable: <span class="extype" name="rx.Observable">rx.Observable</span>[_ &lt;: <span class="extype" name="rx.lang.scala.JavaConversions.toScalaObservable.T">T</span>]</span>)</span><span class="result">: <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.JavaConversions.toScalaObservable.T">T</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="rx.lang.scala.JavaConversions#toScalaObserver" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toScalaObserver[T](s:rx.Observer[_&gt;:T]):rx.lang.scala.Observer[T]"></a>
+      <a id="toScalaObserver[T](rx.Observer[_&gt;:T]):Observer[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toScalaObserver</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="s">s: <span class="extype" name="rx.Observer">rx.Observer</span>[_ &gt;: <span class="extype" name="rx.lang.scala.JavaConversions.toScalaObserver.T">T</span>]</span>)</span><span class="result">: <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.JavaConversions.toScalaObserver.T">T</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="rx.lang.scala.JavaConversions#toScalaSubscription" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toScalaSubscription(s:rx.Subscription):rx.lang.scala.Subscription"></a>
+      <a id="toScalaSubscription(rx.Subscription):Subscription"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toScalaSubscription</span><span class="params">(<span name="s">s: <span class="extype" name="rx.Subscription">rx.Subscription</span></span>)</span><span class="result">: <a href="Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>
@@ -443,6 +551,6 @@
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../lib/template.js"></script>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../lib/template.js"></script>
     </body>
       </html>
