@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>scala - rxjava-scala 0.16.0 API - rx.lang.scala</title>
-          <meta name="description" content="scala - rxjava - scala 0.16.0 API - rx.lang.scala" />
-          <meta name="keywords" content="scala rxjava scala 0.16.0 API rx.lang.scala" />
+          <title>scala - rxjava-scala 0.18.1 API - rx.lang.scala</title>
+          <meta name="description" content="scala - rxjava - scala 0.18.1 API - rx.lang.scala" />
+          <meta name="keywords" content="scala rxjava scala 0.18.1 API rx.lang.scala" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -161,6 +161,19 @@
       </span>
       </h4>
       <p class="comment cmt">A Subject is an Observable and an Observer at the same time.</p>
+    </li><li name="rx.lang.scala.Subscriber" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Subscriber[-T]extendsObserver[T]withSubscription"></a>
+      <a id="Subscriber[-T]:Subscriber[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Subscriber.html"><span class="name">Subscriber</span></a><span class="tparams">[<span name="T">-T</span>]</span><span class="result"> extends <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.Subscriber.T">T</span>] with <a href="Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>
+      </span>
+      </h4>
+      
     </li><li name="rx.lang.scala.Subscription" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="SubscriptionextendsAnyRef"></a>
       <a id="Subscription:Subscription"></a>
@@ -174,6 +187,19 @@
       </span>
       </h4>
       <p class="comment cmt">Subscriptions are returned from all <code>Observable.subscribe</code> methods to allow unsubscribing.</p>
+    </li><li name="rx.lang.scala.Worker" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="WorkerextendsSubscription"></a>
+      <a id="Worker:Worker"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Worker.html"><span class="name">Worker</span></a><span class="result"> extends <a href="Subscription.html" class="extype" name="rx.lang.scala.Subscription">Subscription</a></span>
+      </span>
+      </h4>
+      
     </li></ol>
             </div>
 
@@ -242,7 +268,7 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="Observer$.html"><span class="name">Observer</span></a>
+        <a href="Observer$.html"><span class="name">Observer</span></a><span class="result"> extends <span class="extype" name="rx.lang.scala.ObserverFactoryMethods">ObserverFactoryMethods</span>[<a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>]</span>
       </span>
       </h4>
       
@@ -259,6 +285,19 @@
       </span>
       </h4>
       
+    </li><li name="rx.lang.scala.Subscriber" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Subscriber"></a>
+      <a id="Subscriber:Subscriber"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Subscriber$.html"><span class="name">Subscriber</span></a><span class="result"> extends <span class="extype" name="rx.lang.scala.ObserverFactoryMethods">ObserverFactoryMethods</span>[<a href="Subscriber.html" class="extype" name="rx.lang.scala.Subscriber">Subscriber</a>]</span>
+      </span>
+      </h4>
+      
     </li><li name="rx.lang.scala.Subscription" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Subscription"></a>
       <a id="Subscription:Subscription"></a>
@@ -269,6 +308,19 @@
       </span>
       <span class="symbol">
         <a href="Subscription$.html"><span class="name">Subscription</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="rx.lang.scala.Worker" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Worker"></a>
+      <a id="Worker:Worker"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Worker$.html"><span class="name">Worker</span></a>
       </span>
       </h4>
       

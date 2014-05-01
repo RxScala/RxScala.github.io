@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>JavaConversions - rxjava-scala 0.16.0 API - rx.lang.scala.JavaConversions</title>
-          <meta name="description" content="JavaConversions - rxjava - scala 0.16.0 API - rx.lang.scala.JavaConversions" />
-          <meta name="keywords" content="JavaConversions rxjava scala 0.16.0 API rx.lang.scala.JavaConversions" />
+          <title>JavaConversions - rxjava-scala 0.18.1 API - rx.lang.scala.JavaConversions</title>
+          <meta name="description" content="JavaConversions - rxjava - scala 0.18.1 API - rx.lang.scala.JavaConversions" />
+          <meta name="keywords" content="JavaConversions rxjava scala 0.18.1 API rx.lang.scala.JavaConversions" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -283,6 +283,19 @@ use <a href="ImplicitFunctionConversions$.html" class="extype" name="rx.lang.sca
       </span>
       </h4>
       
+    </li><li name="rx.lang.scala.JavaConversions#javaWorkerToScalaWorker" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="javaWorkerToScalaWorker(s:rx.Scheduler.Worker):rx.lang.scala.Worker"></a>
+      <a id="javaWorkerToScalaWorker(Scheduler.Worker):Worker"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">javaWorkerToScalaWorker</span><span class="params">(<span name="s">s: <span class="extype" name="rx.Scheduler.Worker">Scheduler.Worker</span></span>)</span><span class="result">: <a href="Worker.html" class="extype" name="rx.lang.scala.Worker">Worker</a></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -332,6 +345,19 @@ use <a href="ImplicitFunctionConversions$.html" class="extype" name="rx.lang.sca
       </span>
       <span class="symbol">
         <span class="name">scalaSchedulerToJavaScheduler</span><span class="params">(<span name="s">s: <a href="Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>)</span><span class="result">: <span class="extype" name="rx.Scheduler">rx.Scheduler</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="rx.lang.scala.JavaConversions#scalaWorkerToJavaWorker" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="scalaWorkerToJavaWorker(s:rx.lang.scala.Worker):rx.Scheduler.Worker"></a>
+      <a id="scalaWorkerToJavaWorker(Worker):Scheduler.Worker"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">scalaWorkerToJavaWorker</span><span class="params">(<span name="s">s: <a href="Worker.html" class="extype" name="rx.lang.scala.Worker">Worker</a></span>)</span><span class="result">: <span class="extype" name="rx.Scheduler.Worker">Scheduler.Worker</span></span>
       </span>
       </h4>
       
@@ -387,6 +413,19 @@ use <a href="ImplicitFunctionConversions$.html" class="extype" name="rx.lang.sca
       </span>
       </h4>
       
+    </li><li name="rx.lang.scala.JavaConversions#toJavaSubscriber" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toJavaSubscriber[T](s:rx.lang.scala.Subscriber[T]):rx.Subscriber[_&gt;:T]"></a>
+      <a id="toJavaSubscriber[T](Subscriber[T]):rx.Subscriber[_&gt;:T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toJavaSubscriber</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="s">s: <a href="Subscriber.html" class="extype" name="rx.lang.scala.Subscriber">Subscriber</a>[<span class="extype" name="rx.lang.scala.JavaConversions.toJavaSubscriber.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="rx.Subscriber">rx.Subscriber</span>[_ &gt;: <span class="extype" name="rx.lang.scala.JavaConversions.toJavaSubscriber.T">T</span>]</span>
+      </span>
+      </h4>
+      
     </li><li name="rx.lang.scala.JavaConversions#toJavaSubscription" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="toJavaSubscription(s:rx.lang.scala.Subscription):rx.Subscription"></a>
       <a id="toJavaSubscription(Subscription):rx.Subscription"></a>
@@ -436,6 +475,19 @@ use <a href="ImplicitFunctionConversions$.html" class="extype" name="rx.lang.sca
       </span>
       <span class="symbol">
         <span class="name">toScalaObserver</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="s">s: <span class="extype" name="rx.Observer">rx.Observer</span>[_ &gt;: <span class="extype" name="rx.lang.scala.JavaConversions.toScalaObserver.T">T</span>]</span>)</span><span class="result">: <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.JavaConversions.toScalaObserver.T">T</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="rx.lang.scala.JavaConversions#toScalaSubscriber" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toScalaSubscriber[T](s:rx.Subscriber[_&gt;:T]):rx.lang.scala.Subscriber[T]"></a>
+      <a id="toScalaSubscriber[T](rx.Subscriber[_&gt;:T]):Subscriber[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toScalaSubscriber</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="s">s: <span class="extype" name="rx.Subscriber">rx.Subscriber</span>[_ &gt;: <span class="extype" name="rx.lang.scala.JavaConversions.toScalaSubscriber.T">T</span>]</span>)</span><span class="result">: <a href="Subscriber.html" class="extype" name="rx.lang.scala.Subscriber">Subscriber</a>[<span class="extype" name="rx.lang.scala.JavaConversions.toScalaSubscriber.T">T</span>]</span>
       </span>
       </h4>
       

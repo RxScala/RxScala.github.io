@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>BlockingObservable - rxjava-scala 0.16.0 API - rx.lang.scala.observables.BlockingObservable</title>
-          <meta name="description" content="BlockingObservable - rxjava - scala 0.16.0 API - rx.lang.scala.observables.BlockingObservable" />
-          <meta name="keywords" content="BlockingObservable rxjava scala 0.16.0 API rx.lang.scala.observables.BlockingObservable" />
+          <title>BlockingObservable - rxjava-scala 0.18.1 API - rx.lang.scala.observables.BlockingObservable</title>
+          <meta name="description" content="BlockingObservable - rxjava - scala 0.18.1 API - rx.lang.scala.observables.BlockingObservable" />
+          <meta name="keywords" content="BlockingObservable rxjava scala 0.18.1 API rx.lang.scala.observables.BlockingObservable" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -151,6 +151,24 @@
       </span>
       </h4>
       
+    </li><li name="rx.lang.scala.observables.BlockingObservable#first" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="first:T"></a>
+      <a id="first:T"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">first</span><span class="result">: <span class="extype" name="rx.lang.scala.observables.BlockingObservable.T">T</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns the first item emitted by a specified <a href="../Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>, or
+<code>NoSuchElementException</code> if source contains no elements.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the first item emitted by a specified <a href="../Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>, or
+<code>NoSuchElementException</code> if source contains no elements.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the first item emitted by the source <a href="../Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a></p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">NoSuchElementException<p>
+            if source contains no elements</p></span></dd><dt>See also</dt><dd><span class="cmt"><p><a href="http://msdn.microsoft.com/en-us/library/hh229177.aspx">MSDN: Observable.First</a>
+</p></span><span class="cmt"><p><a href="https://github.com/Netflix/RxJava/wiki/Blocking-Observable-Operators#first-and-firstordefault">RxJava Wiki: first()</a></p></span></dd></dl></div>
     </li><li name="rx.lang.scala.observables.BlockingObservable#foreach" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="foreach(f:T=&gt;Unit):Unit"></a>
       <a id="foreach((T)⇒Unit):Unit"></a>
@@ -184,6 +202,24 @@ not need the <code> Observer#onCompleted()</code> or <code> Observer#onError(Thr
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyVal → Any</dd></dl></div>
+    </li><li name="rx.lang.scala.observables.BlockingObservable#head" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="head:T"></a>
+      <a id="head:T"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">head</span><span class="result">: <span class="extype" name="rx.lang.scala.observables.BlockingObservable.T">T</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns the first item emitted by a specified <a href="../Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>, or
+<code>NoSuchElementException</code> if source contains no elements.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the first item emitted by a specified <a href="../Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>, or
+<code>NoSuchElementException</code> if source contains no elements.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the first item emitted by the source <a href="../Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a></p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">NoSuchElementException<p>
+            if source contains no elements</p></span></dd><dt>See also</dt><dd><span class="cmt"><p><a href="#first:T" class="extmbr" name="rx.lang.scala.observables.BlockingObservable#first">BlockingObservable.first</a>
+</p></span><span class="cmt"><p><a href="http://msdn.microsoft.com/en-us/library/hh229177.aspx">MSDN: Observable.First</a></p></span><span class="cmt"><p><a href="https://github.com/Netflix/RxJava/wiki/Blocking-Observable-Operators#first-and-firstordefault">RxJava Wiki: first()</a></p></span></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -197,6 +233,24 @@ not need the <code> Observer#onCompleted()</code> or <code> Observer#onError(Thr
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="rx.lang.scala.observables.BlockingObservable#last" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="last:T"></a>
+      <a id="last:T"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">last</span><span class="result">: <span class="extype" name="rx.lang.scala.observables.BlockingObservable.T">T</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns the last item emitted by a specified <a href="../Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>, or
+throws <code>NoSuchElementException</code> if it emits no items.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the last item emitted by a specified <a href="../Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a>, or
+throws <code>NoSuchElementException</code> if it emits no items.</p><p><img width="640" src="https://github.com/Netflix/RxJava/wiki/images/rx-operators/B.last.png">
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the last item emitted by the source <a href="../Observable.html" class="extype" name="rx.lang.scala.Observable">Observable</a></p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">NoSuchElementException<p>
+            if source contains no elements</p></span></dd><dt>See also</dt><dd><span class="cmt"><p><a href="http://msdn.microsoft.com/en-us/library/system.reactive.linq.observable.last.aspx">MSDN: Observable.Last</a>
+</p></span><span class="cmt"><p><a href="https://github.com/Netflix/RxJava/wiki/Blocking-Observable-Operators#last-and-lastordefault">RxJava Wiki: last()</a></p></span></dd></dl></div>
     </li><li name="rx.lang.scala.observables.BlockingObservable#mostRecent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mostRecent[U&gt;:T](initialValue:U):Iterable[U]"></a>
       <a id="mostRecent[U&gt;:T](U):Iterable[U]"></a>

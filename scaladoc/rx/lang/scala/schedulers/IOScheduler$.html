@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>CurrentThreadScheduler - rxjava-scala 0.16.0 API - rx.lang.scala.schedulers.CurrentThreadScheduler</title>
-          <meta name="description" content="CurrentThreadScheduler - rxjava - scala 0.16.0 API - rx.lang.scala.schedulers.CurrentThreadScheduler" />
-          <meta name="keywords" content="CurrentThreadScheduler rxjava scala 0.16.0 API rx.lang.scala.schedulers.CurrentThreadScheduler" />
+          <title>IOScheduler - rxjava-scala 0.18.1 API - rx.lang.scala.schedulers.IOScheduler</title>
+          <meta name="description" content="IOScheduler - rxjava - scala 0.18.1 API - rx.lang.scala.schedulers.IOScheduler" />
+          <meta name="keywords" content="IOScheduler rxjava scala 0.18.1 API rx.lang.scala.schedulers.IOScheduler" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -12,7 +12,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../index.html';
-            var hash = 'rx.lang.scala.schedulers.CurrentThreadScheduler$';
+            var hash = 'rx.lang.scala.schedulers.IOScheduler$';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -24,9 +24,9 @@
         </head>
         <body class="value">
       <div id="definition">
-        <a href="CurrentThreadScheduler.html" title="Go to companion"><img src="../../../../lib/object_to_class_big.png" /></a>
+        <a href="IOScheduler.html" title="Go to companion"><img src="../../../../lib/object_to_class_big.png" /></a>
         <p id="owner"><a href="../../../package.html" class="extype" name="rx">rx</a>.<a href="../../package.html" class="extype" name="rx.lang">lang</a>.<a href="../package.html" class="extype" name="rx.lang.scala">scala</a>.<a href="package.html" class="extype" name="rx.lang.scala.schedulers">schedulers</a></p>
-        <h1><a href="CurrentThreadScheduler.html" title="Go to companion">CurrentThreadScheduler</a></h1>
+        <h1><a href="IOScheduler.html" title="Go to companion">IOScheduler</a></h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,7 +35,7 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">CurrentThreadScheduler</span>
+        <span class="name">IOScheduler</span>
       </span>
       </h4>
       
@@ -59,7 +59,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="rx.lang.scala.schedulers.CurrentThreadScheduler"><span>CurrentThreadScheduler</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="rx.lang.scala.schedulers.IOScheduler"><span>IOScheduler</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -150,19 +150,21 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="rx.lang.scala.schedulers.CurrentThreadScheduler#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply():rx.lang.scala.schedulers.CurrentThreadScheduler"></a>
-      <a id="apply():CurrentThreadScheduler"></a>
+    </li><li name="rx.lang.scala.schedulers.IOScheduler#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply():rx.lang.scala.schedulers.IOScheduler"></a>
+      <a id="apply():IOScheduler"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">()</span><span class="result">: <a href="CurrentThreadScheduler.html" class="extype" name="rx.lang.scala.schedulers.CurrentThreadScheduler">CurrentThreadScheduler</a></span>
+        <span class="name">apply</span><span class="params">()</span><span class="result">: <a href="IOScheduler.html" class="extype" name="rx.lang.scala.schedulers.IOScheduler">IOScheduler</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Returns a <a href="../Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">rx.lang.scala.Scheduler</a> that queues work on the current thread to be executed after the current work completes.</p>
+      <p class="shortcomment cmt"><code> Scheduler</code> intended for IO-bound work.</p><div class="fullcomment"><div class="comment cmt"><p><code> Scheduler</code> intended for IO-bound work.</p><p>The implementation is backed by an <code> Executor</code> thread-pool that will grow as needed.</p><p>This can be used for asynchronously performing blocking IO.</p><p>Do not perform computational work on this scheduler. Use <code> ComputationScheduler()</code> instead.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>{ @link ExecutorScheduler} for IO-bound work.
+</p></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>

@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>Observer - rxjava-scala 0.16.0 API - rx.lang.scala.Observer</title>
-          <meta name="description" content="Observer - rxjava - scala 0.16.0 API - rx.lang.scala.Observer" />
-          <meta name="keywords" content="Observer rxjava scala 0.16.0 API rx.lang.scala.Observer" />
+          <title>Observer - rxjava-scala 0.18.1 API - rx.lang.scala.Observer</title>
+          <meta name="description" content="Observer - rxjava - scala 0.18.1 API - rx.lang.scala.Observer" />
+          <meta name="keywords" content="Observer rxjava scala 0.18.1 API rx.lang.scala.Observer" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -35,13 +35,13 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">Observer</span>
+        <span class="name">Observer</span><span class="result"> extends <span class="extype" name="rx.lang.scala.ObserverFactoryMethods">ObserverFactoryMethods</span>[<a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>]</span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="rx.lang.scala.ObserverFactoryMethods">ObserverFactoryMethods</span>[<a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -59,7 +59,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="rx.lang.scala.Observer"><span>Observer</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="rx.lang.scala.Observer"><span>Observer</span></li><li class="in" name="rx.lang.scala.ObserverFactoryMethods"><span>ObserverFactoryMethods</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -150,7 +150,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="rx.lang.scala.Observer#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="rx.lang.scala.Observer#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="apply[T](onNext:T=&gt;Unit,onError:Throwable=&gt;Unit,onCompleted:()=&gt;Unit):rx.lang.scala.Observer[T]"></a>
       <a id="apply[T]((T)⇒Unit,(Throwable)⇒Unit,()⇒Unit):Observer[T]"></a>
       <h4 class="signature">
@@ -162,9 +162,9 @@
         <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="onNext">onNext: (<span class="extype" name="rx.lang.scala.Observer.apply.T">T</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>, <span name="onError">onError: (<span class="extype" name="scala.Throwable">Throwable</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>, <span name="onCompleted">onCompleted: () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.Observer.apply.T">T</span>]</span>
       </span>
       </h4>
-      
-    </li><li name="rx.lang.scala.Observer#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply[T](onNext:T=&gt;Unit,onCompleted:()=&gt;Unit):rx.lang.scala.Observer[T]"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="rx.lang.scala.Observer">Observer</a> → ObserverFactoryMethods</dd></dl></div>
+    </li><li name="rx.lang.scala.ObserverFactoryMethods#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply[T](onNext:T=&gt;Unit,onCompleted:()=&gt;Unit):P[T]"></a>
       <a id="apply[T]((T)⇒Unit,()⇒Unit):Observer[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -172,12 +172,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="onNext">onNext: (<span class="extype" name="rx.lang.scala.Observer.apply.T">T</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>, <span name="onCompleted">onCompleted: () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.Observer.apply.T">T</span>]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="onNext">onNext: (<span class="extype" name="rx.lang.scala.ObserverFactoryMethods.apply.T">T</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>, <span name="onCompleted">onCompleted: () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.ObserverFactoryMethods.apply.T">T</span>]</span>
       </span>
       </h4>
-      
-    </li><li name="rx.lang.scala.Observer#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply[T](onNext:T=&gt;Unit,onError:Throwable=&gt;Unit):rx.lang.scala.Observer[T]"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ObserverFactoryMethods</dd></dl></div>
+    </li><li name="rx.lang.scala.ObserverFactoryMethods#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply[T](onNext:T=&gt;Unit,onError:Throwable=&gt;Unit):P[T]"></a>
       <a id="apply[T]((T)⇒Unit,(Throwable)⇒Unit):Observer[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -185,12 +185,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="onNext">onNext: (<span class="extype" name="rx.lang.scala.Observer.apply.T">T</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>, <span name="onError">onError: (<span class="extype" name="scala.Throwable">Throwable</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.Observer.apply.T">T</span>]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="onNext">onNext: (<span class="extype" name="rx.lang.scala.ObserverFactoryMethods.apply.T">T</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>, <span name="onError">onError: (<span class="extype" name="scala.Throwable">Throwable</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.ObserverFactoryMethods.apply.T">T</span>]</span>
       </span>
       </h4>
-      
-    </li><li name="rx.lang.scala.Observer#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply[T](onNext:T=&gt;Unit):rx.lang.scala.Observer[T]"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ObserverFactoryMethods</dd></dl></div>
+    </li><li name="rx.lang.scala.ObserverFactoryMethods#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply[T](onNext:T=&gt;Unit):P[T]"></a>
       <a id="apply[T]((T)⇒Unit):Observer[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -198,12 +198,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="onNext">onNext: (<span class="extype" name="rx.lang.scala.Observer.apply.T">T</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.Observer.apply.T">T</span>]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="onNext">onNext: (<span class="extype" name="rx.lang.scala.ObserverFactoryMethods.apply.T">T</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.ObserverFactoryMethods.apply.T">T</span>]</span>
       </span>
       </h4>
-      
-    </li><li name="rx.lang.scala.Observer#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply[T]():rx.lang.scala.Observer[T]"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ObserverFactoryMethods</dd></dl></div>
+    </li><li name="rx.lang.scala.ObserverFactoryMethods#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply[T]():P[T]"></a>
       <a id="apply[T]():Observer[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -211,10 +211,10 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">()</span><span class="result">: <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.Observer.apply.T">T</span>]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">()</span><span class="result">: <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.ObserverFactoryMethods.apply.T">T</span>]</span>
       </span>
       </h4>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ObserverFactoryMethods</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -462,7 +462,9 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="rx.lang.scala.ObserverFactoryMethods">
+              <h3>Inherited from <span class="extype" name="rx.lang.scala.ObserverFactoryMethods">ObserverFactoryMethods</span>[<a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>]</h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>

@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>Observable - rxjava-scala 0.16.0 API - rx.lang.scala.Observable</title>
-          <meta name="description" content="Observable - rxjava - scala 0.16.0 API - rx.lang.scala.Observable" />
-          <meta name="keywords" content="Observable rxjava scala 0.16.0 API rx.lang.scala.Observable" />
+          <title>Observable - rxjava-scala 0.18.1 API - rx.lang.scala.Observable</title>
+          <meta name="description" content="Observable - rxjava - scala 0.18.1 API - rx.lang.scala.Observable" />
+          <meta name="keywords" content="Observable rxjava scala 0.18.1 API rx.lang.scala.Observable" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -172,6 +172,41 @@ by <code>that</code>.</p><p><img width="640" src="https://raw.github.com/wiki/Ne
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#amb" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="amb[U&gt;:T](that:rx.lang.scala.Observable[U]):rx.lang.scala.Observable[U]"></a>
+      <a id="amb[U&gt;:T](Observable[U]):Observable[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">amb</span><span class="tparams">[<span name="U">U &gt;: <span class="extype" name="rx.lang.scala.Observable.T">T</span></span>]</span><span class="params">(<span name="that">that: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.amb.U">U</span>]</span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.amb.U">U</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Given two Observables, mirror the one that first emits an item.</p><div class="fullcomment"><div class="comment cmt"><p>Given two Observables, mirror the one that first emits an item.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/amb.png">
+</p></div><dl class="paramcmts block"><dt class="param">that</dt><dd class="cmt"><p>
+           an Observable competing to react first</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that emits the same sequence of items as whichever of <code>this</code> or <code>that</code> first emitted an item.
+</p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(index:Int):rx.lang.scala.Observable[T]"></a>
+      <a id="apply(Int):Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="index">index: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an Observable that emits the single item at a specified index in a sequence of emissions from a
+source Observbable.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that emits the single item at a specified index in a sequence of emissions from a
+source Observbable.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/elementAt.png">
+</p></div><dl class="paramcmts block"><dt class="param">index</dt><dd class="cmt"><p>
+           the zero-based index of the item to retrieve</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that emits a single item: the item at the specified position in the sequence of
+        those emitted by the source Observable</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">IndexOutOfBoundsException<p>
+            if index is less than 0</p></span></dd><dt>See also</dt><dd><span class="cmt"><p><code>Observable.elementAt</code></p></span></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="apply(observer:rx.lang.scala.Observer[T]):rx.lang.scala.Subscription"></a>
       <a id="apply(Observer[T]):Subscription"></a>
@@ -384,21 +419,20 @@ buffer is emitted, and the event is propagated.
         <code>count</code> produced values.
 </p></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#buffer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="buffer[Opening,Closing](openings:rx.lang.scala.Observable[Opening],closings:Opening=&gt;rx.lang.scala.Observable[Closing]):rx.lang.scala.Observable[Seq[T]]"></a>
-      <a id="buffer[Opening,Closing](Observable[Opening],(Opening)⇒Observable[Closing]):Observable[Seq[T]]"></a>
+      <a id="buffer[Opening](openings:rx.lang.scala.Observable[Opening],closings:Opening=&gt;rx.lang.scala.Observable[Any]):rx.lang.scala.Observable[Seq[T]]"></a>
+      <a id="buffer[Opening](Observable[Opening],(Opening)⇒Observable[Any]):Observable[Seq[T]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">buffer</span><span class="tparams">[<span name="Opening">Opening</span>, <span name="Closing">Closing</span>]</span><span class="params">(<span name="openings">openings: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.buffer.Opening">Opening</span>]</span>, <span name="closings">closings: (<span class="extype" name="rx.lang.scala.Observable.buffer.Opening">Opening</span>) ⇒ <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.buffer.Closing">Closing</span>]</span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]]</span>
+        <span class="name">buffer</span><span class="tparams">[<span name="Opening">Opening</span>]</span><span class="params">(<span name="openings">openings: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.buffer.Opening">Opening</span>]</span>, <span name="closings">closings: (<span class="extype" name="rx.lang.scala.Observable.buffer.Opening">Opening</span>) ⇒ <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Creates an Observable which produces buffers of collected values.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an Observable which produces buffers of collected values.</p><p>This Observable produces buffers. Buffers are created when the specified <code>openings</code>
-Observable produces an object. Additionally the function argument
-is used to create an Observable which produces <span class="extype" name="rx.lang.scala.util.Closing">rx.lang.scala.util.Closing</span> objects. When this
-Observable produces such an object, the associated buffer is emitted.
+Observable produces an object. That object is used to construct an Observable to emit buffers, feeding it into <code>closings</code> function.
+Buffers are emitted when the created Observable produces an object.
 </p></div><dl class="paramcmts block"><dt class="param">openings</dt><dd class="cmt"><p>
            The <a href="" class="extype" name="rx.lang.scala.Observable">rx.lang.scala.Observable</a> which, when it produces an object, will cause
            another buffer to be created.</p></dd><dt class="param">closings</dt><dd class="cmt"><p>
@@ -408,15 +442,15 @@ Observable produces such an object, the associated buffer is emitted.
         An <a href="" class="extype" name="rx.lang.scala.Observable">rx.lang.scala.Observable</a> which produces buffers which are created and emitted when the specified <a href="" class="extype" name="rx.lang.scala.Observable">rx.lang.scala.Observable</a>s publish certain objects.
 </p></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#buffer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="buffer[Closing](closings:()=&gt;rx.lang.scala.Observable[_&lt;:Closing]):rx.lang.scala.Observable[Seq[T]]"></a>
-      <a id="buffer[Closing](()⇒Observable[_&lt;:Closing]):Observable[Seq[T]]"></a>
+      <a id="buffer(closings:()=&gt;rx.lang.scala.Observable[Any]):rx.lang.scala.Observable[Seq[T]]"></a>
+      <a id="buffer(()⇒Observable[Any]):Observable[Seq[T]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">buffer</span><span class="tparams">[<span name="Closing">Closing</span>]</span><span class="params">(<span name="closings">closings: () ⇒ <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[_ &lt;: <span class="extype" name="rx.lang.scala.Observable.buffer.Closing">Closing</span>]</span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]]</span>
+        <span class="name">buffer</span><span class="params">(<span name="closings">closings: () ⇒ <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Creates an Observable which produces buffers of collected values.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an Observable which produces buffers of collected values.</p><p>This Observable produces connected non-overlapping buffers. The current buffer is
@@ -471,6 +505,27 @@ emit an infinite or very large number of items that will use up memory.
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#combineLatest" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="combineLatest[U,R](that:rx.lang.scala.Observable[U],f:(T,U)=&gt;R):rx.lang.scala.Observable[R]"></a>
+      <a id="combineLatest[U,R](Observable[U],(T,U)⇒R):Observable[R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">combineLatest</span><span class="tparams">[<span name="U">U</span>, <span name="R">R</span>]</span><span class="params">(<span name="that">that: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.combineLatest.U">U</span>]</span>, <span name="f">f: (<span class="extype" name="rx.lang.scala.Observable.T">T</span>, <span class="extype" name="rx.lang.scala.Observable.combineLatest.U">U</span>) ⇒ <span class="extype" name="rx.lang.scala.Observable.combineLatest.R">R</span></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.combineLatest.R">R</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Combines two observables, emitting some type <code>R</code> specified in the function f,
+each time an event is received from one of the source observables, where the aggregation
+is defined by the given function.</p><div class="fullcomment"><div class="comment cmt"><p>Combines two observables, emitting some type <code>R</code> specified in the function f,
+each time an event is received from one of the source observables, where the aggregation
+is defined by the given function.
+</p></div><dl class="paramcmts block"><dt class="param">that</dt><dd class="cmt"><p>
+          The second source observable.</p></dd><dt class="param">f</dt><dd class="cmt"><p>
+               The function that is used combine the emissions of the two observables.</p></dd><dt>returns</dt><dd class="cmt"><p>An Observable that combines the source Observables according to the function f.
+</p></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#combineLatest" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="combineLatest[U](that:rx.lang.scala.Observable[U]):rx.lang.scala.Observable[(T,U)]"></a>
       <a id="combineLatest[U](Observable[U]):Observable[(T,U)]"></a>
@@ -547,6 +602,73 @@ aggregation is defined by the given function.
            The time each value has to be 'the most recent' of the <a href="" class="extype" name="rx.lang.scala.Observable">rx.lang.scala.Observable</a> to ensure that it's not dropped.
 </p></dd><dt>returns</dt><dd class="cmt"><p>An <a href="" class="extype" name="rx.lang.scala.Observable">rx.lang.scala.Observable</a> which filters out values which are too quickly followed up with newer values.</p></dd></dl><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><code>Observable.throttleWithTimeout</code>
 </p></span></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#delay" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="delay(delay:scala.concurrent.duration.Duration,scheduler:rx.lang.scala.Scheduler):rx.lang.scala.Observable[T]"></a>
+      <a id="delay(Duration,Scheduler):Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">delay</span><span class="params">(<span name="delay">delay: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>, <span name="scheduler">scheduler: <a href="Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an Observable that emits the items emitted by the source Observable shifted forward in time by a
+specified delay.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that emits the items emitted by the source Observable shifted forward in time by a
+specified delay. Error notifications from the source Observable are not delayed.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/delay.s.png">
+</p></div><dl class="paramcmts block"><dt class="param">delay</dt><dd class="cmt"><p>the delay to shift the source by</p></dd><dt class="param">scheduler</dt><dd class="cmt"><p>the Scheduler to use for delaying</p></dd><dt>returns</dt><dd class="cmt"><p>the source Observable shifted in time by the specified delay
+</p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#delay" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="delay(delay:scala.concurrent.duration.Duration):rx.lang.scala.Observable[T]"></a>
+      <a id="delay(Duration):Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">delay</span><span class="params">(<span name="delay">delay: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an Observable that emits the items emitted by the source Observable shifted forward in time by a
+specified delay.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that emits the items emitted by the source Observable shifted forward in time by a
+specified delay. Error notifications from the source Observable are not delayed.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/delay.png">
+</p></div><dl class="paramcmts block"><dt class="param">delay</dt><dd class="cmt"><p>the delay to shift the source by</p></dd><dt>returns</dt><dd class="cmt"><p>the source Observable shifted in time by the specified delay
+</p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#delaySubscription" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="delaySubscription(delay:scala.concurrent.duration.Duration,scheduler:rx.lang.scala.Scheduler):rx.lang.scala.Observable[T]"></a>
+      <a id="delaySubscription(Duration,Scheduler):Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">delaySubscription</span><span class="params">(<span name="delay">delay: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>, <span name="scheduler">scheduler: <a href="Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Return an Observable that delays the subscription to the source Observable by a given amount of time,
+both waiting and subscribing on a given Scheduler.</p><div class="fullcomment"><div class="comment cmt"><p>Return an Observable that delays the subscription to the source Observable by a given amount of time,
+both waiting and subscribing on a given Scheduler.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/delaySubscription.s.png">
+</p></div><dl class="paramcmts block"><dt class="param">delay</dt><dd class="cmt"><p>the time to delay the subscription</p></dd><dt class="param">scheduler</dt><dd class="cmt"><p>the Scheduler on which the waiting and subscription will happen</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that delays the subscription to the source Observable by a given
+        amount, waiting and subscribing on the given Scheduler
+</p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#delaySubscription" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="delaySubscription(delay:scala.concurrent.duration.Duration):rx.lang.scala.Observable[T]"></a>
+      <a id="delaySubscription(Duration):Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">delaySubscription</span><span class="params">(<span name="delay">delay: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Return an Observable that delays the subscription to the source Observable by a given amount of time.</p><div class="fullcomment"><div class="comment cmt"><p>Return an Observable that delays the subscription to the source Observable by a given amount of time.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/delaySubscription.png">
+</p></div><dl class="paramcmts block"><dt class="param">delay</dt><dd class="cmt"><p>the time to delay the subscription</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that delays the subscription to the source Observable by the given amount
+</p></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#dematerialize" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="dematerialize[U]:rx.lang.scala.Observable[U]"></a>
       <a id="dematerialize[U]:Observable[U]"></a>
@@ -656,7 +778,7 @@ distinct according to a key selector function.</p><p><img width="640" src="https
         <span class="name">doOnCompleted</span><span class="params">(<span name="onCompleted">onCompleted: () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Invokes an action when the source Observable calls <code>onCompleted</code>.</code></p><div class="fullcomment"><div class="comment cmt"><p>Invokes an action when the source Observable calls <code>onCompleted</code>.
+      <p class="shortcomment cmt">Invokes an action when the source Observable calls <code>onCompleted</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Invokes an action when the source Observable calls <code>onCompleted</code>.
 </p></div><dl class="paramcmts block"><dt class="param">onCompleted</dt><dd class="cmt"><p>the action to invoke when the source Observable calls
                    <code>onCompleted</code></p></dd><dt>returns</dt><dd class="cmt"><p>the source Observable with the side-effecting behavior applied
 </p></dd></dl></div>
@@ -744,7 +866,7 @@ Observable.
         <span class="name">doOnError</span><span class="params">(<span name="onError">onError: (<span class="extype" name="scala.Throwable">Throwable</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Invokes an action if the source Observable calls <code>onError</code>.</code></p><div class="fullcomment"><div class="comment cmt"><p>Invokes an action if the source Observable calls <code>onError</code>.
+      <p class="shortcomment cmt">Invokes an action if the source Observable calls <code>onError</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Invokes an action if the source Observable calls <code>onError</code>.
 </p></div><dl class="paramcmts block"><dt class="param">onError</dt><dd class="cmt"><p>the action to invoke if the source Observable calls
                <code>onError</code></p></dd><dt>returns</dt><dd class="cmt"><p>the source Observable with the side-effecting behavior applied
 </p></dd></dl></div>
@@ -762,6 +884,42 @@ Observable.
       </h4>
       <p class="shortcomment cmt">Invokes an action when the source Observable calls <code>onNext</code>.</code></p><div class="fullcomment"><div class="comment cmt"><p>Invokes an action when the source Observable calls <code>onNext</code>.
 </p></div><dl class="paramcmts block"><dt class="param">onNext</dt><dd class="cmt"><p>the action to invoke when the source Observable calls <code>onNext</code></p></dd><dt>returns</dt><dd class="cmt"><p>the source Observable with the side-effecting behavior applied
+</p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#drop" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="drop(time:scala.concurrent.duration.Duration,scheduler:rx.lang.scala.Scheduler):rx.lang.scala.Observable[T]"></a>
+      <a id="drop(Duration,Scheduler):Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">drop</span><span class="params">(<span name="time">time: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>, <span name="scheduler">scheduler: <a href="Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an Observable that drops values emitted by the source Observable before a specified time window
+elapses.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that drops values emitted by the source Observable before a specified time window
+elapses.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/skip.t.png">
+</p></div><dl class="paramcmts block"><dt class="param">time</dt><dd class="cmt"><p>the length of the time window to drop</p></dd><dt class="param">scheduler</dt><dd class="cmt"><p>the <code>Scheduler</code> on which the timed wait happens</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that drops values emitted by the source Observable before the time window defined
+        by <code>time</code> elapses and emits the remainder
+</p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#drop" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="drop(time:scala.concurrent.duration.Duration):rx.lang.scala.Observable[T]"></a>
+      <a id="drop(Duration):Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">drop</span><span class="params">(<span name="time">time: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an Observable that drops values emitted by the source Observable before a specified time window
+elapses.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that drops values emitted by the source Observable before a specified time window
+elapses.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/skip.t.png">
+</p></div><dl class="paramcmts block"><dt class="param">time</dt><dd class="cmt"><p>the length of the time window to drop</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that drops values emitted by the source Observable before the time window defined
+        by <code>time</code> elapses and emits the remainder
 </p></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#drop" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="drop(n:Int):rx.lang.scala.Observable[T]"></a>
@@ -782,6 +940,62 @@ Observable and emits the remainder.</p><p><img width="640" src="https://raw.gith
            the number of items to skip</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that is identical to the source Observable except that it does not
         emit the first <code>num</code> items that the source emits
 </p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#dropRight" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dropRight(time:scala.concurrent.duration.Duration,scheduler:rx.lang.scala.Scheduler):rx.lang.scala.Observable[T]"></a>
+      <a id="dropRight(Duration,Scheduler):Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dropRight</span><span class="params">(<span name="time">time: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>, <span name="scheduler">scheduler: <a href="Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an Observable that drops items emitted by the source Observable during a specified time window
+(defined on a specified scheduler) before the source completes.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that drops items emitted by the source Observable during a specified time window
+(defined on a specified scheduler) before the source completes.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/skipLast.ts.png"></p><p>Note: this action will cache the latest items arriving in the specified time window.
+</p></div><dl class="paramcmts block"><dt class="param">time</dt><dd class="cmt"><p>the length of the time window</p></dd><dt class="param">scheduler</dt><dd class="cmt"><p>the scheduler used as the time source</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that drops those items emitted by the source Observable in a time window before the
+        source completes defined by <code>time</code> and <code>scheduler</code>
+</p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#dropRight" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dropRight(time:scala.concurrent.duration.Duration):rx.lang.scala.Observable[T]"></a>
+      <a id="dropRight(Duration):Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dropRight</span><span class="params">(<span name="time">time: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an Observable that drops items emitted by the source Observable during a specified time window
+before the source completes.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that drops items emitted by the source Observable during a specified time window
+before the source completes.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/skipLast.t.png"></p><p>Note: this action will cache the latest items arriving in the specified time window.
+</p></div><dl class="paramcmts block"><dt class="param">time</dt><dd class="cmt"><p>the length of the time window</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that drops those items emitted by the source Observable in a time window before the
+        source completes defined by <code>time</code>
+</p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#dropRight" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dropRight(n:Int):rx.lang.scala.Observable[T]"></a>
+      <a id="dropRight(Int):Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dropRight</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an Observable that drops a specified number of items from the end of the sequence emitted by the
+source Observable.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that drops a specified number of items from the end of the sequence emitted by the
+source Observable.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/skipLast.png"></p><p>This Observer accumulates a queue long enough to store the first <code>n</code> items. As more items are
+received, items are taken from the front of the queue and emitted by the returned Observable. This causes
+such items to be delayed.
+</p></div><dl class="paramcmts block"><dt class="param">n</dt><dd class="cmt"><p>number of items to drop from the end of the source sequence</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that emits the items emitted by the source Observable except for the dropped ones
+        at the end</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">IndexOutOfBoundsException<p>if <code>n</code> is less than zero
+</p></span></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#dropWhile" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="dropWhile(predicate:T=&gt;Boolean):rx.lang.scala.Observable[T]"></a>
       <a id="dropWhile((T)⇒Boolean):Observable[T]"></a>
@@ -801,6 +1015,47 @@ condition holds true. Emits all further source items as soon as the condition be
            A function to test each item emitted from the source Observable for a condition.</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that emits all items from the source Observable as soon as the condition
         becomes false.
 </p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#elementAt" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="elementAt(index:Int):rx.lang.scala.Observable[T]"></a>
+      <a id="elementAt(Int):Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">elementAt</span><span class="params">(<span name="index">index: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an Observable that emits the single item at a specified index in a sequence of emissions from a
+source Observbable.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that emits the single item at a specified index in a sequence of emissions from a
+source Observbable.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/elementAt.png">
+</p></div><dl class="paramcmts block"><dt class="param">index</dt><dd class="cmt"><p>
+           the zero-based index of the item to retrieve</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that emits a single item: the item at the specified position in the sequence of
+        those emitted by the source Observable</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">IndexOutOfBoundsException<p>
+            if index is less than 0
+</p></span></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#elementAtOrDefault" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="elementAtOrDefault[U&gt;:T](index:Int,default:U):rx.lang.scala.Observable[U]"></a>
+      <a id="elementAtOrDefault[U&gt;:T](Int,U):Observable[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">elementAtOrDefault</span><span class="tparams">[<span name="U">U &gt;: <span class="extype" name="rx.lang.scala.Observable.T">T</span></span>]</span><span class="params">(<span name="index">index: <span class="extype" name="scala.Int">Int</span></span>, <span name="default">default: <span class="extype" name="rx.lang.scala.Observable.elementAtOrDefault.U">U</span></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.elementAtOrDefault.U">U</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an Observable that emits the item found at a specified index in a sequence of emissions from a
+source Observable, or a default item if that index is out of range.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that emits the item found at a specified index in a sequence of emissions from a
+source Observable, or a default item if that index is out of range.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/elementAtOrDefault.png">
+</p></div><dl class="paramcmts block"><dt class="param">index</dt><dd class="cmt"><p>
+           the zero-based index of the item to retrieve</p></dd><dt class="param">default</dt><dd class="cmt"><p>
+           the default item</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that emits the item at the specified position in the sequence emitted by the source
+        Observable, or the default item if that index is outside the bounds of the source sequence</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">IndexOutOfBoundsException<p>
+            if <code> index</code> is less than 0
+</p></span></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -907,11 +1162,12 @@ condition holds true. Emits all further source items as soon as the condition be
         <span class="name">first</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Returns an Observable that emits only the very first item emitted by the source Observable.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that emits only the very first item emitted by the source Observable.
-This is just a shorthand for <code>take(1)</code>.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/first.png">
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>an Observable that emits only the very first item from the source, or none if the
-        source Observable completes without emitting a single item.
-</p></dd></dl></div>
+      <p class="shortcomment cmt">Returns an Observable that emits only the very first item emitted by the source Observable, or raises an
+<code>NoSuchElementException</code> if the source Observable is empty.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that emits only the very first item emitted by the source Observable, or raises an
+<code>NoSuchElementException</code> if the source Observable is empty.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/first.png">
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>an Observable that emits only the very first item emitted by the source Observable, or raises an
+        <code>NoSuchElementException</code> if the source Observable is empty</p></dd></dl><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>&quot;MSDN: Observable.firstAsync()&quot;
+</p></span><span class="cmt"><p><a href="https://github.com/Netflix/RxJava/wiki/Filtering-Observables#wiki-first">RxJava Wiki: first()</a></p></span></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#firstOrElse" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="firstOrElse[U&gt;:T](default:=&gt;U):rx.lang.scala.Observable[U]"></a>
       <a id="firstOrElse[U&gt;:T](⇒U):Observable[U]"></a>
@@ -1097,6 +1353,28 @@ the source Observable satisfy a condition.</p><p><img width="640" src="https://g
            a function that extracts the key from an item</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that emits <code>(key, observable)</code> pairs, where <code>observable</code>
         contains all items for which <code>f</code> returned <code>key</code>.
 </p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#groupByUntil" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="groupByUntil[K](f:T=&gt;K,closings:(K,rx.lang.scala.Observable[T])=&gt;rx.lang.scala.Observable[Any]):rx.lang.scala.Observable[(K,rx.lang.scala.Observable[T])]"></a>
+      <a id="groupByUntil[K]((T)⇒K,(K,Observable[T])⇒Observable[Any]):Observable[(K,Observable[T])]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">groupByUntil</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="rx.lang.scala.Observable.T">T</span>) ⇒ <span class="extype" name="rx.lang.scala.Observable.groupByUntil.K">K</span></span>, <span name="closings">closings: (<span class="extype" name="rx.lang.scala.Observable.groupByUntil.K">K</span>, <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]) ⇒ <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[(<span class="extype" name="rx.lang.scala.Observable.groupByUntil.K">K</span>, <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>])]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Groups the items emitted by this Observable according to a specified discriminator function and terminates these groups
+according to a function.</p><div class="fullcomment"><div class="comment cmt"><p>Groups the items emitted by this Observable according to a specified discriminator function and terminates these groups
+according to a function.
+</p></div><dl class="paramcmts block"><dt class="tparam">K</dt><dd class="cmt"><p>
+           the type of the keys returned by the discriminator function.</p></dd><dt class="param">f</dt><dd class="cmt"><p>
+           a function that extracts the key from an item</p></dd><dt class="param">closings</dt><dd class="cmt"><p>
+           the function that accepts the key of a given group and an observable representing that group, and returns
+           an observable that emits a single Closing when the group should be closed.</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that emits <code>(key, observable)</code> pairs, where <code>observable</code>
+        contains all items for which <code>f</code> returned <code>key</code> before <code>closings</code> emits a value.
+</p></dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -1110,6 +1388,24 @@ the source Observable satisfy a condition.</p><p><img width="640" src="https://g
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#head" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="head:rx.lang.scala.Observable[T]"></a>
+      <a id="head:Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">head</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an Observable that emits only the very first item emitted by the source Observable, or raises an
+<code>NoSuchElementException</code> if the source Observable is empty.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that emits only the very first item emitted by the source Observable, or raises an
+<code>NoSuchElementException</code> if the source Observable is empty.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/first.png">
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>an Observable that emits only the very first item emitted by the source Observable, or raises an
+        <code>NoSuchElementException</code> if the source Observable is empty</p></dd></dl><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="#first:rx.lang.scala.Observable[T]" class="extmbr" name="rx.lang.scala.Observable#first">Observable.first</a>
+</p></span><span class="cmt"><p>&quot;MSDN: Observable.firstAsync()&quot;</p></span><span class="cmt"><p><a href="https://github.com/Netflix/RxJava/wiki/Filtering-Observables#wiki-first">RxJava Wiki: first()</a></p></span></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#headOrElse" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="headOrElse[U&gt;:T](default:=&gt;U):rx.lang.scala.Observable[U]"></a>
       <a id="headOrElse[U&gt;:T](⇒U):Observable[U]"></a>
@@ -1159,6 +1455,48 @@ a default value if the source Observable is empty.</p><p><img width="640" src="h
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#join" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="join[S,R](other:rx.lang.scala.Observable[S],leftDurationSelector:T=&gt;rx.lang.scala.Observable[Any],rightDurationSelector:S=&gt;rx.lang.scala.Observable[Any],resultSelector:(T,S)=&gt;R):rx.lang.scala.Observable[R]"></a>
+      <a id="join[S,R](Observable[S],(T)⇒Observable[Any],(S)⇒Observable[Any],(T,S)⇒R):Observable[R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">join</span><span class="tparams">[<span name="S">S</span>, <span name="R">R</span>]</span><span class="params">(<span name="other">other: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.join.S">S</span>]</span>, <span name="leftDurationSelector">leftDurationSelector: (<span class="extype" name="rx.lang.scala.Observable.T">T</span>) ⇒ <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="scala.Any">Any</span>]</span>, <span name="rightDurationSelector">rightDurationSelector: (<span class="extype" name="rx.lang.scala.Observable.join.S">S</span>) ⇒ <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="scala.Any">Any</span>]</span>, <span name="resultSelector">resultSelector: (<span class="extype" name="rx.lang.scala.Observable.T">T</span>, <span class="extype" name="rx.lang.scala.Observable.join.S">S</span>) ⇒ <span class="extype" name="rx.lang.scala.Observable.join.R">R</span></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.join.R">R</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Correlates the items emitted by two Observables based on overlapping durations.</p><div class="fullcomment"><div class="comment cmt"><p>Correlates the items emitted by two Observables based on overlapping durations.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/join_.png">
+</p></div><dl class="paramcmts block"><dt class="param">other</dt><dd class="cmt"><p>
+         the second Observable to join items from</p></dd><dt class="param">leftDurationSelector</dt><dd class="cmt"><p>
+         a function to select a duration for each item emitted by the source Observable,
+         used to determine overlap</p></dd><dt class="param">rightDurationSelector</dt><dd class="cmt"><p>
+        a function to select a duration for each item emitted by the inner Observable,
+        used to determine overlap</p></dd><dt class="param">resultSelector</dt><dd class="cmt"><p>
+        a function that computes an item to be emitted by the resulting Observable for any
+        two overlapping items emitted by the two Observables</p></dd><dt>returns</dt><dd class="cmt"><p>
+        an Observable that emits items correlating to items emitted by the source Observables
+        that have overlapping durations</p></dd></dl><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="http://msdn.microsoft.com/en-us/library/hh229750.aspx">MSDN: Observable.Join</a>
+</p></span><span class="cmt"><p><a href="https://github.com/Netflix/RxJava/wiki/Combining-Observables#join">RxJava Wiki: join()</a></p></span></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#last" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="last:rx.lang.scala.Observable[T]"></a>
+      <a id="last:Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">last</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an Observable that emits the last item emitted by the source Observable or notifies observers of
+an <code>NoSuchElementException</code> if the source Observable is empty.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that emits the last item emitted by the source Observable or notifies observers of
+an <code>NoSuchElementException</code> if the source Observable is empty.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/last.png">
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>an Observable that emits the last item from the source Observable or notifies observers of an
+        error</p></dd></dl><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>&quot;MSDN: Observable.lastAsync()&quot;
+</p></span><span class="cmt"><p><a href="https://github.com/Netflix/RxJava/wiki/Filtering-Observable-Operators#wiki-last">RxJava Wiki: last()</a></p></span></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#length" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="length:rx.lang.scala.Observable[Int]"></a>
       <a id="length:Observable[Int]"></a>
@@ -1568,15 +1906,15 @@ Observable that will replay all of its items and notifications to any future <a 
         is called, the Observable starts to emit items to its <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a>s
 </p></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#retry" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="retry:rx.lang.scala.Observable[T]"></a>
-      <a id="retry:Observable[T]"></a>
+      <a id="retry():rx.lang.scala.Observable[T]"></a>
+      <a id="retry():Observable[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">retry</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
+        <span class="name">retry</span><span class="params">()</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Retry subscription to origin Observable whenever onError is called (infinite retry count).</p><div class="fullcomment"><div class="comment cmt"><p>Retry subscription to origin Observable whenever onError is called (infinite retry count).</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/retry.png"></p><p>If <a href="Observer.html#onError(error:Throwable):Unit" class="extmbr" name="rx.lang.scala.Observer#onError">rx.lang.scala.Observer.onError</a> is invoked the source Observable will be re-subscribed to.</p><p>Any <a href="Observer.html#onNext(value:T):Unit" class="extmbr" name="rx.lang.scala.Observer#onNext">rx.lang.scala.Observer.onNext</a> calls received on each attempt will be emitted and concatenated together.</p><p>For example, if an Observable fails on first time but emits [1, 2] then succeeds the second time and
@@ -1598,6 +1936,25 @@ emits [1, 2, 3, 4, 5] then the complete output would be [1, 2, 1, 2, 3, 4, 5, on
 emits [1, 2, 3, 4, 5] then the complete output would be [1, 2, 1, 2, 3, 4, 5, onCompleted].
 </p></div><dl class="paramcmts block"><dt class="param">retryCount</dt><dd class="cmt"><p>
            Number of retry attempts before failing.</p></dd><dt>returns</dt><dd class="cmt"><p>Observable with retry logic.
+</p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#sample" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sample(sampler:rx.lang.scala.Observable[Any]):rx.lang.scala.Observable[T]"></a>
+      <a id="sample(Observable[Any]):Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sample</span><span class="params">(<span name="sampler">sampler: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Return an Observable that emits the results of sampling the items emitted by the source Observable
+whenever the specified sampler Observable emits an item or completes.</p><div class="fullcomment"><div class="comment cmt"><p>Return an Observable that emits the results of sampling the items emitted by the source Observable
+whenever the specified sampler Observable emits an item or completes.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/sample.o.png">
+</p></div><dl class="paramcmts block"><dt class="param">sampler</dt><dd class="cmt"><p>
+           the Observable to use for sampling the source Observable</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that emits the results of sampling the items emitted by this Observable whenever
+        the sampler Observable emits an item or completes
 </p></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#sample" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="sample(duration:scala.concurrent.duration.Duration,scheduler:rx.lang.scala.Scheduler):rx.lang.scala.Observable[T]"></a>
@@ -1689,6 +2046,44 @@ that seed as its first emitted item.
            Observable, whose result will be emitted to <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a>s via
            <a href="Observer.html#onNext(value:T):Unit" class="extmbr" name="rx.lang.scala.Observer#onNext">onNext</a> and used in the next accumulator call.</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that emits the results of each call to the accumulator function
 </p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#serialize" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="serialize:rx.lang.scala.Observable[T]"></a>
+      <a id="serialize:Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">serialize</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wraps this Observable in another Observable that ensures that the resulting
+Observable is chronologically well-behaved.</p><div class="fullcomment"><div class="comment cmt"><p>Wraps this Observable in another Observable that ensures that the resulting
+Observable is chronologically well-behaved.</p><p><img width="640" src="https://github.com/Netflix/RxJava/wiki/images/rx-operators/synchronize.png"></p><p>A well-behaved Observable does not interleave its invocations of the <a href="Observer.html#onNext(value:T):Unit" class="extmbr" name="rx.lang.scala.Observer#onNext">onNext</a>, <a href="Observer.html#onCompleted():Unit" class="extmbr" name="rx.lang.scala.Observer#onCompleted">onCompleted</a>, and <a href="Observer.html#onError(error:Throwable):Unit" class="extmbr" name="rx.lang.scala.Observer#onError">onError</a> methods of
+its <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a>s; it invokes <code>onCompleted</code> or <code>onError</code> only once; and it never invokes <code>onNext</code> after invoking either <code>onCompleted</code> or <code>onError</code>.
+<code>synchronize</code> enforces this, and the Observable it returns invokes <code>onNext</code> and <code>onCompleted</code> or <code>onError</code> synchronously.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>an Observable that is a chronologically well-behaved version of the source
+        Observable, and that synchronously notifies its <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a>s
+</p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#single" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="single:rx.lang.scala.Observable[T]"></a>
+      <a id="single:Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">single</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">If the source Observable completes after emitting a single item, return an Observable that emits that
+item.</p><div class="fullcomment"><div class="comment cmt"><p>If the source Observable completes after emitting a single item, return an Observable that emits that
+item. If the source Observable emits more than one item or no items, throw an <code>NoSuchElementException</code>.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/single.png">
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>an Observable that emits the single item emitted by the source Observable</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">NoSuchElementException<p>
+            if the source emits more than one item or no items</p></span></dd><dt>See also</dt><dd><span class="cmt"><p>&quot;MSDN: Observable.singleAsync()&quot;
+</p></span><span class="cmt"><p><a href="https://github.com/Netflix/RxJava/wiki/Observable-Utility-Operators#wiki-single-and-singleordefault">RxJava Wiki: single()</a></p></span></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#size" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="size:rx.lang.scala.Observable[Int]"></a>
       <a id="size:Observable[Int]"></a>
@@ -1953,26 +2348,6 @@ otherwise you'll get a compilation error.</p></div><dl class="paramcmts block"><
       </span>
       </h4></div>
           </div></dl></div>
-    </li><li name="rx.lang.scala.Observable#synchronize" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="synchronize:rx.lang.scala.Observable[T]"></a>
-      <a id="synchronize:Observable[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">synchronize</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Wraps this Observable in another Observable that ensures that the resulting
-Observable is chronologically well-behaved.</p><div class="fullcomment"><div class="comment cmt"><p>Wraps this Observable in another Observable that ensures that the resulting
-Observable is chronologically well-behaved.</p><p><img width="640" src="https://github.com/Netflix/RxJava/wiki/images/rx-operators/synchronize.png"></p><p>A well-behaved Observable does not interleave its invocations of the <a href="Observer.html#onNext(value:T):Unit" class="extmbr" name="rx.lang.scala.Observer#onNext">onNext</a>, <a href="Observer.html#onCompleted():Unit" class="extmbr" name="rx.lang.scala.Observer#onCompleted">onCompleted</a>, and <a href="Observer.html#onError(error:Throwable):Unit" class="extmbr" name="rx.lang.scala.Observer#onError">onError</a> methods of
-its <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a>s; it invokes <code>onCompleted</code> or <code>onError</code> only once; and it never invokes <code>onNext</code> after invoking either <code>onCompleted</code> or <code>onError</code>.
-<code>synchronize</code> enforces this, and the Observable it returns invokes <code>onNext</code> and <code>onCompleted</code> or <code>onError</code> synchronously.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>an Observable that is a chronologically well-behaved version of the source
-        Observable, and that synchronously notifies its <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">rx.lang.scala.Observer</a>s
-</p></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -2167,6 +2542,208 @@ specified condition is true.</p><p><img width="640" src="https://github.com/Netf
            The time each value has to be 'the most recent' of the <a href="" class="extype" name="rx.lang.scala.Observable">rx.lang.scala.Observable</a> to ensure that it's not dropped.
 </p></dd><dt>returns</dt><dd class="cmt"><p>An <a href="" class="extype" name="rx.lang.scala.Observable">rx.lang.scala.Observable</a> which filters out values which are too quickly followed up with newer values.</p></dd></dl><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><code>Observable.debounce</code>
 </p></span></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#timeout" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="timeout[U,V,O&gt;:T](firstTimeoutSelector:()=&gt;rx.lang.scala.Observable[U],timeoutSelector:T=&gt;rx.lang.scala.Observable[V],other:rx.lang.scala.Observable[O]):rx.lang.scala.Observable[O]"></a>
+      <a id="timeout[U,V,O&gt;:T](()⇒Observable[U],(T)⇒Observable[V],Observable[O]):Observable[O]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">timeout</span><span class="tparams">[<span name="U">U</span>, <span name="V">V</span>, <span name="O">O &gt;: <span class="extype" name="rx.lang.scala.Observable.T">T</span></span>]</span><span class="params">(<span name="firstTimeoutSelector">firstTimeoutSelector: () ⇒ <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.timeout.U">U</span>]</span>, <span name="timeoutSelector">timeoutSelector: (<span class="extype" name="rx.lang.scala.Observable.T">T</span>) ⇒ <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.timeout.V">V</span>]</span>, <span name="other">other: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.timeout.O">O</span>]</span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.timeout.O">O</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an Observable that mirrors the source Observable, but switches to a fallback
+Observable if either the first item emitted by the source Observable or any subsequent item
+don't arrive within time windows defined by other Observables.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that mirrors the source Observable, but switches to a fallback
+Observable if either the first item emitted by the source Observable or any subsequent item
+don't arrive within time windows defined by other Observables.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/timeout6.png">
+</p></div><dl class="paramcmts block"><dt class="param">firstTimeoutSelector</dt><dd class="cmt"><p>
+           a function that returns an Observable which determines the timeout window for the
+           first source item</p></dd><dt class="param">timeoutSelector</dt><dd class="cmt"><p>
+           a function that returns an Observable for each item emitted by the source
+           Observable and that determines the timeout window in which the subsequent source
+           item must arrive in order to continue the sequence</p></dd><dt class="param">other</dt><dd class="cmt"><p>
+           the fallback Observable to switch to if the source Observable times out</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that mirrors the source Observable, but switches to the <code> other</code> Observable if either the first item emitted by the source Observable or any
+        subsequent item don't arrive within time windows defined by the timeout selectors
+</p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#timeout" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="timeout[U,V](firstTimeoutSelector:()=&gt;rx.lang.scala.Observable[U],timeoutSelector:T=&gt;rx.lang.scala.Observable[V]):rx.lang.scala.Observable[T]"></a>
+      <a id="timeout[U,V](()⇒Observable[U],(T)⇒Observable[V]):Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">timeout</span><span class="tparams">[<span name="U">U</span>, <span name="V">V</span>]</span><span class="params">(<span name="firstTimeoutSelector">firstTimeoutSelector: () ⇒ <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.timeout.U">U</span>]</span>, <span name="timeoutSelector">timeoutSelector: (<span class="extype" name="rx.lang.scala.Observable.T">T</span>) ⇒ <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.timeout.V">V</span>]</span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an Observable that mirrors the source Observable, but emits a TimeoutException
+if either the first item emitted by the source Observable or any subsequent item
+don't arrive within time windows defined by other Observables.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that mirrors the source Observable, but emits a TimeoutException
+if either the first item emitted by the source Observable or any subsequent item
+don't arrive within time windows defined by other Observables.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/timeout5.png">
+</p></div><dl class="paramcmts block"><dt class="param">firstTimeoutSelector</dt><dd class="cmt"><p>
+           a function that returns an Observable that determines the timeout window for the
+           first source item</p></dd><dt class="param">timeoutSelector</dt><dd class="cmt"><p>
+           a function that returns an Observable for each item emitted by the source
+           Observable and that determines the timeout window in which the subsequent source
+           item must arrive in order to continue the sequence</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that mirrors the source Observable, but emits a TimeoutException if either the first item or any subsequent item doesn't
+        arrive within the time windows specified by the timeout selectors
+</p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#timeout" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="timeout[V,O&gt;:T](timeoutSelector:T=&gt;rx.lang.scala.Observable[V],other:rx.lang.scala.Observable[O]):rx.lang.scala.Observable[O]"></a>
+      <a id="timeout[V,O&gt;:T]((T)⇒Observable[V],Observable[O]):Observable[O]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">timeout</span><span class="tparams">[<span name="V">V</span>, <span name="O">O &gt;: <span class="extype" name="rx.lang.scala.Observable.T">T</span></span>]</span><span class="params">(<span name="timeoutSelector">timeoutSelector: (<span class="extype" name="rx.lang.scala.Observable.T">T</span>) ⇒ <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.timeout.V">V</span>]</span>, <span name="other">other: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.timeout.O">O</span>]</span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.timeout.O">O</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an Observable that mirrors the source Observable, but that switches to a fallback
+Observable if an item emitted by the source Observable doesn't arrive within a window of time
+after the emission of the previous item, where that period of time is measured by an
+Observable that is a function of the previous item.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that mirrors the source Observable, but that switches to a fallback
+Observable if an item emitted by the source Observable doesn't arrive within a window of time
+after the emission of the previous item, where that period of time is measured by an
+Observable that is a function of the previous item.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/timeout4.png"></p><p>Note: The arrival of the first source item is never timed out.
+</p></div><dl class="paramcmts block"><dt class="param">timeoutSelector</dt><dd class="cmt"><p>
+           a function that returns an observable for each item emitted by the source
+           Observable and that determines the timeout window for the subsequent item</p></dd><dt class="param">other</dt><dd class="cmt"><p>
+           the fallback Observable to switch to if the source Observable times out</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that mirrors the source Observable, but switches to mirroring a
+        fallback Observable if a item emitted by the source Observable takes longer to arrive
+        than the time window defined by the selector for the previously emitted item
+</p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#timeout" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="timeout[V](timeoutSelector:T=&gt;rx.lang.scala.Observable[V]):rx.lang.scala.Observable[T]"></a>
+      <a id="timeout[V]((T)⇒Observable[V]):Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">timeout</span><span class="tparams">[<span name="V">V</span>]</span><span class="params">(<span name="timeoutSelector">timeoutSelector: (<span class="extype" name="rx.lang.scala.Observable.T">T</span>) ⇒ <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.timeout.V">V</span>]</span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an Observable that mirrors the source Observable, but emits a TimeoutException if an item emitted by
+the source Observable doesn't arrive within a window of time after the emission of the
+previous item, where that period of time is measured by an Observable that is a function
+of the previous item.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Observable that mirrors the source Observable, but emits a TimeoutException if an item emitted by
+the source Observable doesn't arrive within a window of time after the emission of the
+previous item, where that period of time is measured by an Observable that is a function
+of the previous item.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/timeout3.png"></p><p>Note: The arrival of the first source item is never timed out.
+</p></div><dl class="paramcmts block"><dt class="param">timeoutSelector</dt><dd class="cmt"><p>
+           a function that returns an observable for each item emitted by the source
+           Observable and that determines the timeout window for the subsequent item</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that mirrors the source Observable, but emits a TimeoutException if a item emitted by
+        the source Observable takes longer to arrive than the time window defined by the
+        selector for the previously emitted item
+</p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#timeout" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="timeout[U&gt;:T](timeout:scala.concurrent.duration.Duration,other:rx.lang.scala.Observable[U],scheduler:rx.lang.scala.Scheduler):rx.lang.scala.Observable[U]"></a>
+      <a id="timeout[U&gt;:T](Duration,Observable[U],Scheduler):Observable[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">timeout</span><span class="tparams">[<span name="U">U &gt;: <span class="extype" name="rx.lang.scala.Observable.T">T</span></span>]</span><span class="params">(<span name="timeout">timeout: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>, <span name="other">other: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.timeout.U">U</span>]</span>, <span name="scheduler">scheduler: <a href="Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.timeout.U">U</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Applies a timeout policy for each item emitted by the Observable, using
+the specified scheduler to run timeout timers.</p><div class="fullcomment"><div class="comment cmt"><p>Applies a timeout policy for each item emitted by the Observable, using
+the specified scheduler to run timeout timers. If the next item isn't
+observed within the specified timeout duration starting from its
+predecessor, a specified fallback Observable sequence produces future
+items and notifications from that point on.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/timeout.2s.png">
+</p></div><dl class="paramcmts block"><dt class="param">timeout</dt><dd class="cmt"><p>maximum duration between items before a timeout occurs</p></dd><dt class="param">other</dt><dd class="cmt"><p>Observable to use as the fallback in case of a timeout</p></dd><dt class="param">scheduler</dt><dd class="cmt"><p>Scheduler to run the timeout timers on</p></dd><dt>returns</dt><dd class="cmt"><p>the source Observable modified so that it will switch to the
+        fallback Observable in case of a timeout
+</p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#timeout" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="timeout(timeout:scala.concurrent.duration.Duration,scheduler:rx.lang.scala.Scheduler):rx.lang.scala.Observable[T]"></a>
+      <a id="timeout(Duration,Scheduler):Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">timeout</span><span class="params">(<span name="timeout">timeout: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>, <span name="scheduler">scheduler: <a href="Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Applies a timeout policy for each item emitted by the Observable, using
+the specified scheduler to run timeout timers.</p><div class="fullcomment"><div class="comment cmt"><p>Applies a timeout policy for each item emitted by the Observable, using
+the specified scheduler to run timeout timers. If the next item isn't
+observed within the specified timeout duration starting from its
+predecessor, the observer is notified of a <code>TimeoutException</code>.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/timeout.1s.png">
+</p></div><dl class="paramcmts block"><dt class="param">timeout</dt><dd class="cmt"><p>maximum duration between items before a timeout occurs</p></dd><dt class="param">scheduler</dt><dd class="cmt"><p>Scheduler to run the timeout timers on</p></dd><dt>returns</dt><dd class="cmt"><p>the source Observable modified to notify observers of a
+        <code>TimeoutException</code> in case of a timeout
+</p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#timeout" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="timeout[U&gt;:T](timeout:scala.concurrent.duration.Duration,other:rx.lang.scala.Observable[U]):rx.lang.scala.Observable[U]"></a>
+      <a id="timeout[U&gt;:T](Duration,Observable[U]):Observable[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">timeout</span><span class="tparams">[<span name="U">U &gt;: <span class="extype" name="rx.lang.scala.Observable.T">T</span></span>]</span><span class="params">(<span name="timeout">timeout: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>, <span name="other">other: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.timeout.U">U</span>]</span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.timeout.U">U</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Applies a timeout policy for each item emitted by the Observable, using
+the specified scheduler to run timeout timers.</p><div class="fullcomment"><div class="comment cmt"><p>Applies a timeout policy for each item emitted by the Observable, using
+the specified scheduler to run timeout timers. If the next item isn't
+observed within the specified timeout duration starting from its
+predecessor, a specified fallback Observable produces future items and
+notifications from that point on.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/timeout.2.png">
+</p></div><dl class="paramcmts block"><dt class="param">timeout</dt><dd class="cmt"><p>maximum duration between items before a timeout occurs</p></dd><dt class="param">other</dt><dd class="cmt"><p>fallback Observable to use in case of a timeout</p></dd><dt>returns</dt><dd class="cmt"><p>the source Observable modified to switch to the fallback
+        Observable in case of a timeout
+</p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#timeout" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="timeout(timeout:scala.concurrent.duration.Duration):rx.lang.scala.Observable[T]"></a>
+      <a id="timeout(Duration):Observable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">timeout</span><span class="params">(<span name="timeout">timeout: <span class="extype" name="scala.concurrent.duration.Duration">Duration</span></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Applies a timeout policy for each item emitted by the Observable, using
+the specified scheduler to run timeout timers.</p><div class="fullcomment"><div class="comment cmt"><p>Applies a timeout policy for each item emitted by the Observable, using
+the specified scheduler to run timeout timers. If the next item isn't
+observed within the specified timeout duration starting from its
+predecessor, observers are notified of a <code>TimeoutException</code>.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/timeout.1.png">
+</p></div><dl class="paramcmts block"><dt class="param">timeout</dt><dd class="cmt"><p>maximum duration between items before a timeout occurs</p></dd><dt>returns</dt><dd class="cmt"><p>the source Observable modified to notify observers of a
+        <code>TimeoutException</code> in case of a timeout
+</p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#timestamp" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="timestamp(scheduler:rx.lang.scala.Scheduler):rx.lang.scala.Observable[(Long,T)]"></a>
+      <a id="timestamp(Scheduler):Observable[(Long,T)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">timestamp</span><span class="params">(<span name="scheduler">scheduler: <a href="Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">Scheduler</a></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[(<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="rx.lang.scala.Observable.T">T</span>)]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wraps each item emitted by a source Observable in a timestamped tuple
+with timestamps provided by the given Scheduler.</p><div class="fullcomment"><div class="comment cmt"><p>Wraps each item emitted by a source Observable in a timestamped tuple
+with timestamps provided by the given Scheduler.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/timestamp.s.png">
+</p></div><dl class="paramcmts block"><dt class="param">scheduler</dt><dd class="cmt"><p><a href="Scheduler.html" class="extype" name="rx.lang.scala.Scheduler">rx.lang.scala.Scheduler</a> to use as a time source.</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that emits timestamped items from the source
+        Observable with timestamps provided by the given Scheduler
+</p></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#timestamp" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="timestamp:rx.lang.scala.Observable[(Long,T)]"></a>
       <a id="timestamp:Observable[(Long,T)]"></a>
@@ -2199,6 +2776,67 @@ operators).</p><div class="fullcomment"><div class="comment cmt"><p>Converts an 
 operators).
 </p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="https://github.com/Netflix/RxJava/wiki/Blocking-Observable-Operators">Blocking Observable Operators</a>
 </p></span></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#toMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toMap[K,V](keySelector:T=&gt;K,valueSelector:T=&gt;V,mapFactory:()=&gt;Map[K,V]):rx.lang.scala.Observable[Map[K,V]]"></a>
+      <a id="toMap[K,V]((T)⇒K,(T)⇒V,()⇒Map[K,V]):Observable[Map[K,V]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toMap</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="params">(<span name="keySelector">keySelector: (<span class="extype" name="rx.lang.scala.Observable.T">T</span>) ⇒ <span class="extype" name="rx.lang.scala.Observable.toMap.K">K</span></span>, <span name="valueSelector">valueSelector: (<span class="extype" name="rx.lang.scala.Observable.T">T</span>) ⇒ <span class="extype" name="rx.lang.scala.Observable.toMap.V">V</span></span>, <span name="mapFactory">mapFactory: () ⇒ <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="rx.lang.scala.Observable.toMap.K">K</span>, <span class="extype" name="rx.lang.scala.Observable.toMap.V">V</span>]</span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="rx.lang.scala.Observable.toMap.K">K</span>, <span class="extype" name="rx.lang.scala.Observable.toMap.V">V</span>]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Return an Observable that emits a single Map, returned by a specified <code> mapFactory</code> function, that
+contains keys and values extracted from the items emitted by the source Observable.</p><div class="fullcomment"><div class="comment cmt"><p>Return an Observable that emits a single Map, returned by a specified <code> mapFactory</code> function, that
+contains keys and values extracted from the items emitted by the source Observable.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/toMap.png">
+</p></div><dl class="paramcmts block"><dt class="param">keySelector</dt><dd class="cmt"><p>
+           the function that extracts the key from a source item to be used in the Map</p></dd><dt class="param">valueSelector</dt><dd class="cmt"><p>
+           the function that extracts the value from the source items to be used as value in the Map</p></dd><dt class="param">mapFactory</dt><dd class="cmt"><p>
+           the function that returns a Map instance to be used</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that emits a single item: a Map that contains the mapped items emitted by the
+        source Observable
+</p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#toMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toMap[K,V](keySelector:T=&gt;K,valueSelector:T=&gt;V):rx.lang.scala.Observable[Map[K,V]]"></a>
+      <a id="toMap[K,V]((T)⇒K,(T)⇒V):Observable[Map[K,V]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toMap</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="params">(<span name="keySelector">keySelector: (<span class="extype" name="rx.lang.scala.Observable.T">T</span>) ⇒ <span class="extype" name="rx.lang.scala.Observable.toMap.K">K</span></span>, <span name="valueSelector">valueSelector: (<span class="extype" name="rx.lang.scala.Observable.T">T</span>) ⇒ <span class="extype" name="rx.lang.scala.Observable.toMap.V">V</span></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="rx.lang.scala.Observable.toMap.K">K</span>, <span class="extype" name="rx.lang.scala.Observable.toMap.V">V</span>]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Return an Observable that emits a single Map containing values corresponding to items emitted by the
+source Observable, mapped by the keys returned by a specified <code> keySelector</code> function.</p><div class="fullcomment"><div class="comment cmt"><p>Return an Observable that emits a single Map containing values corresponding to items emitted by the
+source Observable, mapped by the keys returned by a specified <code> keySelector</code> function.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/toMap.png"></p><p>If more than one source item maps to the same key, the Map will contain a single entry that
+corresponds to the latest of those items.
+</p></div><dl class="paramcmts block"><dt class="param">keySelector</dt><dd class="cmt"><p>
+           the function that extracts the key from a source item to be used in the Map</p></dd><dt class="param">valueSelector</dt><dd class="cmt"><p>
+           the function that extracts the value from a source item to be used in the Map</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that emits a single item: a HashMap containing the mapped items from the source
+        Observable
+</p></dd></dl></div>
+    </li><li name="rx.lang.scala.Observable#toMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toMap[K](keySelector:T=&gt;K):rx.lang.scala.Observable[Map[K,T]]"></a>
+      <a id="toMap[K]((T)⇒K):Observable[Map[K,T]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toMap</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="keySelector">keySelector: (<span class="extype" name="rx.lang.scala.Observable.T">T</span>) ⇒ <span class="extype" name="rx.lang.scala.Observable.toMap.K">K</span></span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="rx.lang.scala.Observable.toMap.K">K</span>, <span class="extype" name="rx.lang.scala.Observable.T">T</span>]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Return an Observable that emits a single Map containing all items emitted by the source Observable,
+mapped by the keys returned by a specified <code> keySelector</code> function.</p><div class="fullcomment"><div class="comment cmt"><p>Return an Observable that emits a single Map containing all items emitted by the source Observable,
+mapped by the keys returned by a specified <code> keySelector</code> function.</p><p><img width="640" src="https://raw.github.com/wiki/Netflix/RxJava/images/rx-operators/toMap.png"></p><p>If more than one source item maps to the same key, the Map will contain the latest of those items.
+</p></div><dl class="paramcmts block"><dt class="param">keySelector</dt><dd class="cmt"><p>
+the function that extracts the key from a source item to be used in the Map</p></dd><dt>returns</dt><dd class="cmt"><p>an Observable that emits a single item: a Map containing the mapped items from the source
+        Observable
+</p></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#toSeq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toSeq:rx.lang.scala.Observable[Seq[T]]"></a>
       <a id="toSeq:Observable[Seq[T]]"></a>
@@ -2468,21 +3106,20 @@ encounters an error, the current window is emitted, and the event is propagated.
         <code>count</code> produced values.
 </p></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#window" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="window[Opening,Closing](openings:rx.lang.scala.Observable[Opening],closings:Opening=&gt;rx.lang.scala.Observable[Closing]):rx.lang.scala.Observable[rx.lang.scala.Observable[T]]"></a>
-      <a id="window[Opening,Closing](Observable[Opening],(Opening)⇒Observable[Closing]):Observable[Observable[T]]"></a>
+      <a id="window[Opening](openings:rx.lang.scala.Observable[Opening],closings:Opening=&gt;rx.lang.scala.Observable[Any]):rx.lang.scala.Observable[rx.lang.scala.Observable[T]]"></a>
+      <a id="window[Opening](Observable[Opening],(Opening)⇒Observable[Any]):Observable[Observable[T]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">window</span><span class="tparams">[<span name="Opening">Opening</span>, <span name="Closing">Closing</span>]</span><span class="params">(<span name="openings">openings: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.window.Opening">Opening</span>]</span>, <span name="closings">closings: (<span class="extype" name="rx.lang.scala.Observable.window.Opening">Opening</span>) ⇒ <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.window.Closing">Closing</span>]</span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]]</span>
+        <span class="name">window</span><span class="tparams">[<span name="Opening">Opening</span>]</span><span class="params">(<span name="openings">openings: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.window.Opening">Opening</span>]</span>, <span name="closings">closings: (<span class="extype" name="rx.lang.scala.Observable.window.Opening">Opening</span>) ⇒ <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Creates an Observable which produces windows of collected values.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an Observable which produces windows of collected values. This Observable produces windows.
-Chunks are created when the specified <code>openings</code> Observable produces an object.
-Additionally the <code>closings</code> argument is used to create an Observable which produces <span class="extype" name="rx.lang.scala.util.Closing">rx.lang.scala.util.Closing</span> objects.
-When this Observable produces such an object, the associated window is emitted.
+      <p class="shortcomment cmt">Creates an Observable which produces windows of collected values.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an Observable which produces windows of collected values. Chunks are created when the specified <code>openings</code>
+Observable produces an object. That object is used to construct an Observable to emit windows, feeding it into <code>closings</code> function.
+Windows are emitted when the created Observable produces an object.
 </p></div><dl class="paramcmts block"><dt class="param">openings</dt><dd class="cmt"><p>
            The <a href="" class="extype" name="rx.lang.scala.Observable">rx.lang.scala.Observable</a> which when it produces an object, will cause
            another window to be created.</p></dd><dt class="param">closings</dt><dd class="cmt"><p>
@@ -2492,15 +3129,15 @@ When this Observable produces such an object, the associated window is emitted.
         An <a href="" class="extype" name="rx.lang.scala.Observable">rx.lang.scala.Observable</a> which produces windows which are created and emitted when the specified <a href="" class="extype" name="rx.lang.scala.Observable">rx.lang.scala.Observable</a>s publish certain objects.
 </p></dd></dl></div>
     </li><li name="rx.lang.scala.Observable#window" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="window[Closing](closings:()=&gt;rx.lang.scala.Observable[Closing]):rx.lang.scala.Observable[rx.lang.scala.Observable[T]]"></a>
-      <a id="window[Closing](()⇒Observable[Closing]):Observable[Observable[T]]"></a>
+      <a id="window(closings:()=&gt;rx.lang.scala.Observable[Any]):rx.lang.scala.Observable[rx.lang.scala.Observable[T]]"></a>
+      <a id="window(()⇒Observable[Any]):Observable[Observable[T]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">window</span><span class="tparams">[<span name="Closing">Closing</span>]</span><span class="params">(<span name="closings">closings: () ⇒ <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.window.Closing">Closing</span>]</span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]]</span>
+        <span class="name">window</span><span class="params">(<span name="closings">closings: () ⇒ <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<a href="" class="extype" name="rx.lang.scala.Observable">Observable</a>[<span class="extype" name="rx.lang.scala.Observable.T">T</span>]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Creates an Observable which produces windows of collected values.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an Observable which produces windows of collected values. This Observable produces connected
