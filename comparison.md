@@ -3,7 +3,7 @@ layout: comparison
 title: Comparison of Scala Observable and Java Observable
 ---
 
-Note: 
+Note:
 *    This table contains both static methods and instance methods.
 *    If a signature is too long, move your mouse over it to get the full signature.
 
@@ -36,7 +36,8 @@ Note:
 | `concatMap(Func1<? super T, ? extends Observable<? extends R>>)` | **TODO: missing** |
 | `contains(Any)` | `contains(U)` |
 | `count()` | `length` |
-| `create(OnSubscribeFunc<T>)`<br/>`create(OnSubscribe<T>)` | **TODO: missing** |
+| `create(OnSubscribeFunc<T>)` | `create(Observer[T] => Subscription)` |
+| `create(OnSubscribe<T>)` | `apply(Subscriber[T] => Unit)` |
 | `debounce(Long, TimeUnit)` | `debounce(Duration)` |
 | `debounce(Func1<? super T, ? extends Observable<U>>)` | **TODO: missing** |
 | `debounce(Long, TimeUnit, Scheduler)` | `debounce(Duration, Scheduler)` |
@@ -74,20 +75,21 @@ Note:
 | `flatMap(Func1<? super T, ? extends Observable<? extends R>>)` | `flatMap(T => Observable[R])` |
 | `from(Iterable<? extends T>, Scheduler)` | `from(Iterable[T], Scheduler)` |
 | `from(<repeated...><T>)`<br/>`from(T[], Scheduler)` | **TODO: missing** |
-| `from(T[])`<br/>`from(T)`<br/>`from(T, T)`<br/>`from(T, T, T)`<br/>`from(T, T, T, T)`<br/>`from(T, T, T, T, T)`<br/>`from(T, T, T, T, T, T)`<br/>`from(T, T, T, T, T, T, T)`<br/>`from(T, T, T, T, T, T, T, T)`<br/>`from(T, T, T, T, T, T, T, T, T)`<br/>`from(T, T, T, T, T, T, T, T, T, T)` | use apply(T*) |
+| `from(T[])`<br/>`from(T)`<br/>`from(T, T)`<br/>`from(T, T, T)`<br/>`from(T, T, T, T)`<br/>`from(T, T, T, T, T)`<br/>`from(T, T, T, T, T, T)`<br/>`from(T, T, T, T, T, T, T)`<br/>`from(T, T, T, T, T, T, T, T)`<br/>`from(T, T, T, T, T, T, T, T, T)`<br/>`from(T, T, T, T, T, T, T, T, T, T)` | use `items(T*)` |
 | `from(Future<? extends T>)`<br/>`from(Future<? extends T>, Long, TimeUnit)`<br/>`from(Future<? extends T>, Scheduler)` | TODO: Decide how Scala Futures should relate to Observables. Should there be a common base interface for Future and Observable? And should Futures also have an unsubscribe method? |
 | `from(Iterable<? extends T>)` | `from(Iterable[T])` |
 | `groupBy(Func1<? super T, ? extends K>)` | `groupBy(T => K)` |
 | <span title="groupBy(Func1&lt;? super T, ? extends K&gt;, Func1&lt;? super T, ? extends R&gt;)"><code>groupBy(...)</code></span> | use `groupBy` and `map` |
-| <span title="groupByUntil(Func1&lt;? super T, ? extends TKey&gt;, Func1&lt;? super GroupedObservable&lt;TKey, T&gt;, ? extends Observable&lt;? extends TDuration&gt;&gt;)"><code>groupByUntil(...)</code></span><br/><span title="groupByUntil(Func1&lt;? super T, ? extends TKey&gt;, Func1&lt;? super T, ? extends TValue&gt;, Func1&lt;? super GroupedObservable&lt;TKey, TValue&gt;, ? extends Observable&lt;? extends TDuration&gt;&gt;)"><code>groupByUntil(...)</code></span> | **TODO: missing** |
+| <span title="groupByUntil(Func1&lt;? super T, ? extends TKey&gt;, Func1&lt;? super GroupedObservable&lt;TKey, T&gt;, ? extends Observable&lt;? extends TDuration&gt;&gt;)"><code>groupByUntil(...)</code></span> | `groupByUntil(T => K, (K, Observable[T]) => Observable[Any])` |
+| <span title="groupByUntil(Func1&lt;? super T, ? extends TKey&gt;, Func1&lt;? super T, ? extends TValue&gt;, Func1&lt;? super GroupedObservable&lt;TKey, TValue&gt;, ? extends Observable&lt;? extends TDuration&gt;&gt;)"><code>groupByUntil(...)</code></span> | **TODO: missing** |
 | <span title="groupJoin(Observable&lt;T2&gt;, Func1&lt;? super T, ? extends Observable&lt;D1&gt;&gt;, Func1&lt;? super T2, ? extends Observable&lt;D2&gt;&gt;, Func2&lt;? super T, ? super Observable&lt;T2&gt;, ? extends R&gt;)"><code>groupJoin(...)</code></span> | **TODO: missing** |
 | `ignoreElements()` | **TODO: missing** |
 | `interval(Long, TimeUnit)` | `interval(Duration)` |
 | `interval(Long, TimeUnit, Scheduler)` | `interval(Duration, Scheduler)` |
 | `isEmpty()` | `isEmpty` |
 | <span title="join(Observable&lt;TRight&gt;, Func1&lt;T, Observable&lt;TLeftDuration&gt;&gt;, Func1&lt;TRight, Observable&lt;TRightDuration&gt;&gt;, Func2&lt;T, TRight, R&gt;)"><code>join(...)</code></span> | **TODO: missing** |
-| `just(T, Scheduler)` | use apply(T*).subscribeOn(scheduler) |
-| `just(T)` | use apply(T*) |
+| `just(T)` | use `items(T*)` |
+| `just(T, Scheduler)` | use `items(T*).subscribeOn(scheduler)` |
 | `last()` | `last` |
 | `last(Func1<? super T, Boolean>)` | **TODO: missing** |
 | `lastOrDefault(T)`<br/>`lastOrDefault(T, Func1<? super T, Boolean>)` | **TODO: missing** |
@@ -124,7 +126,8 @@ Note:
 | `publish()` | `publish()` |
 | `publish(T)` | `publish(U)` |
 | `publishLast()`<br/><span title="publishLast(Func1&lt;? super Observable&lt;T&gt;, ? extends Observable&lt;R&gt;&gt;)"><code>publishLast(...)</code></span> | **TODO: missing** |
-| `range(Int, Int)`<br/>`range(Int, Int, Scheduler)` | **TODO: missing** |
+| `range(Int, Int, Scheduler)` | use `from((... until ...), scheduler)` |
+| `range(Int, Int)` | use `(... until ...).toObservable` |
 | `reduce(Func2<T, T, T>)` | `reduce((U, U) => U)` |
 | `reduce(R, Func2<R, ? super T, R>)` | `foldLeft(R)((R, T) => R)` |
 | `repeat(Long)` | `repeat(Long)` |
@@ -233,5 +236,5 @@ Note:
 | `zip(Iterable<? extends Observable<_>>, FuncN<? extends R>)`<br/>`zip(Observable<? extends Observable<_>>, FuncN<? extends R>)` | use `zip` in companion object and `map` |
 | <span title="zip(Observable&lt;? extends T1&gt;, Observable&lt;? extends T2&gt;, Observable&lt;? extends T3&gt;, Func3&lt;? super T1, ? super T2, ? super T3, ? extends R&gt;)"><code>zip(...)</code></span><br/><span title="zip(Observable&lt;? extends T1&gt;, Observable&lt;? extends T2&gt;, Observable&lt;? extends T3&gt;, Observable&lt;? extends T4&gt;, Func4&lt;? super T1, ? super T2, ? super T3, ? super T4, ? extends R&gt;)"><code>zip(...)</code></span><br/><span title="zip(Observable&lt;? extends T1&gt;, Observable&lt;? extends T2&gt;, Observable&lt;? extends T3&gt;, Observable&lt;? extends T4&gt;, Observable&lt;? extends T5&gt;, Func5&lt;? super T1, ? super T2, ? super T3, ? super T4, ? super T5, ? extends R&gt;)"><code>zip(...)</code></span><br/><span title="zip(Observable&lt;? extends T1&gt;, Observable&lt;? extends T2&gt;, Observable&lt;? extends T3&gt;, Observable&lt;? extends T4&gt;, Observable&lt;? extends T5&gt;, Observable&lt;? extends T6&gt;, Func6&lt;? super T1, ? super T2, ? super T3, ? super T4, ? super T5, ? super T6, ? extends R&gt;)"><code>zip(...)</code></span><br/><span title="zip(Observable&lt;? extends T1&gt;, Observable&lt;? extends T2&gt;, Observable&lt;? extends T3&gt;, Observable&lt;? extends T4&gt;, Observable&lt;? extends T5&gt;, Observable&lt;? extends T6&gt;, Observable&lt;? extends T7&gt;, Func7&lt;? super T1, ? super T2, ? super T3, ? super T4, ? super T5, ? super T6, ? super T7, ? extends R&gt;)"><code>zip(...)</code></span><br/><span title="zip(Observable&lt;? extends T1&gt;, Observable&lt;? extends T2&gt;, Observable&lt;? extends T3&gt;, Observable&lt;? extends T4&gt;, Observable&lt;? extends T5&gt;, Observable&lt;? extends T6&gt;, Observable&lt;? extends T7&gt;, Observable&lt;? extends T8&gt;, Func8&lt;? super T1, ? super T2, ? super T3, ? super T4, ? super T5, ? super T6, ? super T7, ? super T8, ? extends R&gt;)"><code>zip(...)</code></span><br/><span title="zip(Observable&lt;? extends T1&gt;, Observable&lt;? extends T2&gt;, Observable&lt;? extends T3&gt;, Observable&lt;? extends T4&gt;, Observable&lt;? extends T5&gt;, Observable&lt;? extends T6&gt;, Observable&lt;? extends T7&gt;, Observable&lt;? extends T8&gt;, Observable&lt;? extends T9&gt;, Func9&lt;? super T1, ? super T2, ? super T3, ? super T4, ? super T5, ? super T6, ? super T7, ? super T8, ? super T9, ? extends R&gt;)"><code>zip(...)</code></span> | considered unnecessary in Scala land |
 
-This table was generated on Sun May 11 23:51:33 CST 2014.
+This table was generated on Tue May 13 22:17:35 CST 2014.
 **Do not edit**. Instead, edit `rx.lang.scala.CompletenessTest`.
