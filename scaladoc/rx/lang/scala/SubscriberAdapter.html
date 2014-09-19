@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>OnNext - rxjava-scala 0.20.4 API - rx.lang.scala.Notification.OnNext</title>
-          <meta name="description" content="OnNext - rxjava - scala 0.20.4 API - rx.lang.scala.Notification.OnNext" />
-          <meta name="keywords" content="OnNext rxjava scala 0.20.4 API rx.lang.scala.Notification.OnNext" />
+          <title>SubscriberAdapter - rxjava-scala 0.20.4 API - rx.lang.scala.SubscriberAdapter</title>
+          <meta name="description" content="SubscriberAdapter - rxjava - scala 0.20.4 API - rx.lang.scala.SubscriberAdapter" />
+          <meta name="keywords" content="SubscriberAdapter rxjava scala 0.20.4 API rx.lang.scala.SubscriberAdapter" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -12,7 +12,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../index.html';
-            var hash = 'rx.lang.scala.Notification$$OnNext';
+            var hash = 'rx.lang.scala.SubscriberAdapter';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -24,24 +24,24 @@
         </head>
         <body class="type">
       <div id="definition">
-        <a href="Notification$$OnNext$.html" title="Go to companion"><img src="../../../lib/class_to_object_big.png" /></a>
-        <p id="owner"><a href="../../package.html" class="extype" name="rx">rx</a>.<a href="../package.html" class="extype" name="rx.lang">lang</a>.<a href="package.html" class="extype" name="rx.lang.scala">scala</a>.<a href="Notification$.html" class="extype" name="rx.lang.scala.Notification">Notification</a></p>
-        <h1><a href="Notification$$OnNext$.html" title="Go to companion">OnNext</a></h1>
+        <img src="../../../lib/trait_big.png" />
+        <p id="owner"><a href="../../package.html" class="extype" name="rx">rx</a>.<a href="../package.html" class="extype" name="rx.lang">lang</a>.<a href="package.html" class="extype" name="rx.lang.scala">scala</a></p>
+        <h1>SubscriberAdapter</h1>
       </div>
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">OnNext</span><span class="tparams">[<span name="T">+T</span>]</span><span class="result"> extends <a href="Notification.html" class="extype" name="rx.lang.scala.Notification">Notification</a>[<span class="extype" name="rx.lang.scala.Notification.OnNext.T">T</span>]</span>
+        <span class="name">SubscriberAdapter</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="rx.Subscriber">rx.Subscriber</span>[<span class="extype" name="rx.lang.scala.SubscriberAdapter.T">T</span>]</span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="Notification.html" class="extype" name="rx.lang.scala.Notification">Notification</a>[<span class="extype" name="rx.lang.scala.Notification.OnNext.T">T</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="rx.Subscriber">rx.Subscriber</span>[<span class="extype" name="rx.lang.scala.SubscriberAdapter.T">T</span>], <span class="extype" name="rx.Subscription">rx.Subscription</span>, <span class="extype" name="rx.Observer">rx.Observer</span>[<span class="extype" name="rx.lang.scala.SubscriberAdapter.T">T</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -59,7 +59,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="rx.lang.scala.Notification.OnNext"><span>OnNext</span></li><li class="in" name="rx.lang.scala.Notification"><span>Notification</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="rx.lang.scala.SubscriberAdapter"><span>SubscriberAdapter</span></li><li class="in" name="rx.Subscriber"><span>Subscriber</span></li><li class="in" name="rx.Subscription"><span>Subscription</span></li><li class="in" name="rx.Observer"><span>Observer</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -81,10 +81,65 @@
 
         
 
-        
+        <div id="values" class="values members">
+              <h3>Abstract Value Members</h3>
+              <ol><li name="rx.Observer#onCompleted" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="onCompleted():Unit"></a>
+      <a id="onCompleted():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onCompleted</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Observer</dd></dl></div>
+    </li><li name="rx.Observer#onError" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="onError(x$1:Throwable):Unit"></a>
+      <a id="onError(Throwable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onError</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.lang.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Observer</dd></dl></div>
+    </li><li name="rx.Observer#onNext" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="onNext(x$1:T):Unit"></a>
+      <a id="onNext(T):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onNext</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="rx.lang.scala.SubscriberAdapter.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Observer</dd></dl></div>
+    </li><li name="rx.lang.scala.SubscriberAdapter#requestMore" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="requestMore(n:Long):Unit"></a>
+      <a id="requestMore(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">requestMore</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
 
         <div id="values" class="values members">
-              <h3>Value Members</h3>
+              <h3>Concrete Value Members</h3>
               <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:AnyRef):Boolean"></a>
       <a id="!=(AnyRef):Boolean"></a>
@@ -150,67 +205,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="rx.lang.scala.Notification#accept" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="accept(observer:rx.lang.scala.Observer[T]):Unit"></a>
-      <a id="accept(Observer[T]):Unit"></a>
+    </li><li name="rx.Subscriber#add" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="add(x$1:rx.Subscription):Unit"></a>
+      <a id="add(rx.Subscription):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">accept</span><span class="params">(<span name="observer">observer: <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.Notification.OnNext.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">add</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="rx.Subscription">rx.Subscription</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Invokes the observer corresponding to the notification
-</p><div class="fullcomment"><div class="comment cmt"><p>Invokes the observer corresponding to the notification
-</p></div><dl class="paramcmts block"><dt class="param">observer</dt><dd class="cmt"><p>
-                The observer that to observe the notification
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Notification.html" class="extype" name="rx.lang.scala.Notification">Notification</a></dd></dl></div>
-    </li><li name="rx.lang.scala.Notification#accept" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="accept[R](onNext:T=&gt;R,onError:Throwable=&gt;R,onCompleted:()=&gt;R):R"></a>
-      <a id="accept[R]((T)⇒R,(Throwable)⇒R,()⇒R):R"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">accept</span><span class="tparams">[<span name="R">R</span>]</span><span class="params">(<span name="onNext">onNext: (<span class="extype" name="rx.lang.scala.Notification.OnNext.T">T</span>) ⇒ <span class="extype" name="rx.lang.scala.Notification.accept.R">R</span></span>, <span name="onError">onError: (<span class="extype" name="scala.Throwable">Throwable</span>) ⇒ <span class="extype" name="rx.lang.scala.Notification.accept.R">R</span></span>, <span name="onCompleted">onCompleted: () ⇒ <span class="extype" name="rx.lang.scala.Notification.accept.R">R</span></span>)</span><span class="result">: <span class="extype" name="rx.lang.scala.Notification.accept.R">R</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Invokes the function corresponding to the notification.</p><div class="fullcomment"><div class="comment cmt"><p>Invokes the function corresponding to the notification.
-</p></div><dl class="paramcmts block"><dt class="param">onNext</dt><dd class="cmt"><p>
-              The function to invoke for an <a href="" class="extype" name="rx.lang.scala.Notification.OnNext">rx.lang.scala.Notification.OnNext</a> notification.</p></dd><dt class="param">onError</dt><dd class="cmt"><p>
-              The function to invoke for an <a href="Notification$$OnError.html" class="extype" name="rx.lang.scala.Notification.OnError">rx.lang.scala.Notification.OnError</a> notification.</p></dd><dt class="param">onCompleted</dt><dd class="cmt"><p>
-              The function to invoke for an <a href="Notification$$OnCompleted$.html" class="extype" name="rx.lang.scala.Notification.OnCompleted">rx.lang.scala.Notification.OnCompleted</a> notification.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Notification.html" class="extype" name="rx.lang.scala.Notification">Notification</a></dd></dl></div>
-    </li><li name="rx.lang.scala.Notification#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply(observer:rx.lang.scala.Observer[T]):Unit"></a>
-      <a id="apply(Observer[T]):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="observer">observer: <a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a>[<span class="extype" name="rx.lang.scala.Notification.OnNext.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Notification.html" class="extype" name="rx.lang.scala.Notification">Notification</a></dd></dl></div>
-    </li><li name="rx.lang.scala.Notification#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply[R](onNext:T=&gt;R,onError:Throwable=&gt;R,onCompleted:()=&gt;R):R"></a>
-      <a id="apply[R]((T)⇒R,(Throwable)⇒R,()⇒R):R"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="R">R</span>]</span><span class="params">(<span name="onNext">onNext: (<span class="extype" name="rx.lang.scala.Notification.OnNext.T">T</span>) ⇒ <span class="extype" name="rx.lang.scala.Notification.apply.R">R</span></span>, <span name="onError">onError: (<span class="extype" name="scala.Throwable">Throwable</span>) ⇒ <span class="extype" name="rx.lang.scala.Notification.apply.R">R</span></span>, <span name="onCompleted">onCompleted: () ⇒ <span class="extype" name="rx.lang.scala.Notification.apply.R">R</span></span>)</span><span class="result">: <span class="extype" name="rx.lang.scala.Notification.apply.R">R</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Notification.html" class="extype" name="rx.lang.scala.Notification">Notification</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Subscriber</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -224,19 +231,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="rx.lang.scala.Notification.OnNext#asJavaNotification" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="asJavaNotification:rx.Notification[_&lt;:T]"></a>
-      <a id="asJavaNotification:rx.Notification[_&lt;:T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">asJavaNotification</span><span class="result">: <span class="extype" name="rx.Notification">rx.Notification</span>[_ &lt;: <span class="extype" name="rx.lang.scala.Notification.OnNext.T">T</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="rx.lang.scala.Notification.OnNext">OnNext</a> → <a href="Notification.html" class="extype" name="rx.lang.scala.Notification">Notification</a></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -269,8 +263,8 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="rx.lang.scala.Notification#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="equals(that:Any):Boolean"></a>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
       <a id="equals(Any):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -278,10 +272,10 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="that">that: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Notification.html" class="extype" name="rx.lang.scala.Notification">Notification</a> → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -314,7 +308,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="rx.lang.scala.Notification#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -326,7 +320,7 @@
         <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Notification.html" class="extype" name="rx.lang.scala.Notification">Notification</a> → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -340,6 +334,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="rx.Subscriber#isUnsubscribed" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isUnsubscribed():Boolean"></a>
+      <a id="isUnsubscribed():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isUnsubscribed</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Subscriber → Subscription</dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -379,6 +386,45 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="rx.Subscriber#onStart" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="onStart():Unit"></a>
+      <a id="onStart():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onStart</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Subscriber</dd></dl></div>
+    </li><li name="rx.Subscriber#request" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="request(x$1:Long):Unit"></a>
+      <a id="request(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">request</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../package.html" class="extype" name="rx">rx</a>] </dd><dt>Definition Classes</dt><dd>Subscriber</dd></dl></div>
+    </li><li name="rx.Subscriber#setProducer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setProducer(x$1:rx.Producer):Unit"></a>
+      <a id="setProducer(rx.Producer):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setProducer</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="rx.Producer">rx.Producer</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Subscriber</dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -392,7 +438,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="rx.lang.scala.Notification.OnNext#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>
       <h4 class="signature">
@@ -401,23 +447,23 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="rx.lang.scala.Notification.OnNext">OnNext</a> → AnyRef → Any</dd></dl></div>
-    </li><li name="rx.lang.scala.Notification.OnNext#value" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="value:T"></a>
-      <a id="value:T"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="rx.Subscriber#unsubscribe" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="unsubscribe():Unit"></a>
+      <a id="unsubscribe():Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">value</span><span class="result">: <span class="extype" name="rx.lang.scala.Notification.OnNext.T">T</span></span>
+        <span class="name">unsubscribe</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Subscriber → Subscription</dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -484,8 +530,12 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="rx.lang.scala.Notification">
-              <h3>Inherited from <a href="Notification.html" class="extype" name="rx.lang.scala.Notification">Notification</a>[<span class="extype" name="rx.lang.scala.Notification.OnNext.T">T</span>]</h3>
+        <div class="parent" name="rx.Subscriber">
+              <h3>Inherited from <span class="extype" name="rx.Subscriber">rx.Subscriber</span>[<span class="extype" name="rx.lang.scala.SubscriberAdapter.T">T</span>]</h3>
+            </div><div class="parent" name="rx.Subscription">
+              <h3>Inherited from <span class="extype" name="rx.Subscription">rx.Subscription</span></h3>
+            </div><div class="parent" name="rx.Observer">
+              <h3>Inherited from <span class="extype" name="rx.Observer">rx.Observer</span>[<span class="extype" name="rx.lang.scala.SubscriberAdapter.T">T</span>]</h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">

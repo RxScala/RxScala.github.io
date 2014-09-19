@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>Subscriber - rxjava-scala 0.18.1 API - rx.lang.scala.Subscriber</title>
-          <meta name="description" content="Subscriber - rxjava - scala 0.18.1 API - rx.lang.scala.Subscriber" />
-          <meta name="keywords" content="Subscriber rxjava scala 0.18.1 API rx.lang.scala.Subscriber" />
+          <title>Subscriber - rxjava-scala 0.20.4 API - rx.lang.scala.Subscriber</title>
+          <meta name="description" content="Subscriber - rxjava - scala 0.20.4 API - rx.lang.scala.Subscriber" />
+          <meta name="keywords" content="Subscriber rxjava scala 0.20.4 API rx.lang.scala.Subscriber" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -150,6 +150,22 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="rx.lang.scala.Subscriber#add" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="add(u:=&gt;Unit):Unit"></a>
+      <a id="add(⇒Unit):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">add</span><span class="params">(<span name="u">u: ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Register a callback to be run when Subscriber is unsubscribed
+</p><div class="fullcomment"><div class="comment cmt"><p>Register a callback to be run when Subscriber is unsubscribed
+</p></div><dl class="paramcmts block"><dt class="param">u</dt><dd class="cmt"><p>callback to run when unsubscribed
+</p></dd></dl></div>
     </li><li name="rx.lang.scala.Subscriber#add" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="add(s:rx.lang.scala.Subscription):Unit"></a>
       <a id="add(Subscription):Unit"></a>
@@ -374,6 +390,58 @@
       </h4>
       <p class="shortcomment cmt">Provides the Observer with new data.</p><div class="fullcomment"><div class="comment cmt"><p>Provides the Observer with new data.</p><p>The <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">rx.lang.scala.Observable</a> calls this closure 0 or more times.</p><p>The <a href="Observable.html" class="extype" name="rx.lang.scala.Observable">rx.lang.scala.Observable</a> will not call this method again after it calls either <code>onCompleted</code> or <code>onError</code>.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Observer.html" class="extype" name="rx.lang.scala.Observer">Observer</a></dd></dl></div>
+    </li><li name="rx.lang.scala.Subscriber#onStart" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="onStart():Unit"></a>
+      <a id="onStart():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onStart</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="rx.lang.scala.Subscriber#request" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="request(n:Long):Unit"></a>
+      <a id="request(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">request</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="rx.lang.scala.Subscriber#setProducer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setProducer(producer:Long=&gt;Unit):Unit"></a>
+      <a id="setProducer((Long)⇒Unit):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setProducer</span><span class="params">(<span name="producer">producer: (<span class="extype" name="scala.Long">Long</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="rx.lang.scala.Subscriber#setProducer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setProducer(producer:rx.lang.scala.Producer):Unit"></a>
+      <a id="setProducer(Producer):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setProducer</span><span class="params">(<span name="producer">producer: <a href="Producer.html" class="extype" name="rx.lang.scala.Producer">Producer</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
