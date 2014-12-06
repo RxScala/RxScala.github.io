@@ -1,15 +1,5 @@
 
-## Page visitors
+This repo used to contain the source for RxScala's website [rxscala.github.io](http://rxscala.github.io/).
 
-This repo contains the source for the website [rxscala.github.io](http://rxscala.github.io/).
-
-## Page maintainers
-
-To build the website, run `jekyll build` in the `RxScala.github.io` directory.
-
-On a Fedora 19 machine, `gem` was already installed, but to get `jekyll`, the following commands were necessary:
-
-    sudo yum install -y ruby-devel
-    gem install json_pure
-    gem install jekyll
-
+The new website for RxScala now is at [http://reactivex.io/rxscala/](http://reactivex.io/rxscala/),
+and its source is at [https://github.com/ReactiveX/reactivex.github.io](https://github.com/ReactiveX/reactivex.github.io).
